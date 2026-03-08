@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Mentorship — Brian N. Huh</title>
+  <meta name="description" content="Research training, tutoring, and mentorship for undergraduate and graduate students. Brian N. Huh, USC Marshall psychologist, works with a limited number of students each term." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red:        #990000;
+      --red-dark:   #780000;
+      --red-pale:   #fdf5f5;
+      --bg:         #f9f8f5;
+      --bg-alt:     #f3f1ec;
+      --white:      #ffffff;
+      --border:     #e5e2db;
+      --border-soft:#ededea;
+      --ink:        #181816;
+      --ink-body:   #252523;
+      --ink-mid:    #4d4d4a;
+      --ink-soft:   #6e6e6a;
+      --ink-ghost:  #696966;
+      --serif:  'IBM Plex Serif', Georgia, serif;
+      --sans:   'IBM Plex Sans', system-ui, sans-serif;
+      --mono:   'IBM Plex Mono', monospace;
+      --max:    780px;
+      --ease:   cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); line-height: 1.7; }
+    ::selection { background: var(--red); color: #fff; }
+
+    /* ── Layout ── */
+    .w { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+
+    /* ── Back bar ── */
+    .back-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 0;
+    }
+    .back-bar .w {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .back-link {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.15s;
+    }
+    .back-link:hover { color: var(--red); }
+    .back-bar-brand {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .hero-tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--red);
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .hero-name em { font-style: italic; color: var(--red); }
+    .hero-role {
+      font-family: var(--mono);
+      font-size: 0.70rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+      margin-bottom: 2rem;
+    }
+    .hero-lead {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--ink-body);
+      max-width: 58ch;
+      margin-bottom: 2rem;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.85rem 1.75rem;
+      transition: background 0.15s;
+    }
+    .hero-cta:hover { background: var(--red-dark); }
+
+    /* ── Sections ── */
+    .sec {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sec:last-child { border-bottom: none; }
+    .sec-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .sec-label::before {
+      content: '';
+      width: 16px;
+      height: 1px;
+      background: var(--red);
+    }
+    .sec-h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .body-text {
+      font-size: 0.9375rem;
+      color: var(--ink-body);
+      line-height: 1.8;
+      margin-bottom: 1.1rem;
+      max-width: 62ch;
+    }
+    .body-text:last-child { margin-bottom: 0; }
+
+    /* ── Profile block ── */
+    .profile-block {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 2.5rem;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 3px;
+      object-fit: cover;
+      object-position: top center;
+      border: 1px solid var(--border);
+    }
+    .profile-name {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .profile-title {
+      font-size: 0.82rem;
+      color: var(--ink-mid);
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+    .credential-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .cred-tag {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border: 1px solid var(--border);
+      color: var(--ink-mid);
+      background: var(--bg-alt);
+    }
+
+    /* ── What you'll do ── */
+    .do-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      margin-top: 1.75rem;
+    }
+    .do-cell {
+      background: var(--white);
+      padding: 1.5rem;
+    }
+    .do-num {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--red);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+    .do-title {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .do-body {
+      font-size: 0.8rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    /* ── Who this is for ── */
+    .fit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .fit-card {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+    .fit-card.good { border-top: 3px solid var(--red); }
+    .fit-card.less { border-top: 3px solid var(--border); }
+    .fit-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+    .fit-card.good .fit-label { color: var(--red); }
+    .fit-card.less .fit-label { color: var(--ink-ghost); }
+    .fit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .fit-list li {
+      font-size: 0.8375rem;
+      color: var(--ink-mid);
+      line-height: 1.5;
+      display: flex;
+      gap: 0.6rem;
+      align-items: baseline;
+    }
+    .fit-list li::before {
+      content: '—';
+      color: var(--border);
+      flex-shrink: 0;
+      font-size: 0.75rem;
+    }
+    .fit-card.good .fit-list li::before { color: var(--red); }
+
+    /* ── Stats row ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+    .stat-cell {
+      background: var(--white);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .stat-desc {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+      line-height: 1.4;
+    }
+
+    /* ── Quote block ── */
+    .quote-block {
+      background: var(--red);
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .quote-text {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #fff;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .quote-attr {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ── Alumni strip ── */
+    .alumni-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      margin-top: 1.75rem;
+    }
+    .alumni-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-soft);
+      align-items: center;
+    }
+    .alumni-row:last-child { border-bottom: none; }
+    .alumni-name-text {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .alumni-role-text {
+      font-size: 0.775rem;
+      color: var(--ink-soft);
+      margin-top: 0.1rem;
+    }
+    .alumni-dest {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.07em;
+      color: var(--ink-mid);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--ink);
+      padding: 3rem;
+      margin-top: 2rem;
+    }
+    .contact-h {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .contact-h em { font-style: italic; color: rgba(255,255,255,0.55); }
+    .contact-body {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.70);
+      line-height: 1.8;
+      max-width: 50ch;
+      margin-bottom: 2rem;
+    }
+    .contact-ways {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .contact-way {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-way-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      min-width: 70px;
+    }
+    .contact-way-val {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .contact-way-val a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .contact-way-val a:hover { color: #fff; text-decoration: underline; }
+    .contact-note {
+      font-size: 0.775rem;
+      color: rgba(255,255,255,0.40);
+      line-height: 1.7;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 1.5rem;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      margin-top: 1.75rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 1.25rem 1.5rem;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .faq-a {
+      font-size: 0.8375rem;
+      color: var(--ink-mid);
+      line-height: 1.75;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      padding: 2rem 0;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+    .footer .w {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .footer-text {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+    }
+    .footer-link {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--red);
+      text-decoration: none;
+    }
+    .footer-link:hover { text-decoration: underline; }
+
+    /* ── Reveal animation ── */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s var(--ease), transform 0.55s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .do-grid, .fit-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .profile-block { grid-template-columns: 1fr; }
+      .profile-img { width: 90px; height: 90px; }
+      .contact-block { padding: 2rem 1.5rem; }
+      .w { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back bar -->
+  <div class="back-bar">
+    <div class="w">
+      <a href="index.html" class="back-link">← brianhuh.com</a>
+      <span class="back-bar-brand">Brian N. Huh</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="w">
+      <p class="hero-tag">Mentorship &amp; Research Training</p>
+      <h1 class="hero-name">Working with students<br>who want to <em>do</em> research,<br>not just read about it.</h1>
+      <p class="hero-role">Brian N. Huh &nbsp;·&nbsp; Psychologist &amp; Researcher</p>
+      <p class="hero-lead">
+        I work with a small number of students each term — undergraduates and graduate students 
+        who want hands-on training in behavioral research, stronger analytical and writing skills, 
+        or structured preparation for graduate school applications and thesis work.
+      </p>
+      <a href="#contact" class="hero-cta">Get in touch →</a>
+    </div>
+  </div>
+
+  <!-- Who Brian is -->
+  <div class="sec reveal">
+    <div class="w">
+      <p class="sec-label">About Brian</p>
+      <h2 class="sec-h2">A researcher and mentor with a track record.</h2>
+
+      <div class="profile-block">
+        <img
+          src="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg"
+          alt="Brian N. Huh"
+          class="profile-img"
+        />
+        <div>
+          <p class="profile-name">Brian N. Huh</p>
+          <p class="profile-title">
+            Psychologist &amp; Behavioral Researcher<br>
+            Aviation Psychology · Research Methods · Behavioral Science
+          </p>
+          <div class="credential-row">
+            <span class="cred-tag">M.S. Applied Psychology · USC Dornsife</span>
+            <span class="cred-tag">Grad. Certificate, Business Analytics · USC Marshall</span>
+            <span class="cred-tag">Certificate, Performance Leadership · Cornell ILR</span>
+            <span class="cred-tag">B.A. Psychology · Harvard</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="body-text">
+        Brian is a psychologist and behavioral researcher. He studies how people make 
+        decisions under pressure — particularly in high-stakes environments — and has 
+        spent his career designing, running, and advising on behavioral research across 
+        multiple institutions. He holds graduate training in applied psychology and 
+        business analytics, and an undergraduate degree in psychology from Harvard.
+      </p>
+      <p class="body-text">
+        His research background spans Harvard, Columbia Business School, Chicago Booth, 
+        and Stanford. His methodological expertise covers experimental design, survey 
+        research, archival research, quantitative analysis, and behavioral measurement. 
+        He has advised research across psychology, economics, organizational behavior, 
+        and consumer behavior.
+      </p>
+      <p class="body-text">
+        He is not a tutoring company or a test prep service. He works with a limited 
+        number of students per term and focuses on building durable skills — the kind 
+        that follow a student into graduate school, their first job, and beyond.
+      </p>
+    </div>
+  </div>
+
+  <!-- What students actually do -->
+  <div class="sec reveal" style="background: var(--white);">
+    <div class="w">
+      <p class="sec-label">What to Expect</p>
+      <h2 class="sec-h2">Real work. Not busy work.</h2>
+      <p class="body-text">
+        Students who work with Brian do real things. They learn by doing, not by 
+        watching. Here is what that looks like in practice.
+      </p>
+
+      <div class="do-grid">
+        <div class="do-cell">
+          <div class="do-num">01</div>
+          <div class="do-title">Design actual studies</div>
+          <div class="do-body">Students learn how to formulate a research question, choose the right method to test it, and anticipate what can go wrong. This is the skill that separates strong thinkers from everyone else.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">02</div>
+          <div class="do-title">Collect and handle real data</div>
+          <div class="do-body">Students learn how to manage data collection, quality-check responses, and prepare clean datasets for analysis — not just read about it in a textbook.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">03</div>
+          <div class="do-title">Read research critically</div>
+          <div class="do-body">Students learn to read empirical papers the way a researcher does — identifying what the study actually shows, what it cannot show, and where the argument is strong or weak.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">04</div>
+          <div class="do-title">Write with precision</div>
+          <div class="do-body">Academic writing, research proposals, thesis chapters, analytical reports. The goal is writing that makes a clear argument and backs it up — the kind of writing that gets noticed in applications and on the job.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">05</div>
+          <div class="do-title">Navigate quantitative methods</div>
+          <div class="do-body">From descriptive statistics to structural equation modeling, students build genuine analytical fluency — enough to run a study, interpret results honestly, and know when a method is being misapplied.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">06</div>
+          <div class="do-title">Publish original work</div>
+          <div class="do-body">For students ready to go further, Brian guides the full publication process — developing an original research question, writing to journal standards, responding to peer review, and seeing the work through to acceptance.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Who it's for -->
+  <div class="sec reveal">
+    <div class="w">
+      <p class="sec-label">Is This a Good Fit?</p>
+      <h2 class="sec-h2">Brian works with students who are ready to work.</h2>
+      <p class="body-text">
+        He is not the right fit for every student — and he is upfront about that. 
+        Here is an honest picture of who tends to thrive, and who tends not to.
+      </p>
+
+      <div class="fit-grid">
+        <div class="fit-card good">
+          <div class="fit-label">Good fit</div>
+          <ul class="fit-list">
+            <li>Undergraduates serious about graduate school (PhD, MBA, law, medicine)</li>
+            <li>Students working on a thesis or independent research project</li>
+            <li>Students who want research experience beyond what a class can offer</li>
+            <li>Graduate students who need help with quantitative methods or academic writing</li>
+            <li>Students who are curious and willing to be challenged</li>
+            <li>Students who want honest feedback, not just encouragement</li>
+          </ul>
+        </div>
+        <div class="fit-card less">
+          <div class="fit-label">Less likely to be a fit</div>
+          <ul class="fit-list">
+            <li>Students looking for someone to do the work for them</li>
+            <li>Students who only want help raising a grade in a specific class</li>
+            <li>Students looking for last-minute help the week before a deadline</li>
+            <li>Students who are not genuinely interested in the substance of research</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Track record -->
+  <div class="sec reveal" style="background: var(--white);">
+    <div class="w">
+      <p class="sec-label">Track Record</p>
+      <h2 class="sec-h2">Students who do the work go places.</h2>
+      <p class="body-text">
+        The most direct evidence of what mentorship with Brian produces 
+        is the work students have published — with their own names on it, 
+        and Brian named as their advisor or mentor in the published record.
+      </p>
+
+      <p class="sec-label" style="margin-top:2.5rem;">Published student work</p>
+      <p class="body-text">
+        Brian has advised high school students through the full academic publication 
+        process — from initial research question to peer-reviewed publication. 
+        Two examples below, both naming Brian as mentor in the published work.
+      </p>
+
+      <!-- Rick Liu paper -->
+      <div style="border:1px solid var(--border); background:var(--white); margin-bottom:1rem;">
+        <div style="padding:0.6rem 1.25rem; background:var(--red); display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.85);">Peer-Reviewed · Accepted</span>
+          <span style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.08em; color:rgba(255,255,255,0.65);">Journal of Research High School</span>
+        </div>
+        <div style="padding:1.5rem 1.25rem;">
+          <p style="font-family:var(--serif); font-size:1rem; font-weight:400; color:var(--ink); line-height:1.5; margin-bottom:0.5rem;">
+            Examining Ethical Implications of AI Innovation in Marketing: Towards Responsible Understanding of Impacts on Fairness, Privacy, and Jobs
+          </p>
+          <p style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.07em; color:var(--ink-ghost); margin-bottom:1rem;">
+            Author: Rick Liu &nbsp;·&nbsp; Advisor: Brian Huh &nbsp;·&nbsp; Manuscript JRHS-5600
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+            <div style="padding:0.6rem 1rem; background:var(--red-pale); border:1px solid #e8c5c5;">
+              <span style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--red);">Decision: Accept pending Revision</span>
+            </div>
+            <div style="padding:0.6rem 1rem; background:var(--bg-alt); border:1px solid var(--border);">
+              <span style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-mid);">Student outcome: UC Berkeley</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tom Liu paper -->
+      <div style="border:1px solid var(--border); background:var(--white); margin-bottom:2rem;">
+        <div style="padding:0.6rem 1.25rem; background:var(--ink); display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.85);">Peer-Reviewed · Published</span>
+          <span style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.08em; color:rgba(255,255,255,0.50);">Curieux Academic Journal · Issue 38</span>
+        </div>
+        <div style="padding:1.5rem 1.25rem;">
+          <p style="font-family:var(--serif); font-size:1rem; font-weight:400; color:var(--ink); line-height:1.5; margin-bottom:0.5rem;">
+            Macroeconomic Metrics and Political Choices: Navigating the Interplay of Global Economics and Geopolitical Tensions
+          </p>
+          <p style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.07em; color:var(--ink-ghost); margin-bottom:1rem;">
+            Author: Tom (Haoran) Liu, Army and Navy Academy &nbsp;·&nbsp; Mentor: Brian Huh
+          </p>
+          <div style="padding:1rem; background:var(--bg-alt); border-left:2px solid var(--border); font-size:0.8rem; color:var(--ink-mid); line-height:1.7; font-style:italic;">
+            "I would like to express my sincere gratitude to my mentor, Brian Huh, a researcher at the University of Southern California, for his invaluable insights, guidance, and support throughout the research process."
+            <span style="display:block; margin-top:0.4rem; font-style:normal; font-family:var(--mono); font-size:0.62rem; letter-spacing:0.07em; color:var(--ink-ghost);">— Published acknowledgments, Curieux Academic Journal</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="sec-label">Where students go after</p>
+      <p class="body-text">
+        Students who work with Brian leave with skills that travel — and outcomes to show for it.
+      </p>
+
+      <div class="alumni-strip">
+        <div class="alumni-row">
+          <div>
+            <div class="alumni-name-text">Rick Liu</div>
+            <div class="alumni-role-text">High school mentee · Published, Journal of Research High School</div>
+          </div>
+          <div class="alumni-dest">Admitted<br>UC Berkeley</div>
+        </div>
+        <div class="alumni-row">
+          <div>
+            <div class="alumni-name-text">Tom (Haoran) Liu</div>
+            <div class="alumni-role-text">High school mentee · Published, Curieux Academic Journal</div>
+          </div>
+          <div class="alumni-dest">Army and Navy Academy<br>Published researcher</div>
+        </div>
+        <div class="alumni-row" style="background:var(--bg-alt);">
+          <div>
+            <div class="alumni-name-text">Additional mentees</div>
+            <div class="alumni-role-text">High school, undergraduate &amp; graduate students</div>
+          </div>
+          <div class="alumni-dest">Tech · Finance · Consulting<br>Graduate &amp; Professional School</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="sec reveal">
+    <div class="w">
+      <p class="sec-label">Common Questions</p>
+      <h2 class="sec-h2">What families usually want to know.</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Does my student need to attend a specific school?</div>
+          <div class="faq-a">No. Private mentorship engagements are open to high school, undergraduate, and graduate students regardless of institution. Brian has worked with high school students all the way through the publication process — two have had papers accepted or published in peer-reviewed academic journals.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What year of study is best?</div>
+          <div class="faq-a">There is no single right answer. High school students can start early enough to develop strong research habits before college applications. Undergraduates benefit most when they have time to build skills before graduation — sophomore or junior year is ideal, though seniors and graduate students are welcome. The right time is when the student is genuinely ready to commit to the work.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What does private mentorship look like?</div>
+          <div class="faq-a">It depends on what the student needs. Common engagements include: guiding original research toward publication, help designing or writing a thesis, preparation for graduate school applications and writing samples, working through quantitative methods for a research project, or building stronger academic reading and writing habits over a semester. Brian works with a limited number of students per term and prioritizes those with an active project to work on.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is this right for a student who struggles academically?</div>
+          <div class="faq-a">Possibly, but it depends on the nature of the struggle. If a student finds coursework hard because they have not yet learned how to think analytically — how to read an argument, evaluate evidence, and write with precision — then yes, this work directly addresses that. If the issue is primarily test-taking or course-specific content review, there are better-suited resources for that.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do we get started?</div>
+          <div class="faq-a">Send a brief email describing your student — their year, what they are working on or hoping to work on, and what they are looking for. Brian will respond within a few days and let you know if there is a good fit and availability.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="sec reveal" id="contact">
+    <div class="w">
+      <p class="sec-label">Get in Touch</p>
+      <h2 class="sec-h2">Reach out with a brief description of your student.</h2>
+      <p class="body-text">
+        The best first step is a short email — two or three sentences about your student, 
+        what they are working on, and what they are hoping to get out of working together. 
+        No lengthy form, no application at this stage. Just a direct introduction.
+      </p>
+
+      <div class="contact-block">
+        <h3 class="contact-h">Send a note.<br><em>Brian will respond personally.</em></h3>
+        <p class="contact-body">
+          Include your student's year, what they are studying, and what they are hoping 
+          to work on. If there is a good fit and availability, Brian will follow up to 
+          set up an initial conversation.
+        </p>
+        <div class="contact-ways">
+          <div class="contact-way">
+            <span class="contact-way-label">Email</span>
+            <span class="contact-way-val"><a href="mailto:hello@brianhuh.com">hello@brianhuh.com</a></span>
+          </div>
+          <div class="contact-way">
+            <span class="contact-way-label">Location</span>
+            <span class="contact-way-val">Los Angeles, CA</span>
+          </div>
+        </div>
+        <p class="contact-note">
+          Brian accepts a limited number of mentorship students each term. 
+          Inquiries are responded to on a rolling basis — there is no application deadline, 
+          but spots are limited. Reaching out early in the term is recommended.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="w">
+      <span class="footer-text">© Brian N. Huh</span>
+      <a href="index.html" class="footer-link">← brianhuh.com</a>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+</body>
+</html>
