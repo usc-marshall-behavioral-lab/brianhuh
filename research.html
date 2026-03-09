@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brian N. Huh — Behavioral Scientist · Aviation Human Factors · USC Marshall</title>
-  <meta name="description" content="Behavioral scientist at USC Marshall. Aviation human factors research, manager of the Marshall Behavioral Research Lab, and research mentor with a track record of outcomes." />
+  <title>Research — Brian N. Huh · Behavioral Scientist · USC Marshall</title>
+  <meta name="description" content="Aviation human factors, AI trust, and behavioral science of safety-critical operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
 
   <!-- Open Graph / Social sharing -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://brianhuh.com/" />
-  <meta property="og:title" content="Brian N. Huh — Behavioral Scientist · Aviation Human Factors · USC Marshall" />
-  <meta property="og:description" content="Behavioral scientist at USC Marshall. Aviation human factors research, manager of the Marshall Behavioral Research Lab, and research mentor with a track record of outcomes." />
+  <meta property="og:title" content="Research — Brian N. Huh · Behavioral Scientist · USC Marshall" />
+  <meta property="og:description" content="Aviation human factors, AI trust, and behavioral science of safety-critical operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
   <meta property="og:image"       content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
   <meta name="twitter:card"       content="summary_large_image" />
-  <meta name="twitter:title" content="Brian N. Huh — Behavioral Scientist · Aviation Human Factors · USC Marshall" />
-  <meta name="twitter:description" content="Behavioral scientist at USC Marshall. Aviation human factors research, manager of the Marshall Behavioral Research Lab, and research mentor with a track record of outcomes." />
+  <meta name="twitter:title" content="Research — Brian N. Huh · Behavioral Scientist · USC Marshall" />
+  <meta name="twitter:description" content="Aviation human factors, AI trust, and behavioral science of safety-critical operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
   <meta name="twitter:image"      content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
 
   <!-- Favicon: crimson BH monogram -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23990000'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='400' fill='white' letter-spacing='1'>BH</text></svg>" />
 
-  <link rel="canonical" href="https://brianhuh.com">
+  <link rel="canonical" href="https://brianhuh.com/research">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet" />
@@ -237,13 +237,31 @@
     .btn-red:hover { background: var(--red-dark); border-color: var(--red-dark); box-shadow: 0 6px 20px rgba(153,0,0,0.22); transform: translateY(-1px); }
     .btn-ghost { background: transparent; color: var(--ink-mid); border-color: var(--border); }
     .btn-ghost:hover { color: var(--ink); border-color: var(--ink-soft); transform: translateY(-1px); }
+    #hero .btn-ghost { color: rgba(255,255,255,0.55); border-color: rgba(255,255,255,0.18); }
+    #hero .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,0.45); }
+
     /* ─────────────────────────────────────────────
        HERO
     ───────────────────────────────────────────── */
     #hero {
       padding-top: 7rem; padding-bottom: 0;
-      background: var(--bg);
-      border-bottom: 3px solid var(--red);
+      position: relative; overflow: hidden;
+      background: var(--ink);
+    }
+
+    /* red accent stripe top */
+    #hero::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: var(--red);
+    }
+
+    /* dot grid overlay */
+    #hero::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
     }
 
     .hero-inner {
@@ -252,11 +270,12 @@
       gap: 4rem;
       align-items: end;
       padding-bottom: 4rem;
+      position: relative; z-index: 1;
     }
 
     .hero-tag {
       font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.13em;
-      text-transform: uppercase; color: var(--ink-ghost); margin-bottom: 1.8rem;
+      text-transform: uppercase; color: rgba(255,255,255,0.40); margin-bottom: 1.8rem;
       display: flex; align-items: center; gap: 0.7rem;
       opacity: 0; animation: up 0.75s var(--ease) 0.05s forwards;
     }
@@ -270,24 +289,24 @@
     .h1 {
       font-family: var(--serif); font-weight: 300;
       font-size: clamp(3.5rem, 9vw, 6.5rem);
-      line-height: 0.95; letter-spacing: -0.03em; color: var(--ink);
+      line-height: 0.95; letter-spacing: -0.03em; color: #fff;
     }
     .h1 em { font-style: italic; color: var(--red); }
 
     .hero-domains {
       font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.13em;
-      text-transform: uppercase; color: var(--ink-soft);
+      text-transform: uppercase; color: rgba(255,255,255,0.35);
       display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
       margin-bottom: 2.5rem;
       opacity: 0; animation: up 0.75s var(--ease) 0.24s forwards;
     }
-    .hero-domains-sep { color: var(--border); }
+    .hero-domains-sep { color: rgba(255,255,255,0.15); }
 
     .hero-copy {
       max-width: 560px; opacity: 0; animation: up 0.75s var(--ease) 0.33s forwards;
       margin-bottom: 2.75rem;
     }
-    .hero-copy p { font-size: 1.0625rem; color: var(--ink-body); line-height: 1.85; }
+    .hero-copy p { font-size: 1.0625rem; color: rgba(255,255,255,0.65); line-height: 1.85; }
     .hero-copy p + p { margin-top: 0.9rem; }
 
     .hero-btns {
@@ -303,40 +322,41 @@
     }
     .hero-stat {
       padding: 1.25rem 0;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
-    .hero-stat:last-child { border-bottom: 1px solid var(--border); }
+    .hero-stat:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
     .hero-stat-num {
       font-family: var(--serif); font-size: 2.25rem; font-weight: 300;
-      color: var(--ink); line-height: 1; margin-bottom: 0.3rem;
+      color: #fff; line-height: 1; margin-bottom: 0.3rem;
     }
     .hero-stat-num em { color: var(--red); font-style: normal; }
     .hero-stat-label {
       font-family: var(--mono); font-size: 0.60rem; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--ink-soft);
+      text-transform: uppercase; color: rgba(255,255,255,0.35);
     }
 
-    /* bottom keyword bar */
+    /* bottom bar — previously strip */
     .hero-bottom-bar {
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(255,255,255,0.08);
       padding: 1rem 0;
       display: flex; align-items: center; gap: 0.6rem;
+      position: relative; z-index: 1;
     }
     .hero-bottom-bar-label {
       font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--ink-ghost);
+      text-transform: uppercase; color: rgba(255,255,255,0.25);
       margin-right: 0.5rem;
     }
     .hero-bottom-tag {
       font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.09em;
-      text-transform: uppercase; color: var(--ink-soft);
-      padding: 0.28rem 0.75rem; border: 1px solid var(--border);
+      text-transform: uppercase; color: rgba(255,255,255,0.40);
+      padding: 0.28rem 0.75rem; border: 1px solid rgba(255,255,255,0.10);
     }
 
     @media (max-width: 700px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 0; padding-bottom: 0; margin-top: 2rem; min-width: unset; }
-      .hero-stat { flex: 1; min-width: 120px; border-top: 1px solid var(--border); border-right: none; }
+      .hero-stat { flex: 1; min-width: 120px; border-top: 1px solid rgba(255,255,255,0.08); border-right: none; }
     }
 
     /* ─────────────────────────────────────────────
@@ -986,7 +1006,7 @@
     .path-table tr.highlight-row td:first-child { border-left: 2px solid var(--red); }
     .path-bar { display: flex; align-items: center; gap: 0.75rem; min-width: 120px; }
     .path-bar-track { flex: 1; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; position: relative; }
-    .path-bar-fill { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.2); position: absolute; top: 0; left: 0; }
+    .path-bar-fill { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.2); position: absolute; top: 0; left: 0; width: 0 !important; transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
     .path-bar-fill.sig { background: var(--red); }
     .path-sig { font-family: var(--mono); font-size: 0.70rem; color: #e8a0a0; }
     .path-ns  { font-family: var(--mono); font-size: 0.70rem; color: rgba(255,255,255,0.55); }
@@ -1051,8 +1071,6 @@
     a.feat-row:hover { background: var(--bg-alt) !important; }</style>
 </head>
 <body>
-  <div id="scroll-progress"></div>
-
 
   <!-- ═══════════════════════════════════════════
        NAV
@@ -1143,420 +1161,754 @@
     </div>
   </div>
 
-
-  <!-- ═══════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════ -->
-  <section id="hero">
+  <div id="scroll-progress"></div>
+  <div style="background:var(--white); border-bottom:1px solid var(--border); padding:3.5rem 0 2.5rem;">
     <div class="w">
-      <div class="hero-inner">
+      <a href="index.html" style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:1.5rem;">← Brian N. Huh</a>
+      <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); display:block; margin-bottom:0.6rem;">Research Program</span>
+      <h1 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem,4vw,2.75rem); font-weight:300; color:var(--ink); line-height:1.2;">Consumer and Organizational Behavior Applied to High-Stakes Operations</h1>
+      <p style="font-size:0.9rem; color:var(--ink-mid); max-width:58ch; line-height:1.7; margin-top:0.75rem;">Aviation accidents · AI trust · Behavioral science of safety-critical operations</p>
+    </div>
+  </div>
+  <!-- Research page intro context -->
+  <div style="background:var(--white); border-bottom:1px solid var(--border); padding:1.25rem 0;">
+    <div class="w">
+      <p style="font-family:var(--mono); font-size:0.67rem; color:var(--ink-ghost); line-height:1.7; max-width:72ch;">My research applies consumer and organizational behavior frameworks to high-stakes operational environments — primarily aviation safety and the adoption of AI and sensor technologies. This page covers active research, the ISASI survey findings, and all published and working papers.</p>
+    </div>
+  </div>
 
-        <!-- Left: identity + bio + CTAs -->
-        <div>
-          <p class="hero-tag">
-            <span class="hero-tag-dot"></span>
-            USC Marshall School of Business &ensp;·&ensp; Los Angeles, CA
+    <section id="research" class="sec white reveal">
+    <div class="w">
+      <div class="research-layout">
+
+        <!-- Left: intro + focus areas -->
+        <div id="research-focus" class="sticky">
+          <span class="label">Research</span>
+          <h2 class="h2">Focus Areas &amp; Active Work</h2>
+          <p class="body">
+            My research sits at the intersection of organizational behavior and consumer 
+            behavior — using both theoretical frameworks to study how people actually 
+            make decisions in complex, safety-critical environments. The question is 
+            always the same: why does behavior diverge from what the system expects, 
+            and what would it take to close that gap?
           </p>
-          <p style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:2rem; opacity:0.7;">
-            Previously &ensp;·&ensp; Harvard &ensp;·&ensp; Columbia Business School &ensp;·&ensp; Chicago Booth &ensp;·&ensp; Stanford
-          </p>
 
-          <div class="hero-name">
-            <h1 class="h1">Brian N.<br><em>Huh</em></h1>
-          </div>
-
-          <p class="hero-domains">
-            Behavioral Scientist
-            <span class="hero-domains-sep">·</span>
-            Aviation Human Factors
-            <span class="hero-domains-sep">·</span>
-            AI Trust
-            <span class="hero-domains-sep">·</span>
-            Multi-Method Research Infrastructure
-          </p>
-
-          <div class="hero-copy">
-            <p>
-              I am a behavioral scientist who studies aviation accidents and incidents 
-              through the lens of consumer and organizational behavior — combining 
-              behavioral science theory with operational practice to understand why 
-              people make the decisions they do in high-stakes environments, and how 
-              AI and leading technologies like sensors, radar, and lidar can be designed 
-              and deployed to improve safety outcomes and operational efficiency.
-            </p>
-            <p>
-              Separately, I run the Marshall Behavioral Research Lab — USC Marshall's primary 
-              research support infrastructure. The lab serves faculty and doctoral researchers 
-              across all departments and topics: study design, participant recruitment, 
-              behavioral measurement technology, and methodological guidance. My own 
-              research is in aviation. The lab's mandate is institution-wide. I also run a mentorship program that has 
-              trained 139 students since 2017 — alumni who land strong positions not 
-              simply because USC Marshall is on their degree, but because hands-on 
-              analytical exposure to rigorous behavioral science research developed the 
-              skills they needed for what came next.
-            </p>
-          </div>
-
-          <div class="hero-btns">
-            <a href="research.html" class="btn btn-red">View Research &rarr;</a>
-            <button onclick="openCV()" class="btn btn-ghost">View CV &rarr;</button>
+          <div class="focus-list">
+            <div class="focus-item">Aviation accidents &amp; incidents — consumer and organizational behavior analysis</div>
+            <div class="focus-item">Trust in AI, sensors, radar, and lidar in safety-critical settings</div>
+            <div class="focus-item">Operational efficiency through behavioral science and technology</div>
+            <div class="focus-item">Experimental, field, and archival research methods</div>
           </div>
         </div>
 
-        <!-- Right: count-up stats -->
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-num" id="hs1" data-target="110862">0</div>
-            <div class="hero-stat-label">Study participants<br>2017–2025</div>
+        <!-- Right: featured items -->
+        <div>
+          <p class="featured-label">Featured Work</p>
+
+          <!-- Filter tabs -->
+          <div id="research-filter-tabs" style="display:flex; gap:0; margin-bottom:1.5rem; border:1px solid var(--border); width:fit-content;">
+            <button onclick="researchFilter('all', this)" class="rf-tab rf-active" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:var(--ink); color:#fff; border:none; cursor:pointer; transition:all 0.15s;">All</button>
+            <button onclick="researchFilter('published', this)" class="rf-tab" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:transparent; color:var(--ink-mid); border:none; border-left:1px solid var(--border); cursor:pointer; transition:all 0.15s;">Published</button>
+            <button onclick="researchFilter('active', this)" class="rf-tab" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:transparent; color:var(--ink-mid); border:none; border-left:1px solid var(--border); cursor:pointer; transition:all 0.15s;">In Progress</button>
           </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num" id="hs2" data-target="851">0</div>
-            <div class="hero-stat-label">Research studies<br>supported</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num" id="hs3" data-target="269">0</div>
-            <div class="hero-stat-label">Professionals across<br>49 countries, ISASI 2025</div>
-          </div>
-          <div class="hero-stat" style="border-bottom:1px solid var(--border);">
-            <div class="hero-stat-num" id="hs4" data-target="139">0</div>
-            <div class="hero-stat-label">Research assistants<br>trained since 2017</div>
-          </div>
+
+
           <script>
-          (function(){
-            var els = [
-              {id:"hs1", target:110862, duration:1600, delay:0},
-              {id:"hs2", target:851,    duration:1200, delay:120},
-              {id:"hs3", target:269,    duration:1000, delay:220},
-              {id:"hs4", target:139,    duration:900,  delay:320}
-            ];
-            var fired = false;
-            function fmt(n){ return n >= 1000 ? n.toLocaleString() : String(n); }
-            function countUp(el, target, duration){
-              var start = performance.now();
-              function step(now){
-                var p = Math.min((now - start) / duration, 1);
-                var ease = 1 - Math.pow(1 - p, 3);
-                el.textContent = fmt(Math.round(ease * target));
-                if(p < 1) requestAnimationFrame(step);
-              }
-              requestAnimationFrame(step);
-            }
-            function run(){
-              if(fired) return; fired = true;
-              els.forEach(function(e){
-                var el = document.getElementById(e.id);
-                if(!el) return;
-                setTimeout(function(){ countUp(el, e.target, e.duration); }, e.delay);
-              });
-            }
-            var sentinel = document.getElementById("hs1");
-            if("IntersectionObserver" in window && sentinel){
-              new IntersectionObserver(function(entries){
-                if(entries[0].isIntersecting) run();
-              },{threshold:0.5}).observe(sentinel);
-            } else { run(); }
-          })();
+          function researchFilter(status, btn){
+            // Update tab button styles
+            document.querySelectorAll('.rf-tab').forEach(function(b){
+              b.style.background = 'transparent';
+              b.style.color = 'var(--ink-mid)';
+            });
+            btn.style.background = 'var(--ink)';
+            btn.style.color = '#fff';
+            // Show/hide rows
+            document.querySelectorAll('.feat-row[data-status]').forEach(function(row){
+              var s = row.getAttribute('data-status');
+              if(s === 'always'){ row.style.display = ''; return; }
+              if(status === 'all'){ row.style.display = ''; }
+              else { row.style.display = (s === status) ? '' : 'none'; }
+            });
+            // Show/hide sublabels
+            var pubLabel = document.getElementById('rf-pub-label');
+            var actLabel = document.getElementById('rf-active-label');
+            if(pubLabel) pubLabel.style.display = (status === 'active') ? 'none' : '';
+            if(actLabel) actLabel.style.display = (status === 'published') ? 'none' : '';
+          }
           </script>
-        </div>
+          <p id="rf-pub-label" style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.11em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:0.75rem; margin-top:0.25rem;">Publications</p>
 
-      </div>
-
-      <!-- Bottom keyword bar -->
-      <div class="hero-bottom-bar">
-        <span class="hero-bottom-bar-label">Focus</span>
-        <span class="hero-bottom-tag">Aviation Accidents</span>
-        <span class="hero-bottom-tag">AI Trust</span>
-        <span class="hero-bottom-tag">Human Factors</span>
-        <span class="hero-bottom-tag">Behavioral Science</span>
-        <span class="hero-bottom-tag">Sensors · Radar · Lidar</span>
-        <span class="hero-bottom-tag">Safety Operations</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="strip" class="sec dark reveal">
-    <div class="w">
-      <div class="strip-inner">
-        <p class="strip-headline">Researcher. Lab manager. Mentor.</p>
-        <p class="strip-body">
-          The research program covers aviation accidents, AI trust, and the behavioral science 
-          of safety-critical operations. The lab — eight years of infrastructure, 164 researchers, 
-          11 departments — serves the full research community at USC Marshall. The mentorship program 
-          is what makes it mean something for the next generation.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section id="research-card" style="background:var(--white); padding:5rem 0; border-top:1px solid var(--border); min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div style="display:grid; grid-template-columns:1fr 280px; gap:5rem; align-items:center;">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-ghost); display:block; margin-bottom:1rem;">Research Program</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem,4vw,2.75rem); font-weight:300; color:var(--ink); line-height:1.2; margin-bottom:1.5rem;">Consumer and Organizational Behavior Applied to High-Stakes Operations</h2>
-          <p style="font-size:1rem; color:var(--ink-body); line-height:1.85; max-width:52ch; margin-bottom:2rem;">I study aviation accidents, AI trust, and the behavioral science of safety-critical operations — applying organizational and consumer behavior frameworks to understand why people make the decisions they do under pressure, and what that means for how technologies and safety systems should be designed.</p>
-          <a href="research.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:#990000;color:#fff;border-color:#990000;">View Research &rarr;</a>
-        </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">2</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Publications & working papers</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">269</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Survey respondents · ISASI 2025</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">β = 0.727</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Professional engagement → AI trust</div>
-          </div></div>
-      </div>
-    </div>
-  </section>
-  <section id="lab-card" style="background:var(--bg); padding:5rem 0; border-top:1px solid var(--border); min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div style="display:grid; grid-template-columns:1fr 280px; gap:5rem; align-items:center;">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-ghost); display:block; margin-bottom:1rem;">Lab Management</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem,4vw,2.75rem); font-weight:300; color:var(--ink); line-height:1.2; margin-bottom:1.5rem;">Running the Marshall Behavioral Research Lab</h2>
-          <p style="font-size:1rem; color:var(--ink-body); line-height:1.85; max-width:52ch; margin-bottom:2rem;">I run the Marshall Behavioral Research Lab — USC Marshall's primary behavioral science infrastructure — built over eight years. 164 registered researchers, 11 departments, 19,194-member participant pool, and 11,176 research hours logged in FY2025.</p>
-          <a href="lab.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:#990000;color:#fff;border-color:#990000;">View Lab &rarr;</a>
-        </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">11,176</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Research hours · FY2025</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">164</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Registered researchers</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">263%</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Participant pool growth</div>
-          </div></div>
-      </div>
-    </div>
-  </section>
-  <section id="mentorship-card" style="background:var(--ink); padding:5rem 0; border-top:1px solid transparent; min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div style="display:grid; grid-template-columns:1fr 280px; gap:5rem; align-items:center;">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:rgba(255,255,255,0.45); display:block; margin-bottom:1rem;">Research Mentorship</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem,4vw,2.75rem); font-weight:300; color:#fff; line-height:1.2; margin-bottom:1.5rem;">Research Training With a Track Record of Outcomes.</h2>
-          <p style="font-size:1rem; color:rgba(255,255,255,0.85); line-height:1.85; max-width:52ch; margin-bottom:2rem;">Since 2017, 139 students have trained through the Research Assistant program — drawn from five USC schools, contributing 392 person-semesters of real research experience. Alumni land strong positions not because of the degree alone, but because they know how rigorous empirical research actually works.</p>
-          <a href="mentorship.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">View Mentorship &rarr;</a>
-        </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">139</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">Students trained since 2017</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">392</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">Person-semesters</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">53%</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">Continue 3+ semesters</div>
-          </div></div>
-      </div>
-    </div>
-  </section>
-  <section id="about" class="sec alt reveal">
-    <div class="w">
-      <div class="about-layout">
-
-        <div>
-          <div class="portrait">
-            <img src="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" alt="Brian N. Huh — Behavioral Scientist, Aviation Human Factors, USC Marshall" />
-          </div>
-        </div>
-
-        <div id="about-bio" class="about-bio">
-          <span class="label">About</span>
-
-          <p>
-            Brian is a behavioral scientist whose work applies organizational behavior and 
-            consumer behavior frameworks to the study of aviation accidents, incidents, 
-            and the human systems that shape operational safety. He bridges theory and 
-            practice — using behavioral science to understand why people make the decisions 
-            they do under pressure, and what that means for how organizations, technologies, 
-            and safety cultures should be designed.
-          </p>
-
-          <!-- Plain-language translator -->
-          <p style="font-size:0.82rem; color:var(--ink-mid); line-height:1.8; padding:1rem 1.25rem; background:var(--bg-alt); border-left:2px solid var(--border); margin-bottom:1.5rem; margin-top:1.5rem;">
-            <strong style="color:var(--ink);">For a general audience:</strong> Brian studies why people make the decisions they do in high-pressure situations — particularly in aviation, where the consequences of those decisions are consequential. He also manages the behavioral science research infrastructure at USC Marshall — the facilities, participant pool, equipment, and staff that make it possible for faculty across the school to conduct empirical research. The lab supports research across all topics and disciplines; his own research focus is aviation human factors and AI trust. He also trains the next generation of researchers, and advises on how organizations should think about AI and new technology.
-          </p>
-          <p>
-            He runs the Marshall Behavioral Research Lab at USC Marshall School of 
-            Business — the school's primary behavioral science research infrastructure — 
-            where he oversees 60 active faculty study teams across 11 departments, leads 
-            a team of three full-time staff, and serves as the methodological partner 
-            for faculty and doctoral researchers who need expert guidance on research 
-            design, experimentation mode, and data quality. His domain expertise spans 
-            online and in-person experimental design, archival research support, 
-            behavioral measurement technology, and participant ecosystem strategy. 
-           
-          </p>
-          <p>
-            He holds an M.S. in Applied Psychology from USC Dornsife, a Graduate 
-            Certificate in Business Analytics from USC Marshall, a Certificate in 
-            Performance Leadership from Cornell ILR School, and a B.A. in Psychology 
-            from Harvard. Prior to USC, he held research roles at Harvard, Columbia 
-            Business School, Chicago Booth, and Stanford.
-          </p>
-          <p>
-            His mentorship program has trained 139 students since 2017. Alumni have gone on 
-            to positions in tech, consulting, finance, and research — not simply because 
-            USC Marshall is on their degree, but because they worked in a real behavioral 
-            science lab, handled real data, and understand how rigorous empirical research 
-            actually works.
-          </p>
-
-          <div style="margin-top: 2rem; display: flex; gap: 0.85rem; flex-wrap: wrap;">
-            <button onclick="openCV()" class="btn btn-red">View CV →</button>
-            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-          </div>
-
-          <div class="affil-strip">
-            <div class="affil-cell">
-              <div class="affil-lbl">Education</div>
-              <div class="affil-val"><strong>M.S. Applied Psychology</strong> · USC Dornsife<br>B.A. Psychology · Harvard University</div>
+          <!-- Published journal article -->
+          <a href="https://lnkd.in/gT7ByF_Z" target="_blank" rel="noopener" class="feat-row" data-status="published" style="background:var(--red-pale); border-left:2px solid var(--red); padding-left:1.25rem; display:flex; text-decoration:none; margin-bottom:0;">
+            <div style="flex:1;">
+              <div style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Published · Peer-Reviewed</div>
+              <div class="feat-title">Human Factors in Aviation Safety: Bridging Behavioral Science and Operational Practice</div>
+              <div class="feat-sub">ISASI Forum — Journal of the International Society of Air Safety Investigators · Vol. 57, No. 2</div>
+              <div style="margin-top:0.5rem; font-family:var(--mono); font-size:0.62rem; color:var(--red); letter-spacing:0.06em;">N=127 aviation safety experts worldwide · In collaboration with ISASI HF Working Group &amp; USC Viterbi — Read article →</div>
             </div>
-            <div class="affil-cell">
-              <div class="affil-lbl">Current Role</div>
-              <div class="affil-val"><strong>Marshall Behavioral Research Lab</strong><br>Lab Manager · USC Marshall<br><a href="https://www.marshall.usc.edu/people/brian-huh" target="_blank" rel="noopener" style="color:var(--red); font-size:0.8rem;">Faculty Profile →</a></div>
+            <span class="feat-badge wip" style="align-self:flex-start; margin-top:0.1rem;">2024</span>
+          </a>
+
+          <a id="research-isasi" href="research.html#findings" class="feat-row" data-status="published" style="background:var(--bg-alt); padding-left:1.25rem; display:flex; text-decoration:none;">
+            <div style="flex:1;">
+              <div class="feat-title">Professional Engagement as the Dominant Predictor of AI Trust in Aviation Safety Investigations</div>
+              <div class="feat-sub">ISASI Human Factors Working Group needs assessment survey · N=269 · EFA→CFA→SEM · August–September 2024</div>
+              <div style="margin-top:0.5rem; font-family:var(--mono); font-size:0.62rem; color:var(--red); letter-spacing:0.06em;">β = 0.727 · R² = 48.9% · p &lt; 0.001 — View full findings →</div>
             </div>
-            <div class="affil-cell">
-              <div class="affil-lbl">Prior Institutions</div>
-              <div class="affil-val">Columbia Business School · Harvard · Chicago Booth · Stanford</div>
+            <span class="feat-badge wip" style="align-self:flex-start; margin-top:0.1rem;">2024</span>
+          </a>
+
+          <p id="rf-active-label" style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.11em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:0.75rem; margin-top:1.5rem;">Active &amp; In Progress</p>
+          <div class="feat-row" data-status="active">
+            <div>
+              <div class="feat-title">Behavioral Infrastructure and the Design of Research Ecosystems</div>
+              <div class="feat-sub">Lab operations research — Marshall Behavioral Research Lab, USC · See Lab page</div>
+            </div>
+            <span class="feat-badge wip">active</span>
+          </div>
+
+          <div class="feat-row" data-status="active">
+            <div>
+              <div class="feat-title">Eye-Tracking and Behavioral Measurement in Experimental Research</div>
+              <div class="feat-sub">Lab technology initiative — Noldus Reference Lab partnership, USC Marshall · See Lab page</div>
+            </div>
+            <span class="feat-badge">2023</span>
+          </div>
+
+          <div class="feat-row" data-status="active">
+            <div>
+              <div class="feat-title">Trust Calibration and Reliance in Human-Automation Interaction</div>
+              <div class="feat-sub">Manuscript in development</div>
+            </div>
+            <span class="feat-badge wip">in prep</span>
+          </div>
+
+          <div class="feat-row" data-status="active">
+            <div>
+              <div class="feat-title">Subject Pool Diversification and Non-Student Participant Recruitment</div>
+              <div class="feat-sub">Operational research — compensated pool development, USC Marshall</div>
+            </div>
+            <span class="feat-badge">ongoing</span>
+          </div>
+
+          <!-- Prior research institutions -->
+          <div style="margin-top: 2.5rem; padding-top: 1.75rem; border-top: 1px solid var(--border-soft);">
+            <p style="font-family: var(--mono); font-size: 0.67rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-ghost); margin-bottom: 1.25rem;">Prior Research Experience</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+              <span style="font-family: var(--mono); font-size: 0.68rem; padding: 0.35rem 0.85rem; border: 1px solid var(--border); color: var(--ink-mid); background: var(--bg-alt);">Harvard University</span>
+              <span style="font-family: var(--mono); font-size: 0.68rem; padding: 0.35rem 0.85rem; border: 1px solid var(--border); color: var(--ink-mid); background: var(--bg-alt);">Columbia Business School</span>
+              <span style="font-family: var(--mono); font-size: 0.68rem; padding: 0.35rem 0.85rem; border: 1px solid var(--border); color: var(--ink-mid); background: var(--bg-alt);">Chicago Booth</span>
+              <span style="font-family: var(--mono); font-size: 0.68rem; padding: 0.35rem 0.85rem; border: 1px solid var(--border); color: var(--ink-mid); background: var(--bg-alt);">Stanford University</span>
             </div>
           </div>
-        </div>
 
-      </div>
-    </div>
-  </section>
-
-  </section>
-
-  <section id="contact" class="sec white reveal">
-    <div class="w">
-      <div class="contact-layout">
-
-        <div>
-          <span class="label">Contact</span>
-          <h2 class="h2">Get in Touch</h2>
-          <p class="body">
-            Inquiries regarding research collaboration, speaking engagements, 
-            institutional research partnerships, advisory roles, and research 
-            operations leadership are welcome. Email is the preferred channel 
-            for direct correspondence.
-          </p>
-          <p class="body">
-            Mentorship engagements are accepted on a limited basis each term, 
-            with priority given to students with active research or writing projects. 
-            Sessions address research design, academic writing, critical reading, 
-            and analytical communication.
-          </p>
-
-          <div class="contact-methods">
-            <a href="mailto:hello@brianhuh.com" class="contact-row">
-              <div class="contact-icon">@</div>
-              <div>
-                <div class="contact-row-label">Email (Personal)</div>
-                <div class="contact-row-val">hello@brianhuh.com</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="mailto:brianhuh@usc.edu" class="contact-row">
-              <div class="contact-icon">@</div>
-              <div>
-                <div class="contact-row-label">Email (USC Marshall)</div>
-                <div class="contact-row-val">brianhuh@usc.edu</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="tel:+12138219752" class="contact-row">
-              <div class="contact-icon">☎</div>
-              <div>
-                <div class="contact-row-label">Phone</div>
-                <div class="contact-row-val">+1 (213) 821-9752</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="https://www.marshall.usc.edu/people/brian-huh" target="_blank" rel="noopener" class="contact-row">
-              <div class="contact-icon">USC</div>
-              <div>
-                <div class="contact-row-label">Faculty Profile</div>
-                <div class="contact-row-val">marshall.usc.edu/people/brian-huh</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener" class="contact-row">
-              <div class="contact-icon">in</div>
-              <div>
-                <div class="contact-row-label">LinkedIn</div>
-                <div class="contact-row-val">linkedin.com/in/brian-huh</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="#" onclick="openCV();return false;" class="contact-row">
-              <div class="contact-icon">CV</div>
-              <div>
-                <div class="contact-row-label">Curriculum Vitae</div>
-                <div class="contact-row-val">View full CV</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <div class="contact-note">
-            <h3 class="contact-note-head">Research &amp; Collaboration</h3>
-            <p class="contact-note-body">
-              Research collaboration inquiries are welcome, particularly in areas 
-              involving trust in automation, aviation human factors, behavioral 
-              methodology, or research infrastructure design.
-            </p>
-          </div>
-
-          <div class="contact-note" style="margin-top: 1px; background: var(--bg); border: 1px solid var(--border);">
-            <h3 class="contact-note-head" style="color: var(--ink);">Faculty — Run a Study</h3>
-            <p class="contact-note-body" style="color: var(--ink-mid);">
-              USC Marshall faculty and doctoral researchers: the Marshall Behavioral 
-              Research Lab supports in-person, online, field, and archival study designs 
-              across 11 departments. Email to discuss study design, participant pool 
-              options, or equipment access.
-            </p>
-            <a href="mailto:brianhuh@usc.edu" style="display:inline-block; margin-top:0.85rem; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.08em; color:var(--red); text-decoration:none; border-bottom:1px solid rgba(153,0,0,0.3); padding-bottom:1px;">brianhuh@usc.edu →</a>
-          </div>
-
-          <div class="contact-note" style="margin-top: 1px; background: var(--bg); border: 1px solid var(--border);">
-            <h3 class="contact-note-head" style="color: var(--ink);">Teaching &amp; Mentorship</h3>
-            <p class="contact-note-body" style="color: var(--ink-mid);">
-              Sessions address research design, academic writing, critical reading, 
-              and analytical communication, at the undergraduate, graduate, and 
-              professional levels.
-            </p>
-            <p class="contact-note-body" style="color: var(--ink-mid); margin-top: 0.85rem;">
-              Availability is limited each term. Early inquiry is encouraged.
-            </p>
+          <div class="feat-row" data-status="always">
+            <div>
+              <p style="font-size:0.875rem; color:var(--ink-ghost); font-style:italic; line-height:1.7;">
+                Additional working papers available upon request.
+              </p>
+            </div>
+            <div></div>
           </div>
         </div>
 
       </div>
     </div>
   </section>
-
-
 
   <!-- ═══════════════════════════════════════════
+       SECTION 2 — AVIATION & HUMAN FACTORS
+  ═══════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════
+       SECTION 2 — AVIATION & HUMAN FACTORS
+  ═══════════════════════════════════════════ -->
+  <section id="aviation" class="sec reveal">
+    <div class="w">
+      <figure style="margin:0 0 3.5rem;border-radius:6px;overflow:hidden;line-height:0;">
+        <img 
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDQyMCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iNDIwIj4KICA8IS0tIFNrZXRjaC1zdHlsZSBjb2NrcGl0IGluc3RydW1lbnQgcGFuZWwgLS0+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iNDIwIiBmaWxsPSIjZjlmOGY1Ii8+CiAgCiAgPCEtLSBTdWJ0bGUgZ3JpZCAvIHNrZXRjaCBwYXBlciB0ZXh0dXJlIC0tPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCAwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlNWUyZGIiIHN0cm9rZS13aWR0aD0iMC40Ii8+CiAgICA8L3BhdHRlcm4+CiAgICA8ZmlsdGVyIGlkPSJyb3VnaGVuIj4KICAgICAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuMDQiIG51bU9jdGF2ZXM9IjUiIHNlZWQ9IjIiIHJlc3VsdD0ibm9pc2UiLz4KICAgICAgPGZlRGlzcGxhY2VtZW50TWFwIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9Im5vaXNlIiBzY2FsZT0iMC44IiB4Q2hhbm5lbFNlbGVjdG9yPSJSIiB5Q2hhbm5lbFNlbGVjdG9yPSJHIi8+CiAgICA8L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iNDIwIiBmaWxsPSJ1cmwoI2dyaWQpIiBvcGFjaXR5PSIwLjUiLz4KCiAgPCEtLSBJbnN0cnVtZW50IFBhbmVsIEZyYW1lIC0tPgogIDxyZWN0IHg9IjEyMCIgeT0iNDAiIHdpZHRoPSIxMzYwIiBoZWlnaHQ9IjM0MCIgcng9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbHRlcj0idXJsKCNyb3VnaGVuKSIvPgogIAogIDwhLS0gSG9yaXpvbiBpbmRpY2F0b3IgKGNlbnRlciwgbGFyZ2UpIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwMCwyMTApIiBmaWx0ZXI9InVybCgjcm91Z2hlbikiPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjEwOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNCw0Ii8+CiAgICA8IS0tIEhvcml6b24gbGluZSAtLT4KICAgIDxsaW5lIHgxPSItOTAiIHkxPSIwIiB4Mj0iOTAiIHkyPSIwIiBzdHJva2U9IiM5OTAwMDAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8IS0tIEFpcmNyYWZ0IHN5bWJvbCAtLT4KICAgIDxsaW5lIHgxPSItNDUiIHkxPSIwIiB4Mj0iLTE1IiB5Mj0iMCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgPGxpbmUgeDE9IjE1IiB5MT0iMCIgeDI9IjQ1IiB5Mj0iMCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjMiIGZpbGw9IiMyNTI1MjMiLz4KICAgIDwhLS0gRGVncmVlIG1hcmtzIC0tPgogICAgPGxpbmUgeDE9IjAiIHkxPSItMTA4IiB4Mj0iMCIgeTI9Ii05NSIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iOTUiIHgyPSIwIiB5Mj0iMTA4IiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPGxpbmUgeDE9Ii0xMDgiIHkxPSIwIiB4Mj0iLTk1IiB5Mj0iMCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxsaW5lIHgxPSI5NSIgeTE9IjAiIHgyPSIxMDgiIHkyPSIwIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPGxpbmUgeDE9Ii03NiIgeTE9Ii03NiIgeDI9Ii02OCIgeTI9Ii02OCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPGxpbmUgeDE9IjY4IiB5MT0iLTY4IiB4Mj0iNzYiIHkyPSItNzYiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxsaW5lIHgxPSItNzYiIHkxPSI3NiIgeDI9Ii02OCIgeTI9IjY4IiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8bGluZSB4MT0iNjgiIHkxPSI2OCIgeDI9Ijc2IiB5Mj0iNzYiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDwhLS0gTGFiZWwgLS0+CiAgICA8dGV4dCB4PSIwIiB5PSIxMzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iIzZlNmU2YSIgbGV0dGVyLXNwYWNpbmc9IjIiPkFUVElUVURFPC90ZXh0PgogIDwvZz4KCiAgPCEtLSBBaXJzcGVlZCBpbmRpY2F0b3IgKGxlZnQpIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUyMCwyMTApIiBmaWx0ZXI9InVybCgjcm91Z2hlbikiPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9Ijg1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8IS0tIFNjYWxlIG1hcmtzIC0tPgogICAgPGxpbmUgeDE9IjAiIHkxPSItODUiIHgyPSIwIiB5Mj0iLTcyIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPGxpbmUgeDE9Ijg1IiB5MT0iMCIgeDI9IjcyIiB5Mj0iMCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iODUiIHgyPSIwIiB5Mj0iNzIiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8bGluZSB4MT0iLTg1IiB5MT0iMCIgeDI9Ii03MiIgeTI9IjAiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8IS0tIE1pbm9yIG1hcmtzIC0tPgogICAgPGxpbmUgeDE9IjYwIiB5MT0iLTYwIiB4Mj0iNTIiIHkyPSItNTIiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIwLjYiLz4KICAgIDxsaW5lIHgxPSItNjAiIHkxPSItNjAiIHgyPSItNTIiIHkyPSItNTIiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIwLjYiLz4KICAgIDxsaW5lIHgxPSI2MCIgeTE9IjYwIiB4Mj0iNTIiIHkyPSI1MiIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjAuNiIvPgogICAgPGxpbmUgeDE9Ii02MCIgeTE9IjYwIiB4Mj0iLTUyIiB5Mj0iNTIiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIwLjYiLz4KICAgIDwhLS0gTmVlZGxlIC0tPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxMCIgeDI9IjU1IiB5Mj0iLTQ1IiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iNSIgZmlsbD0iIzI1MjUyMyIvPgogICAgPCEtLSBHcmVlbiBhcmMgZm9yIG5vcm1hbCBvcHMgLS0+CiAgICA8cGF0aCBkPSJNIDAsLTg1IEEgODUsODUgMCAwLDEgNjAsNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRhOGE1YSIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIwLjYiLz4KICAgIDx0ZXh0IHg9IjAiIHk9IjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iIzZlNmU2YSI+S0lBUzwvdGV4dD4KICAgIDx0ZXh0IHg9IjAiIHk9IjEwNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSI5IiBmaWxsPSIjNmU2ZTZhIiBsZXR0ZXItc3BhY2luZz0iMiI+QUlSU1BFRUQ8L3RleHQ+CiAgPC9nPgoKICA8IS0tIEFsdGltZXRlciAocmlnaHQpIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwODAsMjEwKSIgZmlsdGVyPSJ1cmwoI3JvdWdoZW4pIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI4NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPCEtLSBDb25jZW50cmljIHJpbmcgZGV0YWlsIC0tPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjcyIiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtZGFzaGFycmF5PSIyLDYiLz4KICAgIDwhLS0gU2NhbGUgbWFya3MgLS0+CiAgICA8bGluZSB4MT0iMCIgeTE9Ii04NSIgeDI9IjAiIHkyPSItNzAiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICAgIDxsaW5lIHgxPSI4NSIgeTE9IjAiIHgyPSI3MCIgeTI9IjAiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iODUiIHgyPSIwIiB5Mj0iNzAiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICAgIDxsaW5lIHgxPSItODUiIHkxPSIwIiB4Mj0iLTcwIiB5Mj0iMCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEuMiIvPgogICAgPGxpbmUgeDE9IjYwIiB5MT0iLTYwIiB4Mj0iNTAiIHkyPSItNTAiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIwLjciLz4KICAgIDxsaW5lIHgxPSItNjAiIHkxPSItNjAiIHgyPSItNTAiIHkyPSItNTAiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIwLjciLz4KICAgIDxsaW5lIHgxPSI2MCIgeTE9IjYwIiB4Mj0iNTAiIHkyPSI1MCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjAuNyIvPgogICAgPGxpbmUgeDE9Ii02MCIgeTE9IjYwIiB4Mj0iLTUwIiB5Mj0iNTAiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIwLjciLz4KICAgIDwhLS0gTG9uZyBuZWVkbGUgKDEwMHMpIC0tPgogICAgPGxpbmUgeDE9IjAiIHkxPSI4IiB4Mj0iMCIgeTI9Ii02OCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogICAgPCEtLSBTaG9ydCBuZWVkbGUgKDEwMDBzKSAtLT4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNiIgeDI9IjM4IiB5Mj0iMzgiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI1IiBmaWxsPSIjMjUyNTIzIi8+CiAgICA8dGV4dCB4PSIwIiB5PSIxMDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iIzZlNmU2YSIgbGV0dGVyLXNwYWNpbmc9IjIiPkFMVElNRVRFUjwvdGV4dD4KICA8L2c+CgogIDwhLS0gVlNJICh2ZXJ0aWNhbCBzcGVlZCwgZmFyIGxlZnQpIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMCwyMTApIiBmaWx0ZXI9InVybCgjcm91Z2hlbikiPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9Ii02NSIgeDI9IjAiIHkyPSItNTUiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8bGluZSB4MT0iNjUiIHkxPSIwIiB4Mj0iNTUiIHkyPSIwIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI2NSIgeDI9IjAiIHkyPSI1NSIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxsaW5lIHgxPSItNjUiIHkxPSIwIiB4Mj0iLTU1IiB5Mj0iMCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iOCIgeDI9IjQwIiB5Mj0iLTQwIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iNCIgZmlsbD0iIzI1MjUyMyIvPgogICAgPHRleHQgeD0iMCIgeT0iODIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iIzZlNmU2YSIgbGV0dGVyLXNwYWNpbmc9IjEiPlZTSTwvdGV4dD4KICA8L2c+CgogIDwhLS0gVHVybiBjb29yZGluYXRvciAoZmFyIHJpZ2h0KSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAwLDIxMCkiIGZpbHRlcj0idXJsKCNyb3VnaGVuKSI+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iNjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICAgIDxsaW5lIHgxPSItNDUiIHkxPSIwIiB4Mj0iLTIwIiB5Mj0iMCIgc3Ryb2tlPSIjMjUyNTIzIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSIyMCIgeTE9IjAiIHgyPSI0NSIgeTI9IjAiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iNCIgZmlsbD0iIzI1MjUyMyIvPgogICAgPCEtLSBJbmNsaW5vbWV0ZXIgLS0+CiAgICA8cGF0aCBkPSJNIC01MCAzMCBBIDU1IDU1IDAgMCAxIDUwIDMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjMwIiByPSI1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHRleHQgeD0iMCIgeT0iODIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iIzZlNmU2YSIgbGV0dGVyLXNwYWNpbmc9IjEiPlRVUk4gQ09PUkQ8L3RleHQ+CiAgPC9nPgoKICA8IS0tIEhlYWRpbmcgaW5kaWNhdG9yIChiZWxvdyBjZW50ZXIpIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwMCwzNDApIiBmaWx0ZXI9InVybCgjcm91Z2hlbikiPgogICAgPGVsbGlwc2UgY3g9IjAiIGN5PSIwIiByeD0iMTAwIiByeT0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI1MjUyMyIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8bGluZSB4MT0iLTEwMCIgeTE9IjAiIHgyPSIxMDAiIHkyPSIwIiBzdHJva2U9IiMyNTI1MjMiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtZGFzaGFycmF5PSI0LDgiLz4KICAgIDx0ZXh0IHg9Ii04MCIgeT0iNCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSI5IiBmaWxsPSIjNmU2ZTZhIj5OPC90ZXh0PgogICAgPHRleHQgeD0iMCIgeT0iNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSI5IiBmaWxsPSIjNmU2ZTZhIj5FPC90ZXh0PgogICAgPHRleHQgeD0iNzUiIHk9IjQiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iIzZlNmU2YSI+UzwvdGV4dD4KICAgIDxsaW5lIHgxPSIwIiB5MT0iLTIwIiB4Mj0iMCIgeTI9Ii0zMCIgc3Ryb2tlPSIjOTkwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8L2c+CgogIDwhLS0gUGFuZWwgZGl2aWRlcnMgLyBiZXplbHMgLS0+CiAgPHJlY3QgeD0iMTcwIiB5PSI5MCIgd2lkdGg9IjIyMCIgaGVpZ2h0PSIyNDAiIHJ4PSIzIiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZTZlNmEiIHN0cm9rZS13aWR0aD0iMC44IiBzdHJva2UtZGFzaGFycmF5PSIyLDMiLz4KICA8cmVjdCB4PSI0MTUiIHk9IjkwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjI0MCIgcng9IjMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZlNmU2YSIgc3Ryb2tlLXdpZHRoPSIwLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIsMyIvPgogIDxyZWN0IHg9IjY4NSIgeT0iNjUiIHdpZHRoPSIyMzAiIGhlaWdodD0iMjkwIiByeD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNmU2ZTZhIiBzdHJva2Utd2lkdGg9IjAuOCIgc3Ryb2tlLWRhc2hhcnJheT0iMiwzIi8+CiAgPHJlY3QgeD0iOTY1IiB5PSI5MCIgd2lkdGg9IjIyMCIgaGVpZ2h0PSIyNDAiIHJ4PSIzIiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZTZlNmEiIHN0cm9rZS13aWR0aD0iMC44IiBzdHJva2UtZGFzaGFycmF5PSIyLDMiLz4KICA8cmVjdCB4PSIxMjEwIiB5PSI5MCIgd2lkdGg9IjIyMCIgaGVpZ2h0PSIyNDAiIHJ4PSIzIiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZTZlNmEiIHN0cm9rZS13aWR0aD0iMC44IiBzdHJva2UtZGFzaGFycmF5PSIyLDMiLz4KCiAgPCEtLSBTa2V0Y2ggbGFiZWwgdG9wIHJpZ2h0IC0tPgogIDx0ZXh0IHg9IjE0OTAiIHk9IjM5MCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSI5IiBmaWxsPSIjYzVjMmJiIiBsZXR0ZXItc3BhY2luZz0iMSI+SU5TVFJVTUVOVCBQQU5FTCDigJQgU0tFVENIPC90ZXh0Pgo8L3N2Zz4K"
+          alt="Aircraft cockpit instrument panel — sketch illustration of flight gauges and controls"
+          style="width:100%;height:320px;object-fit:cover;object-position:center top;display:block;"
+          loading="lazy"
+        >
+      </figure>
+
+      <div class="avi-layout">
+
+        <div>
+          <span class="label">Aviation Human Factors</span>
+          <h2 class="h2">Where Behavioral Science Meets the Technology That Runs Operations</h2>
+          <p class="body" style="background:var(--bg-alt); border-left:2px solid var(--border); padding:0.85rem 1.1rem; font-size:0.8rem; color:var(--ink-mid);">
+            <strong style="color:var(--ink); font-weight:600;">Human factors</strong> is the study of how people, organizations, and technology interact — particularly in high-stakes environments where decisions under pressure determine outcomes. In aviation, it asks: why do accidents happen even when the aircraft is working and the crew is trained? The answer is almost always behavioral and organizational.
+          </p>
+          <p class="body">
+            I study aviation accidents and incidents as a behavioral scientist, not as a 
+            technical safety auditor. The questions I bring are behavioral: what 
+            organizational dynamics, communication patterns, and decision biases 
+            contribute to what goes wrong — and what does that mean for how safety 
+            systems should be designed?
+          </p>
+          <p class="body">
+            Increasingly, those systems involve AI and leading operational technologies — 
+            sensors, radar, lidar, and the AI platforms that synthesize their data into 
+            investigative and situational awareness tools. How safety professionals develop 
+            trust in these technologies, how they calibrate reliance under uncertainty, 
+            and what behavioral conditions make adoption succeed or fail are central 
+            questions in this research program.
+          </p>
+          <p class="body">
+            The objective is applied: derive principles from consumer and organizational 
+            behavior that translate into better-designed technologies, better-trained 
+            professionals, and measurable improvements in operational efficiency and 
+            safety outcomes.
+          </p>
+        </div>
+
+        <div>
+          <div class="card-grid">
+            <div id="aviation-ai" class="card-cell">
+              <div class="card-cell-title">AI, Sensors &amp; Operational Technology Trust</div>
+              <div class="card-cell-body">How aviation safety professionals calibrate trust in AI and leading technologies — sensors, radar, lidar — that enter investigative and operational workflows. Studied through consumer and organizational behavior frameworks on technology acceptance and reliance under uncertainty.</div>
+            </div>
+            <div id="aviation-hf" class="card-cell">
+              <div class="card-cell-title">Accident &amp; Incident Behavioral Analysis</div>
+              <div class="card-cell-body">Applying consumer and organizational behavior theory to understand the human and systemic patterns behind aviation accidents — from authority dynamics and safety culture to how operational pressure shapes judgment at critical moments.</div>
+            </div>
+            <div id="aviation-isasi" class="card-cell">
+              <div class="card-cell-title">ISASI Human Factors Working Group</div>
+              <div class="card-cell-body">Member and contributor to the ISASI Human Factors Working Group. Contributing to the <em>Next Generation Human Factors Guide</em> — bridging consumer and organizational behavior frameworks with investigative and safety practice.</div>
+            </div>
+            <div id="aviation-viterbi" class="card-cell">
+              <div class="card-cell-title">Operational Efficiency Through Behavioral Science</div>
+              <div class="card-cell-body">Cross-school collaboration with USC Viterbi translating behavioral research findings into operational design principles — connecting how people respond to AI-driven systems with how those systems should be built and deployed.</div>
+            </div>
+          </div>
+
+          <!-- Conference presentations -->
+          <div style="margin-top:2rem; border:1px solid var(--border);">
+            <div style="padding:0.65rem 1.25rem; border-bottom:1px solid var(--border); font-family:var(--mono); font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost);">Conference Presentations</div>
+            <div style="padding:1.1rem 1.25rem; border-bottom:1px solid var(--border-soft); display:grid; grid-template-columns:1fr auto; gap:1rem; align-items:start;">
+              <div>
+                <div style="font-size:0.875rem; font-weight:600; color:var(--ink); margin-bottom:0.2rem;">ISASI Annual Seminar 2025 — Denver, CO</div>
+                <div style="font-size:0.775rem; color:var(--ink-mid); line-height:1.6;">Presented AI trust research to aviation professionals from 49 countries. Introduced a composite trust model: curiosity + learned risk + perceived utility + structural access + message framing — each a distinct psychological mechanism.</div>
+              </div>
+              <span style="font-family:var(--mono); font-size:0.67rem; color:var(--ink-ghost); white-space:nowrap;">2025</span>
+            </div>
+            <div style="padding:1.1rem 1.25rem; display:grid; grid-template-columns:1fr auto; gap:1rem; align-items:start;">
+              <div>
+                <div style="font-size:0.875rem; font-weight:600; color:var(--ink); margin-bottom:0.2rem;">ISASI Annual Seminar 2024 — Lisbon, Portugal</div>
+                <div style="font-size:0.775rem; color:var(--ink-mid); line-height:1.6;">Research presented on behalf of USC by Daniel Scalese, PE, at the ISASI Human Factors Working Group meeting. Attendees highlighted the need for a systemic approach integrating organizational factors, practical tools, and behavioral AI guidance.</div>
+              </div>
+              <span style="font-family:var(--mono); font-size:0.67rem; color:var(--ink-ghost); white-space:nowrap;">2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Aviation → ISASI bridge -->
+  <div style="background:var(--ink); padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.04);">
+    <div class="w" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
+      <div>
+        <p style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.13em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:0.3rem;">From the aviation research program</p>
+        <p style="font-size:0.875rem; color:rgba(255,255,255,0.80); line-height:1.6;">What does the survey data actually show about AI trust among aviation safety professionals?</p>
+      </div>
+      <a href="research.html#findings" style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); text-decoration:none; white-space:nowrap; border-bottom:1px solid rgba(153,0,0,0.4); padding-bottom:2px; flex-shrink:0;">Key Findings &darr;</a>
+    </div>
+  </div>
+
+  <section id="findings" class="sec dark reveal">
+    <div class="w">
+
+      <!-- Header -->
+      <div class="findings-intro">
+        <div>
+          <span class="label dim">Research Findings · ISASI Human Factors Working Group · 2024</span>
+          <h2 class="h2 dark-h2">
+            What Predicts AI Trust<br><em>Among Aviation Safety<br>Investigators?</em>
+          </h2>
+          <p style="font-family:var(--mono); font-size:0.72rem; color:rgba(255,255,255,0.55); line-height:1.7; margin-bottom:1rem; padding:0.75rem 1rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.5);">
+            A structural equation modeling study of 269 aviation safety professionals examined what predicts trust in AI tools within investigative practice. A single factor accounted for nearly half the variance in trust scores. The dominant predictor was not demographic — not age, seniority, or organizational affiliation — but the degree to which investigators maintained active professional engagement with their field.
+          </p>
+          <p class="dark-body">
+            A survey-based structural equation modeling study examining what predicts 
+            AI trust among professional aviation safety investigators. Conducted in 
+            collaboration with the ISASI Human Factors Working Group, August–September 2024.
+          </p>
+        </div>
+        <div>
+          <p style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.13em; text-transform:uppercase; color:rgba(255,255,255,0.60); margin-bottom:1rem;">Study Design</p>
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Population</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">Aviation safety investigators</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Survey responses</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">N = 540 total · 269 complete</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Analysis method</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">EFA → CFA → SEM</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Factors tested</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">6 latent constructs</span>
+            </div>
+            <div style="padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75); display:block; margin-bottom:0.4rem;">Model fit indices</span>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.25rem 1rem;">
+                <span style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.85);">RMSEA = 0.061 <span style="color:rgba(255,255,255,0.85);">Good</span></span>
+                <span style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.85);">SRMR = 0.075 <span style="color:rgba(255,255,255,0.85);">Acceptable</span></span>
+                <span style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.85);">CFI = 0.879 <span style="color:rgba(255,255,255,0.85);">Acceptable</span></span>
+                <span style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.85);">TLI = 0.864 <span style="color:rgba(255,255,255,0.85);">Acceptable</span></span>
+              </div>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:0.6rem 0;">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Sponsor</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">ISASI HF Working Group</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Row -->
+      <div class="findings-kpi-row">
+        <div class="findings-kpi">
+          <div class="findings-kpi-label">Primary Finding</div>
+          <div class="findings-kpi-num"><em>β</em> = 0.727</div>
+          <div class="findings-kpi-note">Professional Engagement path coefficient to AI Trust — the only significant predictor in the model (p &lt; 0.001)</div>
+        </div>
+        <div class="findings-kpi">
+          <div class="findings-kpi-label">Variance Explained</div>
+          <div class="findings-kpi-num">48.9<em>%</em></div>
+          <div class="findings-kpi-note">R² — Professional Engagement alone accounts for nearly half the variance in AI Trust scores across investigators</div>
+        </div>
+        <div class="findings-kpi">
+          <div class="findings-kpi-label">Sample</div>
+          <div class="findings-kpi-num">269</div>
+          <div class="findings-kpi-note">Aviation safety professionals with complete AI Trust data, from 540 total ISASI needs assessment respondents</div>
+        </div>
+      </div>
+
+      <!-- Structural Paths Table -->
+      <div style="margin-bottom:3rem;">
+        <div class="findings-model-head">Structural Equation Model — All Paths to AI Trust</div>
+        <table class="path-table">
+          <thead>
+            <tr>
+              <th>Predictor</th>
+              <th>β</th>
+              <th>Reliability</th>
+              <th>Effect Size</th>
+              <th>Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>Professional Engagement</strong></td>
+              <td class="path-beta sig">+0.727</td>
+              <td><span class="rel-badge excellent">CR = 0.915 · Excellent</span></td>
+              <td><div class="path-bar"><div class="path-bar-track" style="min-width:90px;"><div data-w="72.7%" class="path-bar-fill sig" style="width:0;"></div></div></div></td>
+              <td class="path-sig">p &lt; 0.001 ***</td>
+            </tr>
+            <tr>
+              <td>HF Integration</td>
+              <td class="path-beta ns">−0.110</td>
+              <td><span class="rel-badge accept">CR = 0.781 · Acceptable</span></td>
+              <td><div class="path-bar"><div class="path-bar-track" style="min-width:90px;"><div data-w="11%" class="path-bar-fill" style="width:0;"></div></div></div></td>
+              <td class="path-ns">n.s.</td>
+            </tr>
+            <tr>
+              <td>Investigation Volume</td>
+              <td class="path-beta ns">−0.071</td>
+              <td><span class="rel-badge accept">CR = 0.760 · Acceptable</span></td>
+              <td><div class="path-bar"><div class="path-bar-track" style="min-width:90px;"><div data-w="7.1%" class="path-bar-fill" style="width:0;"></div></div></div></td>
+              <td class="path-ns">n.s.</td>
+            </tr>
+            <tr>
+              <td>Support Needs</td>
+              <td class="path-beta ns">+0.037</td>
+              <td><span class="rel-badge good">CR = 0.880 · Good</span></td>
+              <td><div class="path-bar"><div class="path-bar-track" style="min-width:90px;"><div data-w="3.7%" class="path-bar-fill" style="width:0;"></div></div></div></td>
+              <td class="path-ns">n.s.</td>
+            </tr>
+            <tr>
+              <td>Org Readiness</td>
+              <td class="path-beta ns">−0.022</td>
+              <td><span class="rel-badge good">CR = 0.859 · Good</span></td>
+              <td><div class="path-bar"><div class="path-bar-track" style="min-width:90px;"><div data-w="2.2%" class="path-bar-fill" style="width:0;"></div></div></div></td>
+              <td class="path-ns">n.s.</td>
+            </tr>
+            <tr>
+              <td>HF Experience</td>
+              <td class="path-beta ns">−0.029</td>
+              <td><span class="rel-badge good">CR = 0.806 · Good</span></td>
+              <td><div class="path-bar"><div class="path-bar-track" style="min-width:90px;"><div data-w="2.9%" class="path-bar-fill" style="width:0;"></div></div></div></td>
+              <td class="path-ns">n.s.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.7rem; color:rgba(255,255,255,0.80); font-style:italic; margin-top:0.6rem;">Organizational factors (Org Readiness, HF Integration) were non-significant — confirming that individual professional engagement, not institutional context, drives AI trust calibration.</p>
+      </div>
+
+
+      <!-- β Coefficient Chart -->
+      <div style="margin: 2.5rem 0 3rem; padding: 1.75rem 2rem; background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px;">
+        <p style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.80); margin-bottom:1.5rem;">Standardized Path Coefficients (β) — All Predictors to AI Trust</p>
+        <div id="isasi-beta-chart" style="display:flex; flex-direction:column; gap:0.85rem;">
+
+          <div style="display:grid; grid-template-columns: 180px 1fr 60px; gap:0.75rem; align-items:center;">
+            <div style="font-size:0.72rem; color:rgba(255,255,255,0.85); text-align:right; line-height:1.3;">Professional<br>Engagement</div>
+            <div style="position:relative; height:22px; background:rgba(255,255,255,0.08); border-radius:2px; overflow:hidden;">
+              <div class="beta-bar" data-w="72.7" style="position:absolute; left:0; top:0; height:100%; width:0; background:#990000; border-radius:2px; transition:width 1.2s cubic-bezier(.4,0,.2,1);"></div>
+            </div>
+            <div style="font-family:var(--mono); font-size:0.70rem; color:#cc4444; font-weight:600;">+0.727***</div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 180px 1fr 60px; gap:0.75rem; align-items:center;">
+            <div style="font-size:0.72rem; color:rgba(255,255,255,0.55); text-align:right;">HF Integration</div>
+            <div style="position:relative; height:14px; background:rgba(255,255,255,0.08); border-radius:2px; overflow:hidden;">
+              <div class="beta-bar" data-w="11.0" style="position:absolute; left:0; top:0; height:100%; width:0; background:rgba(255,255,255,0.25); border-radius:2px; transition:width 1.3s cubic-bezier(.4,0,.2,1) 0.1s;"></div>
+            </div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.45);">−0.110</div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 180px 1fr 60px; gap:0.75rem; align-items:center;">
+            <div style="font-size:0.72rem; color:rgba(255,255,255,0.55); text-align:right;">Investigation Volume</div>
+            <div style="position:relative; height:14px; background:rgba(255,255,255,0.08); border-radius:2px; overflow:hidden;">
+              <div class="beta-bar" data-w="7.1" style="position:absolute; left:0; top:0; height:100%; width:0; background:rgba(255,255,255,0.25); border-radius:2px; transition:width 1.3s cubic-bezier(.4,0,.2,1) 0.15s;"></div>
+            </div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.45);">−0.071</div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 180px 1fr 60px; gap:0.75rem; align-items:center;">
+            <div style="font-size:0.72rem; color:rgba(255,255,255,0.55); text-align:right;">Support Needs</div>
+            <div style="position:relative; height:14px; background:rgba(255,255,255,0.08); border-radius:2px; overflow:hidden;">
+              <div class="beta-bar" data-w="3.7" style="position:absolute; left:0; top:0; height:100%; width:0; background:rgba(255,255,255,0.25); border-radius:2px; transition:width 1.3s cubic-bezier(.4,0,.2,1) 0.2s;"></div>
+            </div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.45);">+0.037</div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 180px 1fr 60px; gap:0.75rem; align-items:center;">
+            <div style="font-size:0.72rem; color:rgba(255,255,255,0.55); text-align:right;">Org Readiness</div>
+            <div style="position:relative; height:14px; background:rgba(255,255,255,0.08); border-radius:2px; overflow:hidden;">
+              <div class="beta-bar" data-w="2.2" style="position:absolute; left:0; top:0; height:100%; width:0; background:rgba(255,255,255,0.25); border-radius:2px; transition:width 1.3s cubic-bezier(.4,0,.2,1) 0.25s;"></div>
+            </div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.45);">−0.022</div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 180px 1fr 60px; gap:0.75rem; align-items:center;">
+            <div style="font-size:0.72rem; color:rgba(255,255,255,0.55); text-align:right;">HF Experience</div>
+            <div style="position:relative; height:14px; background:rgba(255,255,255,0.08); border-radius:2px; overflow:hidden;">
+              <div class="beta-bar" data-w="2.9" style="position:absolute; left:0; top:0; height:100%; width:0; background:rgba(255,255,255,0.25); border-radius:2px; transition:width 1.3s cubic-bezier(.4,0,.2,1) 0.3s;"></div>
+            </div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.45);">−0.029</div>
+          </div>
+
+        </div>
+        <div style="margin-top:1.25rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.10); display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap;">
+          <div style="display:flex; gap:0.5rem; align-items:center;"><div style="width:10px; height:10px; background:#990000; border-radius:1px;"></div><span style="font-family:var(--mono); font-size:0.63rem; color:rgba(255,255,255,0.55);">p &lt; 0.001 (significant)</span></div>
+          <div style="display:flex; gap:0.5rem; align-items:center;"><div style="width:10px; height:10px; background:rgba(255,255,255,0.25); border-radius:1px;"></div><span style="font-family:var(--mono); font-size:0.63rem; color:rgba(255,255,255,0.55);">n.s. (non-significant)</span></div>
+          <span style="margin-left:auto; font-family:var(--mono); font-size:0.62rem; color:rgba(255,255,255,0.35);">Bar width scaled to |β| relative to maximum (0.727)</span>
+        </div>
+      </div>
+
+      <!-- 2x2 Secondary Findings -->
+      <div class="findings-grid-2">
+        <div class="findings-panel">
+          <div class="findings-panel-title">Moderation by Job Profile</div>
+          <p style="font-size:0.72rem; color:rgba(255,255,255,0.85); margin-bottom:1rem; line-height:1.6;">Effect varies substantially by role (β range 0.221–0.637). Substantial moderation confirmed for job profile.</p>
+          <div class="findings-row"><span class="findings-row-label">Management / Safety</span><span class="findings-row-val val-hi">β = 0.637 · n=11</span></div>
+          <div class="findings-row"><span class="findings-row-label">Investigator</span><span class="findings-row-val val-med">β = 0.330 · n=114</span></div>
+          <div class="findings-row"><span class="findings-row-label">Operations</span><span class="findings-row-val val-lo">β = 0.275 · n=26</span></div>
+          <div class="findings-row"><span class="findings-row-label">Other / Observer</span><span class="findings-row-val val-lo">β = 0.221 · n=6</span></div>
+        </div>
+        <div class="findings-panel">
+          <div class="findings-panel-title">The HF Integration Paradox</div>
+          <p style="font-size:0.72rem; color:rgba(255,255,255,0.85); margin-bottom:1rem; line-height:1.6;">Senior investigators (&gt;10 years) show the weakest effect — not resistance, but calibrated skepticism.</p>
+          <div class="findings-row"><span class="findings-row-label">Mid-career (3–10 years)</span><span class="findings-row-val val-hi">β = 0.497 · n=34</span></div>
+          <div class="findings-row"><span class="findings-row-label">Junior (&lt;3 years)</span><span class="findings-row-val val-med">β = 0.452 · n=10</span></div>
+          <div class="findings-row"><span class="findings-row-label">Senior (&gt;10 years)</span><span class="findings-row-val val-lo">β = 0.286 · n=117</span></div>
+          <div style="margin-top:1rem; padding:0.75rem; background:rgba(153,0,0,0.12); border-left:2px solid rgba(153,0,0,0.4);">
+            <p style="font-size:0.72rem; color:#e8a0a0; line-height:1.5;">Senior investigators exhibit lower trust not as resistance, but as calibrated skepticism informed by direct experience with the limitations of prior technologies.</p>
+          </div>
+        </div>
+        <div class="findings-panel">
+          <div class="findings-panel-title">HF Improvement Needs → AI Trust</div>
+          <p style="font-size:0.72rem; color:rgba(255,255,255,0.85); margin-bottom:1rem; line-height:1.6;">Investigators who identify data-oriented gaps show higher AI trust — aligned with tool readiness.</p>
+          <div class="findings-row"><span class="findings-row-label">Improved data collection tools</span><span class="findings-row-val val-hi">r = 0.323 ***</span></div>
+          <div class="findings-row"><span class="findings-row-label">Cross-functional team integration</span><span class="findings-row-val val-med">r = 0.247 ***</span></div>
+          <div class="findings-row"><span class="findings-row-label">Standardized investigation procedures</span><span class="findings-row-val val-med">r = 0.160 *</span></div>
+          <div class="findings-row"><span class="findings-row-label">Better HF training programs (most needed: 47.7%)</span><span class="findings-row-val val-lo">r = −0.025 n.s.</span></div>
+        </div>
+        <div class="findings-panel">
+          <div class="findings-panel-title">Professional Update Methods → AI Trust</div>
+          <p style="font-size:0.72rem; color:rgba(255,255,255,0.85); margin-bottom:1rem; line-height:1.6;">Digital professional development channels predict AI trust; traditional formats do not. Online learning and professional networks are significantly associated with higher trust; academic journals and conferences are not.</p>
+          <div class="findings-row"><span class="findings-row-label">Online courses / webinars</span><span class="findings-row-val val-hi">β = 0.378 **</span></div>
+          <div class="findings-row"><span class="findings-row-label">Social media / online forums</span><span class="findings-row-val val-hi">β = 0.329 **</span></div>
+          <div class="findings-row"><span class="findings-row-label">Professional networks / colleagues</span><span class="findings-row-val val-med">β = 0.296 *</span></div>
+          <div class="findings-row"><span class="findings-row-label">Academic journals (most traditional)</span><span class="findings-row-val val-lo">β = 0.196 n.s.</span></div>
+        </div>
+      </div>
+
+      <!-- HF Categories Mini-Grid -->
+      <div style="margin-bottom:3rem;">
+        <div class="findings-model-head">HF Investigation Categories × AI Trust (n=194)</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,0.07);">
+          <div style="background:rgba(255,255,255,0.04); padding:1.25rem;">
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.85); margin-bottom:0.3rem;">Interpersonal &amp; Communication</div>
+            <div style="font-family:var(--mono); font-size:1.05rem; color:#8fd4a0;">r = 0.257 ***</div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.60); margin-top:0.2rem;">Prevalence 51.5%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04); padding:1.25rem;">
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.85); margin-bottom:0.3rem;">Human-System Integration</div>
+            <div style="font-family:var(--mono); font-size:1.05rem; color:#8fd4a0;">r = 0.185 **</div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.60); margin-top:0.2rem;">Prevalence 59.3%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04); padding:1.25rem;">
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.85); margin-bottom:0.3rem;">Physiological &amp; Medical</div>
+            <div style="font-family:var(--mono); font-size:1.05rem; color:rgba(255,255,255,0.85);">r = 0.117 n.s.</div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.60); margin-top:0.2rem;">Prevalence 17.5%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04); padding:1.25rem;">
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.85); margin-bottom:0.3rem;">Org &amp; Environmental</div>
+            <div style="font-family:var(--mono); font-size:1.05rem; color:rgba(255,255,255,0.85);">r = 0.065 n.s.</div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.60); margin-top:0.2rem;">Prevalence 69.6%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04); padding:1.25rem;">
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.85); margin-bottom:0.3rem;">Individual Performance</div>
+            <div style="font-family:var(--mono); font-size:1.05rem; color:rgba(255,255,255,0.85);">r = 0.057 n.s.</div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.60); margin-top:0.2rem;">Prevalence 65.5%</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04); padding:1.25rem;">
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.85); margin-bottom:0.3rem;">Cognitive Factors</div>
+            <div style="font-family:var(--mono); font-size:1.05rem; color:rgba(255,255,255,0.85);">r = 0.057 n.s.</div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.60); margin-top:0.2rem;">Prevalence 49.0%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Implication callout -->
+      <div style="border:1px solid rgba(153,0,0,0.3); padding:2.5rem; background:rgba(153,0,0,0.06);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start;">
+          <div>
+            <p style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(153,0,0,0.65); margin-bottom:0.85rem;">Core Implication for ISASI Guidance</p>
+            <p style="font-size:0.875rem; color:var(--white); line-height:1.75; margin-bottom:1rem;">Organizational factors are non-significant. Trust calibration programs cannot rely on top-down institutional interventions alone — professional engagement is the lever.</p>
+            <p style="font-size:0.78rem; color:rgba(255,255,255,0.70); line-height:1.75;">Professional engagement interventions work broadly across all subgroups. Management/Safety roles show the strongest effect and represent a priority cohort for early adoption programs.</p>
+
+            <!-- Composite trust model from Denver 2025 -->
+            <div style="margin-top:1.75rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.08);">
+              <p style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:0.85rem;">Composite Trust Model · ISASI 2025 Denver</p>
+              <p style="font-size:0.78rem; color:rgba(255,255,255,0.70); line-height:1.75; margin-bottom:0.75rem;">Presented at ISASI Annual Seminar 2025: AI trust among aviation professionals is not a single variable. It is a dynamic composite of five distinct psychological mechanisms — each requiring a different intervention strategy.</p>
+              <p style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:0.5rem;">Click any component to expand</p>
+              <div style="display:flex; flex-direction:column; gap:0.3rem;" id="trust-model-list">
+
+                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Curiosity</span>
+                    <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
+                  </div>
+                  <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">The intrinsic motivation to explore AI tools out of genuine interest, independent of organizational pressure. Investigators high in curiosity seek out AI applications on their own initiative — predicting higher baseline trust and adoption readiness.</div>
+                </div>
+
+                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Learned Risk</span>
+                    <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
+                  </div>
+                  <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">Calibrated wariness derived from direct experience with past technology failures or misapplication. Distinct from simple resistance — learned risk reflects informed skepticism that can actually improve the quality of AI adoption by prompting verification behaviors rather than blind reliance.</div>
+                </div>
+
+                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Perceived Utility</span>
+                    <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
+                  </div>
+                  <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">The investigator's confidence that a specific AI tool meaningfully improves investigative outcomes — not AI in the abstract, but this tool for this task. Perceived utility is task-specific and context-dependent, which means training programs must demonstrate concrete investigative applications rather than general capability claims.</div>
+                </div>
+
+                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Structural Access</span>
+                    <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
+                  </div>
+                  <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">Whether the investigator is organizationally included in AI-enabled workflows — assigned to AI-assisted investigations, given access to AI platforms, included in tool evaluation. Structural access predicts trust because exposure drives familiarity; its absence explains why institutional mandates alone fail to produce adoption.</div>
+                </div>
+
+                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Message Framing</span>
+                    <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
+                  </div>
+                  <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">How AI is presented to investigators shapes initial trust orientation. Innovation framing ("this expands what investigations can do") works better with management and senior staff. Error-prevention framing ("this catches what humans miss") works better with frontline investigators. Mismatched framing actively suppresses adoption regardless of tool quality.</div>
+                </div>
+
+              </div>
+              <script>
+              function tmToggle(item){
+                var body = item.querySelector('.tm-body');
+                var chev = item.querySelector('.tm-chevron');
+                var isOpen = body.style.display !== 'none';
+                body.style.display = isOpen ? 'none' : 'block';
+                chev.textContent = isOpen ? '+' : '×';
+                chev.style.transform = isOpen ? '' : 'rotate(0deg)';
+                item.style.background = isOpen ? 'rgba(255,255,255,0.04)' : 'rgba(255,255,255,0.08)';
+                item.style.borderLeftColor = isOpen ? 'rgba(153,0,0,0.4)' : 'rgba(153,0,0,0.8)';
+              }
+              </script>
+            </div>
+          </div>
+          <div>
+            <p style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.80); margin-bottom:1rem;">Strategic Priorities (ISASI)</p>
+            <div style="display:flex; flex-direction:column; gap:0.6rem;">
+              <div style="display:flex; gap:1rem; align-items:baseline;"><span style="font-family:var(--mono); font-size:0.68rem; color:var(--red); min-width:20px;">01</span><span style="font-size:0.78rem; color:rgba(255,255,255,0.80); line-height:1.5;">Professional development programs — direct impact on key predictor (β=0.727)</span></div>
+              <div style="display:flex; gap:1rem; align-items:baseline;"><span style="font-family:var(--mono); font-size:0.68rem; color:var(--red); min-width:20px;">02</span><span style="font-size:0.78rem; color:rgba(255,255,255,0.80); line-height:1.5;">Enhanced resource access for all investigators</span></div>
+              <div style="display:flex; gap:1rem; align-items:baseline;"><span style="font-family:var(--mono); font-size:0.68rem; color:var(--red); min-width:20px;">03</span><span style="font-size:0.78rem; color:rgba(255,255,255,0.80); line-height:1.5;">Investigation experience diversification for junior professionals</span></div>
+              <div style="display:flex; gap:1rem; align-items:baseline;"><span style="font-family:var(--mono); font-size:0.68rem; color:var(--red); min-width:20px;">04</span><span style="font-size:0.78rem; color:rgba(255,255,255,0.80); line-height:1.5;">Digital-first knowledge sharing platforms over traditional formats</span></div>
+              <div style="display:flex; gap:1rem; align-items:baseline;"><span style="font-family:var(--mono); font-size:0.68rem; color:var(--red); min-width:20px;">05</span><span style="font-size:0.78rem; color:rgba(255,255,255,0.80); line-height:1.5;">Role-targeted messaging — high-power staff need innovation framing; frontline staff need error-prevention framing</span></div>
+              <div style="display:flex; gap:1rem; align-items:baseline;"><span style="font-family:var(--mono); font-size:0.68rem; color:var(--red); min-width:20px;">06</span><span style="font-size:0.78rem; color:rgba(255,255,255,0.80); line-height:1.5;">Professional network expansion for geographically isolated investigators</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Publications & Writing — moved from writing.html -->
+  <section id="research-writing" class="sec alt reveal">
+    <div class="w">
+      <div style="margin-bottom:2rem;">
+        <span class="label">Publications &amp; Writing</span>
+        <h2 class="h2">Essays, Working Papers &amp; Published Work</h2>
+        <p class="body" style="max-width:58ch;">Applied writing on behavioral science, aviation safety, and trust in complex systems — alongside working papers and published research output.</p>
+      </div>
+
+
+      <!-- Featured Essay (real content) -->
+      <div class="essay-featured">
+        <div class="essay-featured-inner">
+          <div>
+            <p class="essay-featured-tag">Trust &amp; Automation</p>
+            <h3 class="essay-featured-title">Why AI Is Driving More Demand for In-Person Research — And What That Tells Us About Trust</h3>
+            <div class="essay-featured-body">
+              <p>
+                Something counterintuitive is happening in behavioral research: as AI becomes more capable of 
+                completing online studies, researchers are increasingly turning back to in-person lab environments. 
+                The reason is straightforward but underappreciated — they need to be confident they are studying 
+                real human participants.
+              </p>
+              <p>
+                This shift is not primarily about methodology. It is about trust. Specifically, it is about the 
+                conditions under which a researcher can trust that the data they collect reflects genuine human 
+                cognition rather than automated response. When that trust is uncertain, the entire evidentiary 
+                foundation of behavioral science becomes shaky.
+              </p>
+              <p>
+                From where I sit — running a research lab that has seen in-person study hours jump 122% in a 
+                single year — this looks less like a logistical trend and more like a behavioral signal. It reveals 
+                something important about how trust in automated systems actually works: when the stakes are high 
+                enough, people revert to methods they can verify directly, even when those methods are more costly 
+                and inconvenient.
+              </p>
+              <p>
+                This is the core problem of automation trust. We don't need people to distrust AI — we need them 
+                to trust it appropriately. That means having clear signals for when AI output is reliable, when 
+                it isn't, and how to tell the difference. The behavioral science of trust calibration has a lot 
+                to say here. Aviation figured this out decades ago. Research methodology is learning it now.
+              </p>
+            </div>
+            <div class="essay-featured-meta">Essay · Research Notes · March 2026</div>
+          </div>
+          <div class="essay-related">
+            <p class="essay-related-lbl">Related Topics</p>
+            <span class="essay-chip">Trust in AI</span>
+            <span class="essay-chip">Automation Reliance</span>
+            <span class="essay-chip">Research Methods</span>
+            <span class="essay-chip">Human Factors</span>
+            <span class="essay-chip">Behavioral Science</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="writing-articles" class="writing-grid">
+
+        <div class="article">
+          <p class="article-tag">Aviation Safety</p>
+          <h3 class="article-title">What the D.C. Mid-Air Collision Reveals About Automation Oversight</h3>
+          <p class="article-excerpt">The collision between AA Flight 5342 and a U.S. Army helicopter raises urgent questions about how automation shapes the limits of human oversight — and what behavioral science says about those limits.</p>
+          <div class="article-abstract" style="display:none; margin-bottom:1rem;">
+            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">The January 2025 collision between American Eagle Flight 5342 and a U.S. Army Black Hawk helicopter near Reagan National Airport is the deadliest aviation accident in the United States in over two decades. It raises urgent questions that behavioral science is well-positioned to address: what happens to human oversight capacity when automation is present but imperfect? How do operators calibrate their attention when systems are mostly reliable? And what does the research on automation complacency tell us about how these accidents happen — and how they can be prevented?</p>
+          </div>
+          <div class="article-foot">
+            <span class="article-meta">Essay · In Development · 2026 · 6 min read</span>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+          </div>
+        </div>
+
+        <div class="article">
+          <p class="article-tag">AI Trust Research</p>
+          <h3 class="article-title">Professional Engagement Patterns and AI Trust Among Safety Investigators</h3>
+          <p class="article-excerpt">My research shows that how aviation safety professionals engage with their field — not just their technical training — predicts how they develop trust toward AI tools. What that means for AI adoption in safety-critical work.</p>
+          <div class="article-abstract" style="display:none; margin-bottom:1rem;">
+            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">The central finding from the ISASI survey — that professional engagement is the only significant predictor of AI trust among aviation safety investigators — raises a deeper question: what does professional engagement actually consist of, and why does it predict trust? This essay unpacks the construct, explores what it means for AI adoption in safety-critical fields, and argues that the behavioral science of trust calibration offers a more useful framework than conventional adoption models.</p>
+          </div>
+          <div class="article-foot">
+            <span class="article-meta">Research Note · In Development · 5 min read</span>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+          </div>
+        </div>
+
+        <div class="article">
+          <p class="article-tag">Human Factors</p>
+          <h3 class="article-title">What ISASI's Human Factors Working Group Is Getting Right</h3>
+          <p class="article-excerpt">The 2024 ISASI conference in Lisbon put human factors at the center of safety investigation practice. A look at what the field is learning — and what behavioral science still has to offer.</p>
+          <div class="article-abstract" style="display:none; margin-bottom:1rem;">
+            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">The 2024 ISASI Annual Seminar in Denver brought together 269 aviation safety professionals from 49 countries. The human factors working group sessions were notable for what they emphasized: not just the presence of human error in accidents, but the systemic and organizational conditions that shape it. This essay argues that the working group's framework aligns closely with consumer and organizational behavior research in ways that could meaningfully strengthen both fields.</p>
+          </div>
+          <div class="article-foot">
+            <span class="article-meta">Essay · In Development · 5 min read</span>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+          </div>
+        </div>
+
+        <div id="writing-framework" class="article">
+          <p class="article-tag">Aviation · Human Factors</p>
+          <h3 class="article-title">Next Generation Human Factors Guide — Contributor</h3>
+          <p class="article-excerpt">Contributing author to an active framework initiative through the ISASI Human Factors Working Group. The guide develops structured investigation taxonomies — including human fatigue, alertness, and performance shaping factors — for use in aviation safety investigation practice.</p>
+          <div class="article-abstract" style="display:none; margin-bottom:1rem;">
+            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">Contributing author to a framework initiative led by the ISASI Human Factors Working Group. The guide is developing structured taxonomies for human fatigue, alertness, and performance shaping factors in aviation safety investigation practice. My contribution focuses on the behavioral science of fatigue-related decision-making and the organizational conditions that increase or mitigate risk.</p>
+          </div>
+          <div class="article-foot">
+            <span class="article-meta">Framework Contribution · Active · ISASI · 3 min read</span>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+          </div>
+        </div>
+
+        <div class="article">
+          <p class="article-tag">Decision-Making</p>
+          <h3 class="article-title">Decisions Made Without Full Information</h3>
+          <p class="article-excerpt">Most consequential decisions — in aviation, in organizations, in research — happen before all the facts are in. What behavioral science reveals about how people navigate uncertainty, and how they can do it better.</p>
+          <div class="article-abstract" style="display:none; margin-bottom:1rem;">
+            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">Most consequential decisions — in aviation, in organizations, in research — happen before all the facts are in. Behavioral science has studied this problem extensively: how people represent uncertainty, what heuristics they rely on under time pressure, and where those heuristics systematically fail. This essay draws on research from naturalistic decision-making, signal detection theory, and organizational behavior to argue that the goal should not be to eliminate uncertainty but to improve the quality of reasoning under it.</p>
+          </div>
+          <div class="article-foot">
+            <span class="article-meta">Essay · In Development · 7 min read</span>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
   <footer>
@@ -1594,54 +1946,6 @@
       <span>brianhuh.com</span>
     </div>
   </footer>
-
-  <!-- ═══════════════════════════════════════════
-       SCRIPTS
-  ═══════════════════════════════════════════ -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Enable scroll animations (progressive enhancement)
-    document.documentElement.classList.add('js-ready');
-
-    // Nav scroll shadow
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('up', window.scrollY > 12), { passive: true });
-
-    // Active nav on scroll
-    const secs = [...document.querySelectorAll('section[id]')];
-    const links = [...document.querySelectorAll('.nav-menu a:not(.nav-contact)')];
-    const activeObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
-        }
-      });
-    }, { rootMargin: '-58px 0px -45% 0px', threshold: 0 });
-    secs.forEach(s => activeObs.observe(s));
-
-    // Scroll-triggered reveals
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-    }, { threshold: 0.04 });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-    // CV overlay
-    function openCV() {
-      var el = document.getElementById('cv-overlay');
-      el.style.display = 'block';
-      el.classList.add('open');
-      document.body.classList.add('cv-open');
-      el.scrollTop = 0;
-    }
-    function closeCV() {
-      var el = document.getElementById('cv-overlay');
-      el.classList.remove('open');
-      document.body.classList.remove('cv-open');
-      setTimeout(function() { el.style.display = 'none'; }, 350);
-    }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCV(); });
-  </script>
-
-  
 
   <!-- ═══════════════════════════════════════════
        SCRIPTS
@@ -2078,7 +2382,7 @@
               </div>
               <div class="cv-entry-date">Ongoing</div>
             </div>
-            <div class="cv-entry-body">Formal external partnership (P6) connecting Marshall Behavioral Research Lab methodology with USC Viterbi's aviation safety programs — bridging behavioral research tools and operational safety practice.</div>
+            <div class="cv-entry-body">Formal external partnership (P6) connecting Marshall Behavioral Research Lab methodology and infrastructure with USC Viterbi's aviation safety programs — extending the lab's research support into cross-school operational safety work.</div>
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
@@ -2272,7 +2576,19 @@
       } else { animate(); }
     })();
   </script>
-
+  <script>
+  (function(){
+    var path = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-menu > li > a').forEach(function(a){
+      var href = a.getAttribute('href') || '';
+      var page = href.split('/').pop().split('#')[0] || 'index.html';
+      if(page && path && (page === path || (path === '' && page === 'index.html'))){
+        a.style.color = 'var(--ink)';
+        a.style.fontWeight = '500';
+      }
+    });
+  })();
+  </script>
 
   <script>
   // Scroll progress bar
@@ -2288,17 +2604,37 @@
   </script>
 
   <script>
-  // Active nav highlighting
+  // Animate ISASI path bars on scroll
   (function(){
-    var path = window.location.pathname;
-    var links = document.querySelectorAll('.nav-links > li > a');
-    links.forEach(function(a){
-      if(a.getAttribute('href') && path.indexOf(a.getAttribute('href').replace('.html','')) > -1 && a.getAttribute('href') !== 'index.html'){
-        a.style.fontWeight = '600';
-        a.style.color = 'var(--ink)';
+    var fills = document.querySelectorAll('[data-w]');
+    if(!fills.length) return;
+    var section = document.getElementById('findings');
+    if(!section) return;
+    var animated = false;
+    var observer = new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting && !animated){
+        animated = true;
+        setTimeout(function(){
+          fills.forEach(function(el, i){
+            setTimeout(function(){
+              el.style.width = el.getAttribute('data-w');
+            }, i * 120);
+          });
+        }, 300);
       }
-    });
+    }, { threshold: 0.3 });
+    observer.observe(section);
   })();
+
+  // Toggle publication abstract
+  function toggleAbstract(btn) {
+    var card = btn.closest('.article');
+    var abstract = card.querySelector('.article-abstract');
+    var open = abstract.style.display !== 'none';
+    abstract.style.display = open ? 'none' : 'block';
+    btn.textContent = open ? '+ Abstract' : '− Abstract';
+    btn.setAttribute('aria-expanded', !open);
+  }
   </script>
 </body>
 </html>
