@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Research Assistant Pool Program — Brian N. Huh · USC Marshall</title>
+  <meta name="description" content="The Marshall Behavioral Research Lab Student Research Assistant Pool Program. Brian N. Huh works directly with every RA — one-on-one, inside the work, as a hands-on staff researcher at USC Marshall." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brianhuh.com/research-assistants.html" />
+  <meta property="og:title" content="Student Research Assistant Pool Program — Brian N. Huh · USC Marshall" />
+  <meta property="og:description" content="The Marshall Behavioral Research Lab Student Research Assistant Pool Program. Brian N. Huh works directly with every RA — one-on-one, inside the work, as a hands-on staff researcher at USC Marshall." />
+  <meta property="og:image" content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23990000'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='400' fill='white' letter-spacing='1'>BH</text></svg>" />
+  <link rel="canonical" href="https://brianhuh.com/research-assistants.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red:        #990000;
+      --red-dark:   #780000;
+      --red-pale:   #fdf5f5;
+      --bg:         #f9f8f5;
+      --bg-alt:     #f3f1ec;
+      --white:      #ffffff;
+      --border:     #e5e2db;
+      --border-soft:#ededea;
+      --ink:        #181816;
+      --ink-body:   #252523;
+      --ink-mid:    #4d4d4a;
+      --ink-soft:   #6e6e6a;
+      --ink-ghost:  #696966;
+      --serif:  'IBM Plex Serif', Georgia, serif;
+      --sans:   'IBM Plex Sans', system-ui, sans-serif;
+      --mono:   'IBM Plex Mono', monospace;
+      --max:    1200px;
+      --ease:   cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 2px;
+      background: var(--red); z-index: 99999;
+      width: 0%; transition: width 0.1s linear;
+      pointer-events: none;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); line-height: 1.7; }
+    ::selection { background: var(--red); color: #fff; }
+
+    /* ── Layout ── */
+    .w { max-width: var(--max); margin: 0 auto; padding: 0 2.5rem; }
+
+
+    /* ── Hero ── */
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .hero-tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--red);
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 9vw, 6.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .hero-name em { font-style: italic; color: var(--red); }
+    .hero-role {
+      font-family: var(--mono);
+      font-size: 0.70rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+      margin-bottom: 2rem;
+    }
+    .hero-lead {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--ink-body);
+      max-width: 58ch;
+      margin-bottom: 2rem;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.85rem 1.75rem;
+      transition: background 0.15s;
+    }
+    .hero-cta:hover { background: var(--red-dark); }
+
+    /* ── Sections ── */
+    .sec {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sec:last-child { border-bottom: none; }
+    .sec-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .sec-label::before {
+      content: '';
+      width: 16px;
+      height: 1px;
+      background: var(--red);
+    }
+    .sec-h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .body-text {
+      font-size: 0.9375rem;
+      color: var(--ink-body);
+      line-height: 1.8;
+      margin-bottom: 1.1rem;
+      max-width: 62ch;
+    }
+    .body-text:last-child { margin-bottom: 0; }
+
+    /* ── Profile block ── */
+    .profile-block {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 2.5rem;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 3px;
+      object-fit: cover;
+      object-position: top center;
+      border: 1px solid var(--border);
+    }
+    .profile-name {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .profile-title {
+      font-size: 0.82rem;
+      color: var(--ink-mid);
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+    .credential-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .cred-tag {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border: 1px solid var(--border);
+      color: var(--ink-mid);
+      background: var(--bg-alt);
+    }
+
+    /* ── What you'll do ── */
+    .do-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      margin-top: 1.75rem;
+    }
+    .do-cell {
+      background: var(--white);
+      padding: 1.5rem;
+    }
+    .do-num {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--red);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+    .do-title {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .do-body {
+      font-size: 0.8rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    /* ── Who this is for ── */
+    .fit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .fit-card {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+    .fit-card.good { border-top: 3px solid var(--red); }
+    .fit-card.less { border-top: 3px solid var(--border); }
+    .fit-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+    .fit-card.good .fit-label { color: var(--red); }
+    .fit-card.less .fit-label { color: var(--ink-ghost); }
+    .fit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .fit-list li {
+      font-size: 0.8375rem;
+      color: var(--ink-mid);
+      line-height: 1.5;
+      display: flex;
+      gap: 0.6rem;
+      align-items: baseline;
+    }
+    .fit-list li::before {
+      content: '—';
+      color: var(--border);
+      flex-shrink: 0;
+      font-size: 0.75rem;
+    }
+    .fit-card.good .fit-list li::before { color: var(--red); }
+
+    /* ── Stats row ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+    .stat-cell {
+      background: var(--white);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .stat-desc {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+      line-height: 1.4;
+    }
+
+    /* ── Quote block ── */
+    .quote-block {
+      background: var(--red);
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .quote-text {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #fff;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .quote-attr {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ── Alumni strip ── */
+    .alumni-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      margin-top: 1.75rem;
+    }
+    .alumni-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-soft);
+      align-items: center;
+    }
+    .alumni-row:last-child { border-bottom: none; }
+    .alumni-name-text {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .alumni-role-text {
+      font-size: 0.775rem;
+      color: var(--ink-soft);
+      margin-top: 0.1rem;
+    }
+    .alumni-dest {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.07em;
+      color: var(--ink-mid);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--ink);
+      padding: 3rem;
+      margin-top: 2rem;
+    }
+    .contact-h {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .contact-h em { font-style: italic; color: rgba(255,255,255,0.55); }
+    .contact-body {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.70);
+      line-height: 1.8;
+      max-width: 50ch;
+      margin-bottom: 2rem;
+    }
+    .contact-ways {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .contact-way {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-way-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      min-width: 70px;
+    }
+    .contact-way-val {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .contact-way-val a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .contact-way-val a:hover { color: #fff; text-decoration: underline; }
+    .contact-note {
+      font-size: 0.775rem;
+      color: rgba(255,255,255,0.40);
+      line-height: 1.7;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 1.5rem;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      margin-top: 1.75rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 1.25rem 1.5rem;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .faq-a {
+      font-size: 0.8375rem;
+      color: var(--ink-mid);
+      line-height: 1.75;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      padding: 2rem 0;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+    .footer .w {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .footer-text {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+    }
+    .footer-link {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--red);
+      text-decoration: none;
+    }
+    .footer-link:hover { text-decoration: underline; }
+
+    /* ── Reveal animation ── */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s var(--ease), transform 0.55s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .do-grid, .fit-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .profile-block { grid-template-columns: 1fr; }
+      .profile-img { width: 90px; height: 90px; }
+      .contact-block { padding: 2rem 1.5rem; }
+      .w { padding: 0 1.25rem; }
+    }
+
+    /* ─────────────────────────────────────────────
+       NAV
+    ───────────────────────────────────────────── */
+    #nav {
+      position: fixed; inset: 0 0 auto; z-index: 300; height: 56px;
+      display: flex; align-items: center;
+      background: rgba(249, 248, 245, 0.9);
+      backdrop-filter: blur(20px) saturate(1.6);
+      -webkit-backdrop-filter: blur(20px) saturate(1.6);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    #nav.up { box-shadow: 0 1px 24px rgba(0,0,0,0.07); }
+
+    .nav-w {
+      max-width: var(--max); margin: 0 auto; padding: 0 1.5rem;
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      display: flex; align-items: baseline; gap: 0.4rem; flex-shrink: 0;
+      font-family: var(--serif); font-size: 0.9rem; font-weight: 400; color: var(--ink);
+    }
+    .nav-brand-sep {
+      width: 1px; height: 12px; background: var(--border); align-self: center;
+    }
+    .nav-brand-sub {
+      font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--ink-soft);
+    }
+
+    .nav-menu { display: flex; align-items: center; list-style: none; gap: 0; }
+    .nav-menu a {
+      font-size: 0.72rem; letter-spacing: 0.01em; color: var(--ink-mid);
+      padding: 0.28rem 0.48rem; border-radius: 100px; transition: color 0.18s, background 0.18s;
+      white-space: nowrap;
+    }
+    .nav-menu a:hover, .nav-menu a.on { color: var(--ink); background: rgba(0,0,0,0.055); }
+
+    .nav-contact {
+      font-size: 0.68rem !important; font-weight: 500 !important;
+      color: var(--red) !important;
+      border: 1px solid rgba(153,0,0,0.22) !important;
+      padding: 0.26rem 0.65rem !important;
+      transition: background 0.18s, color 0.18s, border-color 0.18s !important;
+      flex-shrink: 0;
+    }
+    .nav-contact:hover {
+      background: var(--red) !important; color: #fff !important;
+      border-color: var(--red) !important;
+    }
+
+    /* ─── DROPDOWNS ─── */
+    .nav-menu li { position: relative; }
+    /* Invisible hover bridge prevents gap from closing dropdown */
+    .has-dropdown::before {
+      content: ''; position: absolute;
+      top: 100%; left: -10px; right: -10px; height: 10px;
+      background: transparent; z-index: 9998;
+    }
+    .nav-dropdown {
+      display: none; opacity: 0; pointer-events: none;
+      position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%);
+      background: #1a1917; border: 1px solid rgba(255,255,255,0.1);
+      min-width: 260px; z-index: 9999; padding: 0.5rem 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+    }
+    .nav-dropdown.open { display: block !important; opacity: 1; pointer-events: auto; }
+    .nav-dropdown a {
+      display: block; padding: 0.6rem 1.25rem;
+      font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.09em;
+      text-transform: uppercase; color: rgba(255,255,255,0.55);
+      text-decoration: none; white-space: nowrap;
+      background: none; border-radius: 0;
+    }
+    .nav-dropdown a:hover { background: rgba(255,255,255,0.07) !important; color: rgba(255,255,255,0.9) !important; }
+    .has-dropdown > a::after { content: " ▾"; font-size: 0.70rem; opacity: 0.4; }
+
+
+    /* ─── HAMBURGER ─── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column; justify-content: center; align-items: center;
+      gap: 5px; background: none; border: none; cursor: pointer;
+      padding: 6px; margin-left: 0.5rem; flex-shrink: 0;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--ink); border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── MOBILE DRAWER ─── */
+    .mobile-drawer {
+      display: none;
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: #fff; z-index: 9000;
+      overflow-y: auto; overscroll-behavior: contain;
+    }
+    .mobile-drawer.open { display: block; }
+    .mobile-drawer-inner { padding: 1.25rem 1.5rem 3rem; }
+    .mobile-drawer-close {
+      display: block; margin-left: auto; margin-bottom: 1.5rem;
+      background: none; border: none; cursor: pointer;
+      font-size: 1.2rem; color: var(--ink-mid); padding: 4px 8px;
+    }
+    .mobile-nav { display: flex; flex-direction: column; }
+    .mobile-nav a { text-decoration: none; color: var(--ink); }
+    .mobile-nav-section {
+      font-family: var(--serif); font-size: 1.05rem; font-weight: 400;
+      padding: 0.75rem 0; border-bottom: 1px solid var(--border);
+      display: block;
+    }
+    .mobile-nav-group {
+      padding: 0.35rem 0 0.35rem 1rem;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .mobile-nav-group a {
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink-mid);
+      padding: 0.4rem 0; display: block;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .mobile-nav-group a:hover { color: var(--ink); }
+    .mobile-nav-cta { margin-top: 2rem; }
+
+
+    /* ── Body offset for fixed nav ── */
+    body { padding-top: 56px; }
+    .hero { padding-top: 5rem; }
+
+    /* ── Skip navigation link ── */
+    .skip-nav {
+      position: absolute; top: -100px; left: 1rem;
+      background: var(--red); color: #fff;
+      padding: 0.5rem 1rem; font-size: 0.8rem;
+      font-family: var(--mono); letter-spacing: 0.04em;
+      text-decoration: none; z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-nav:focus { top: 1rem; }
+
+    /* ── Respect reduced-motion preference ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .js-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+
+    /* ── Focus visible styles ── */
+    :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+  </style>
+    <meta property="og:title" content="Student Research Assistant Pool Program — Brian N. Huh · USC Marshall" />
+  <meta property="og:description" content="The Marshall Behavioral Research Lab Student Research Assistant Pool Program. Brian N. Huh works directly with every RA — one-on-one, inside the work, as a hands-on staff researcher at USC Marshall." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brianhuh.com/research-assistants" />
+  <link rel="canonical" href="https://brianhuh.com/research-assistants">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Student Research Assistant Pool Program — Brian N. Huh · USC Marshall",
+    "url": "https://brianhuh.com/research-assistants.html",
+    "author": {
+      "@type": "Person",
+      "name": "Brian N. Huh",
+      "url": "https://brianhuh.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div id="scroll-progress"></div>
+
+  <nav id="nav" aria-label="Main navigation">
+    <div class="nav-w">
+      <a href="index.html" class="nav-brand" aria-label="Brian N. Huh">
+        Brian N. Huh
+        <span class="nav-brand-sep"></span>
+        <span class="nav-brand-sub">Behavioral Scientist · USC Marshall</span>
+      </a>
+      <ul class="nav-menu">
+        <li class="has-dropdown">
+          <a href="research.html">Research</a>
+          <div class="nav-dropdown" style="display:none;">
+            <a href="research.html#aviation">Aviation Human Factors</a>
+            <a href="research.html#findings">AI Trust &amp; Technology</a>
+            <a href="research.html#research-writing">Publications &amp; Writing</a>
+            <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
+            </div>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="lab.html">Lab</a>
+          <div class="nav-dropdown" style="display:none;">
+            <a href="lab.html#lab-people">People</a>
+            <a href="lab.html#systems-coral">Infrastructure</a>
+            <a href="lab.html#systems-stats">Stats &amp; Growth</a>
+            <a href="lab.html#lab-writing">Field Research</a>
+            <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team</span>
+            </div>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="index.html#about">About</a>
+          <div class="nav-dropdown" style="display:none;">
+            <a href="index.html#about">Bio &amp; Background</a>
+            <a href="research-assistants.html">Mentorship</a>
+            <a href="index.html#contact">Contact</a>
+            <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Bio · Mentorship · Contact</span>
+            </div>
+          </div>
+        </li>
+        <li><a href="cv.html" class="nav-contact">CV</a></li>
+      </ul>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" style="display:none;">
+    <div class="mobile-drawer-inner">
+      <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close menu">✕</button>
+      <nav class="mobile-nav">
+        <a href="research.html" class="mobile-nav-section">Research</a>
+        <div class="mobile-nav-group">
+          <a href="research.html#aviation">Aviation Human Factors</a>
+          <a href="research.html#findings">AI Trust &amp; Technology</a>
+          <a href="research.html#research-writing">Publications &amp; Writing</a>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Aviation human factors · AI trust · Publications</span>
+        </div>
+        <a href="lab.html" class="mobile-nav-section">Lab</a>
+        <div class="mobile-nav-group">
+          <a href="lab.html#lab-people">People</a>
+          <a href="lab.html#systems-coral">Infrastructure</a>
+          <a href="lab.html#systems-stats">Stats &amp; Growth</a>
+          <a href="lab.html#lab-writing">Field Research</a>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Marshall Behavioral Lab · Infrastructure · Team</span>
+        </div>
+        <a href="index.html#about" class="mobile-nav-section">About</a>
+        <div class="mobile-nav-group">
+          <a href="index.html#about">Bio &amp; Background</a>
+          <a href="research-assistants.html">Mentorship</a>
+          <a href="index.html#contact">Contact</a>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Bio · Mentorship · Contact</span>
+        </div>
+        <div class="mobile-nav-cta">
+          <a href="cv.html" style="display:block; background:var(--red);color:#fff;padding:0.75rem 1.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;text-align:center;text-decoration:none;">Curriculum Vitae →</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <div class="hero">
+    <div class="w">
+      <p class="hero-tag">Student RA Pool · USC Marshall</p>
+      <h1 class="hero-name">The Research<br><em>Assistant Program</em></h1>
+      <p class="hero-role">Brian N. Huh &nbsp;·&nbsp; Behavioral Scientist &amp; Researcher · USC Marshall</p>
+      <p class="hero-lead">
+        The Marshall Behavioral Research Lab maintains an active pool of undergraduate and 
+        graduate Research Assistants. Brian works directly with every one of them — 
+        supervising their work, developing their skills, and mentoring them one-on-one 
+        as a staff researcher present in the work.
+      </p>
+      <a href="#ra-program" class="hero-cta" style="display:inline-block; margin-top:1.5rem; background:var(--red); color:#fff; padding:0.65rem 1.4rem; font-family:var(--mono); font-size:0.65rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none;">SRA Pool Program →</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       TRACK A: RA PROGRAM
+  ═══════════════════════════════════════════ -->
+  <div id="ra-program" class="sec reveal" style="background:var(--white);">
+    <div class="w">
+      <p class="sec-label">The Lab</p>
+      <h2 class="sec-h2">The Student Research Assistant Pool Program</h2>
+      <p class="body-text" style="max-width:62ch;">
+        The Marshall Behavioral Research Lab maintains an active pool of undergraduate and 
+        graduate Research Assistants who support faculty study teams across the school. 
+        Brian manages and works directly with all of them — not as a program director 
+        at a remove, but as a hands-on staff researcher who is present in the work. 
+        Every RA gets one-on-one mentorship as a natural consequence of how the lab operates.
+      </p>
+      <p class="body-text" style="max-width:62ch;">
+        This is not a structured curriculum or external coaching arrangement. It is 
+        real research, running in a real lab, supervised directly by someone who 
+        has been doing this for eight years. Students who do this work learn what 
+        empirical behavioral research actually looks and feels like — the design 
+        decisions, the messiness of data, and the standards that separate rigorous 
+        work from noise.
+      </p>
+
+      <!-- Stats row -->
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin:2.5rem 0;">
+        <div style="background:var(--bg); padding:1.5rem 1.75rem;">
+          <div style="font-family:var(--serif); font-size:2.25rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.3rem;">139</div>
+          <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft);">RAs trained since 2017</div>
+        </div>
+        <div style="background:var(--bg); padding:1.5rem 1.75rem;">
+          <div style="font-family:var(--serif); font-size:2.25rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.3rem;">392</div>
+          <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft);">Person-semesters</div>
+        </div>
+        <div style="background:var(--bg); padding:1.5rem 1.75rem;">
+          <div style="font-family:var(--serif); font-size:2.25rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.3rem;">53%</div>
+          <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft);">Continue 3+ semesters</div>
+        </div>
+        <div style="background:var(--bg); padding:1.5rem 1.75rem;">
+          <div style="font-family:var(--serif); font-size:2.25rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.3rem;">37</div>
+          <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft);">Active RAs — current pool</div>
+        </div>
+      </div>
+
+      <!-- What RAs do -->
+      <p class="sec-label" style="margin-top:2.5rem;">What RAs actually do</p>
+      <div class="do-grid">
+        <div class="do-cell">
+          <div class="do-num">01</div>
+          <div class="do-title">Run live studies</div>
+          <div class="do-body">RAs staff and execute in-person behavioral studies — managing participants, operating equipment, maintaining protocol fidelity, and handling data collection in real time. This is direct, hands-on research experience that classroom work cannot replicate.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">02</div>
+          <div class="do-title">Handle real data</div>
+          <div class="do-body">Data cleaning, quality checks, flagging anomalies, preparing datasets for analysis. Students learn what real data looks like — which is messier and more demanding than textbook examples.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">03</div>
+          <div class="do-title">Learn research design</div>
+          <div class="do-body">Working alongside faculty study teams, RAs see how studies are designed, what tradeoffs go into methodological choices, and what makes a study rigorous enough to produce interpretable results.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">04</div>
+          <div class="do-title">Develop technical skills</div>
+          <div class="do-body">Qualtrics survey design, eye-tracking operation (Tobii), psychophysiology systems (BIOPAC), SONA participant management, data pipelines. Practical skills with real tools used in active research.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">05</div>
+          <div class="do-title">Work across 11 departments</div>
+          <div class="do-body">The lab serves the full range of Marshall's academic units — RAs encounter research questions from marketing, organizational behavior, finance, management, and accounting, among others. Breadth is built in.</div>
+        </div>
+        <div class="do-cell">
+          <div class="do-num">06</div>
+          <div class="do-title">Receive direct mentorship</div>
+          <div class="do-body">Brian works directly with every RA — on the research, on professional development, on understanding what they are doing and why. This is not mentorship at a remove. It is built into the daily structure of how the lab runs.</div>
+        </div>
+      </div>
+
+      <!-- Alumni outcomes -->
+      <p class="sec-label" style="margin-top:3rem;">Where program alumni go</p>
+      <p class="body-text">Students who work in the lab leave with demonstrated skills — and the outcomes reflect that.</p>
+      <div class="alumni-strip" style="margin-top:1.25rem;">
+        <div class="alumni-row">
+          <div>
+            <div class="alumni-name-text">RA alumni — technology</div>
+            <div class="alumni-role-text">Product, data, analytics, and research roles at tech companies</div>
+          </div>
+          <div class="alumni-dest">Industry</div>
+        </div>
+        <div class="alumni-row">
+          <div>
+            <div class="alumni-name-text">RA alumni — consulting &amp; finance</div>
+            <div class="alumni-role-text">Strategy consulting, investment banking, and financial analysis</div>
+          </div>
+          <div class="alumni-dest">Industry</div>
+        </div>
+        <div class="alumni-row">
+          <div>
+            <div class="alumni-name-text">RA alumni — graduate &amp; professional school</div>
+            <div class="alumni-role-text">PhD programs, MBA programs, law, and medicine</div>
+          </div>
+          <div class="alumni-dest">Graduate School</div>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem; padding:1.5rem 1.75rem; background:var(--bg-alt); border:1px solid var(--border); border-left:3px solid var(--red); max-width:62ch;">
+        <p style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--red); margin-bottom:0.6rem;">Student Research Assistant Pool · How to Join</p>
+        <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">RA positions are recruited through USC Marshall. Positions are posted through the lab and filled each semester. Students interested in joining the Student Research Assistant Pool should reach out directly to inquire about current availability.</p>
+        <a href="lab.html#lab-people" style="display:inline-block; margin-top:1rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.08em; color:var(--red); text-decoration:none; border-bottom:1px solid rgba(153,0,0,0.3); padding-bottom:1px;">See the current team →</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <div class="sec reveal" id="contact" style="background:var(--white);">
+    <div class="w">
+      <p class="sec-label">Get in Touch</p>
+      <h2 class="sec-h2">Interested in joining the Student Research Assistant Pool?</h2>
+      <p class="body-text" style="max-width:58ch;">
+        RA positions are recruited through USC Marshall each semester. 
+        Students interested in joining the Student Research Assistant Pool should send a short email — 
+        include your year, department, and a sentence about why you are 
+        interested in the lab.
+      </p>
+
+      <div style="margin-top:2rem; max-width:40ch;">
+        <div style="padding:1.5rem; background:var(--bg-alt); border:1px solid var(--border); border-top:3px solid var(--red);">
+          <p style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.6rem;">Student Research Assistant Pool — Inquiries</p>
+          <p style="font-size:0.825rem; color:var(--ink-body); line-height:1.75; margin-bottom:0.85rem;">Marshall Behavioral Research Lab · USC Marshall School of Business</p>
+          <a href="/cdn-cgi/l/email-protection#fa928f9298ba979b8889929b9696d48f8999d49f9e8f" style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.07em; color:var(--red); text-decoration:none; border-bottom:1px solid rgba(153,0,0,0.3); padding-bottom:1px;"><span class="__cf_email__" data-cfemail="127a677a70527f7360617a737e7e3c6761713c777667">[email&#160;protected]</span> →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+
+  </main>
+  <footer>
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">Brian N. Huh</p>
+        <p class="footer-brand-sub">Behavioral Science · Human Decision Systems · Aviation &amp; Technology</p>
+      </div>
+      <div>
+        <p class="footer-col-lbl">Navigation</p>
+        <ul class="footer-list">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="research.html#aviation">Aviation Human Factors</a></li>
+          <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="research-assistants.html">Student RA Pool</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-lbl">Contact</p>
+        <ul class="footer-list">
+          <li><a href="/cdn-cgi/l/email-protection#cea6bba6ac8ea3afbcbda6afa2a2e0bbbdade0abaabb" class="red"><span class="__cf_email__" data-cfemail="87eff2efe5c7eae6f5f4efe6ebeba9f2f4e4a9e2e3f2">[email&#160;protected]</span></a></li>
+          <li><a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="cv.html">View CV</a></li>
+          <li><a href="https://usc.edu" target="_blank" rel="noopener">USC Marshall</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Brian N. Huh. All rights reserved.</span>
+      <span>brianhuh.com</span>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  </script>
+
+  <script>
+  (function(){
+    var bar = document.getElementById('scroll-progress');
+    if(bar) window.addEventListener('scroll', function(){
+      var d = document.documentElement;
+      bar.style.width = (d.scrollHeight - window.innerHeight > 0 ? (window.scrollY / (d.scrollHeight - window.innerHeight)) * 100 : 0) + '%';
+    }, { passive: true });
+  })();
+  (function(){
+
+  <script>
+    document.documentElement.classList.add('js-ready');
+    const nav = document.getElementById('nav');
+    if(nav) window.addEventListener('scroll', () => nav.classList.toggle('up', window.scrollY > 12), { passive: true });
+    // Scroll progress
+    (function(){
+      var bar = document.getElementById('scroll-progress');
+      if(!bar) return;
+      window.addEventListener('scroll', function(){
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        var docH = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (docH > 0 ? (scrollTop / docH) * 100 : 0) + '%';
+      }, { passive: true });
+    })();
+  </script>
+
+  <script>
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.04 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+  </script>
+
+  <script>
+        // ─── MOBILE NAV ───
+    (function() {
+      var hamburger = document.getElementById('nav-hamburger');
+      var drawer = document.getElementById('mobile-drawer');
+      var closeBtn = document.getElementById('mobile-drawer-close');
+      if (!hamburger || !drawer) return;
+
+      function openDrawer() {
+        drawer.style.display = 'block';
+        drawer.classList.add('open');
+        hamburger.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeDrawer() {
+        drawer.classList.remove('open');
+        drawer.style.display = 'none';
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function() {
+        drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+      });
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+
+      // Close on any link click inside drawer
+      drawer.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', closeDrawer);
+      });
+
+      // Close on ESC
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeDrawer();
+      });
+    })();
+
+    // ─── DROPDOWN NAV ───
+    (function() {
+      var items = document.querySelectorAll('.has-dropdown');
+      var closeTimers = new WeakMap();
+
+      var closeAll = function() {
+        items.forEach(function(li) {
+          var d = li.querySelector('.nav-dropdown');
+          if (d) { d.classList.remove('open'); d.style.display = 'none'; }
+          var t = closeTimers.get(li);
+          if (t) { clearTimeout(t); closeTimers.delete(li); }
+        });
+      };
+
+      items.forEach(function(li) {
+        var link = li.querySelector('a');
+        var dropdown = li.querySelector('.nav-dropdown');
+        if (!dropdown) return;
+
+        // Desktop: hover — open immediately, close with delay
+        li.addEventListener('mouseenter', function() {
+          var t = closeTimers.get(li);
+          if (t) { clearTimeout(t); closeTimers.delete(li); }
+          closeAll();
+          dropdown.classList.add('open');
+          dropdown.style.display = 'block';
+        });
+        li.addEventListener('mouseleave', function() {
+          var t = setTimeout(function() {
+            dropdown.classList.remove('open');
+            dropdown.style.display = 'none';
+          }, 120);
+          closeTimers.set(li, t);
+        });
+
+        // Keep open when hovering the dropdown itself
+        dropdown.addEventListener('mouseenter', function() {
+          var t = closeTimers.get(li);
+          if (t) { clearTimeout(t); closeTimers.delete(li); }
+        });
+        dropdown.addEventListener('mouseleave', function() {
+          var t = setTimeout(function() {
+            dropdown.classList.remove('open');
+            dropdown.style.display = 'none';
+          }, 80);
+          closeTimers.set(li, t);
+        });
+
+        // Touch / click: toggle
+        link.addEventListener('click', function(e) {
+          var isOpen = dropdown.classList.contains('open');
+          closeAll();
+          if (!isOpen) {
+            e.preventDefault();
+            dropdown.classList.add('open');
+            dropdown.style.display = 'block';
+          }
+        });
+      });
+
+      // Click outside closes all dropdowns
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.has-dropdown')) {
+          document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
+            d.classList.remove('open');
+            d.style.display = 'none';
+          });
+        }
+      });
+    })();
+  </script>
+
+  <script>
+  (function(){
+    var path = window.location.pathname;
+    var filename = path.split

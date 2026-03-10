@@ -3,29 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brian N. Huh — Behavioral Scientist · Aviation Safety & AI Trust · USC Marshall</title>
-  <meta name="description" content="Behavioral scientist studying aviation accidents, AI trust, and high-stakes decision-making. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
-
-  <!-- Open Graph / Social sharing -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://brianhuh.com/" />
-  <meta property="og:title" content="Brian N. Huh — Behavioral Scientist · Aviation Safety & AI Trust · USC Marshall" />
-  <meta property="og:description" content="Behavioral scientist studying aviation accidents, AI trust, and high-stakes decision-making. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
-  <meta property="og:image"       content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
-  <meta name="twitter:card"       content="summary_large_image" />
-  <meta name="twitter:title" content="Brian N. Huh — Behavioral Scientist · Aviation Safety & AI Trust · USC Marshall" />
-  <meta name="twitter:description" content="Behavioral scientist studying aviation accidents, AI trust, and high-stakes decision-making. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
-  <meta name="twitter:image"      content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
-
-  <!-- Favicon: crimson BH monogram -->
+  <title>Curriculum Vitae — Brian N. Huh · USC Marshall</title>
+  <meta name="description" content="Curriculum vitae of Brian N. Huh — behavioral scientist, lab manager, aviation human factors researcher at USC Marshall School of Business." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brianhuh.com/cv.html" />
+  <meta property="og:title" content="CV — Brian N. Huh · USC Marshall" />
+  <meta property="og:description" content="Curriculum vitae of Brian N. Huh — behavioral scientist, aviation human factors researcher, and lab manager at USC Marshall." />
+  <meta property="og:image" content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://brianhuh.com/cv.html" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23990000'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='400' fill='white' letter-spacing='1'>BH</text></svg>" />
-
-  <link rel="canonical" href="https://brianhuh.com">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet" />
 
   <style>
+
     /* ─────────────────────────────────────────────
        TOKENS
     ───────────────────────────────────────────── */
@@ -659,7 +652,7 @@
       background: var(--ink); padding: 2.5rem; margin-top: 2.5rem;
     }
     .contact-note-head {
-      font-family: var(--serif); font-size: 1.1875rem; font-weight: 400;
+      font-family: var(--serif); font-size: 1.125rem; font-weight: 400;
       color: rgba(255,255,255,0.9); margin-bottom: 0.85rem; line-height: 1.3;
     }
     .contact-note-body { font-size: 0.875rem; color: rgba(255,255,255,0.80); line-height: 1.8; }
@@ -1070,29 +1063,357 @@
       color: white; line-height: 1; letter-spacing: -0.02em; }
     .findings-stat-label { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.12em;
       text-transform: uppercase; color: rgba(255,255,255,0.70); margin-top: 0.4rem; }
-    a.feat-row:hover { background: var(--bg-alt) !important; }</style>
+    a.feat-row:hover { background: var(--bg-alt) !important; }
+/* ─────────────────────────────────────────────
+       CV OVERLAY
+    ───────────────────────────────────────────── */
+    #cv-overlay {
+      position: fixed; inset: 0; z-index: 500;
+      background: var(--bg);
+      overflow-y: auto; overflow-x: hidden;
+      opacity: 0; pointer-events: none;
+      transform: translateY(24px);
+      transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+    }
+    #cv-overlay.open {
+      opacity: 1; pointer-events: all; transform: none;
+    }
+
+    /* lock body scroll when CV is open */
+    body.cv-open { overflow: hidden; }
+
+    .cv-topbar {
+      position: sticky; top: 0; z-index: 10; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem;
+      background: rgba(249,248,245,0.95);
+      backdrop-filter: blur(20px) saturate(1.6);
+      -webkit-backdrop-filter: blur(20px) saturate(1.6);
+      border-bottom: 1px solid var(--border);
+    }
+    .cv-topbar-brand {
+      font-family: var(--serif); font-size: 0.9375rem; color: var(--ink);
+      display: flex; align-items: baseline; gap: 0.5rem;
+    }
+    .cv-topbar-brand span {
+      font-family: var(--mono); font-size: 0.67rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-soft);
+    }
+    .cv-topbar-right { display: flex; align-items: center; gap: 0.5rem; }
+    .cv-print-btn {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.03em;
+      padding: 0.28rem 0.85rem; background: transparent;
+      border: 1px solid var(--border); color: var(--ink-mid);
+      cursor: pointer; transition: all 0.18s; font-family: var(--sans);
+    }
+    .cv-print-btn:hover { color: var(--ink); border-color: var(--ink-soft); }
+    .cv-close-btn {
+      display: flex; align-items: center; gap: 0.35rem;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.03em;
+      padding: 0.28rem 0.85rem; background: var(--red); color: #fff;
+      border: 1px solid var(--red); cursor: pointer;
+      transition: background 0.18s; font-family: var(--sans);
+    }
+    .cv-close-btn:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+    .cv-page { max-width: 900px; margin: 0 auto; padding: 0 2.5rem 6rem; }
+
+    .cv-header {
+      padding-top: 4.5rem; padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 3rem; align-items: end;
+    }
+    .cv-name {
+      font-family: var(--serif); font-weight: 300;
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      line-height: 0.97; letter-spacing: -0.03em; color: var(--ink);
+    }
+    .cv-name em { font-style: italic; color: var(--red); }
+    .cv-tagline {
+      font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--ink-soft); margin-top: 1.1rem;
+      display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap;
+    }
+    .cv-tagline-sep { color: var(--ink-ghost); }
+    .cv-meta { text-align: right; }
+    .cv-meta-item { font-size: 0.8125rem; color: var(--ink-mid); line-height: 1.85; }
+    .cv-meta-item a { color: var(--red); }
+
+    .cv-section {
+      display: grid; grid-template-columns: 180px 1fr;
+      gap: 3rem; padding: 3.25rem 0; border-bottom: 1px solid var(--border);
+    }
+    .cv-section:last-child { border-bottom: none; }
+    .cv-sec-label {
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.13em;
+      text-transform: uppercase; color: var(--ink-soft); padding-top: 0.2rem;
+      position: sticky; top: 68px; align-self: start;
+    }
+    .cv-sec-label::before {
+      content: ''; display: block; width: 16px; height: 1px;
+      background: var(--red); margin-bottom: 0.55rem;
+    }
+
+    .cv-entry { margin-bottom: 2.25rem; }
+    .cv-entry:last-child { margin-bottom: 0; }
+    .cv-entry-head {
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 1rem; align-items: baseline; margin-bottom: 0.25rem;
+    }
+    .cv-entry-title {
+      font-family: var(--serif); font-size: 1rem; font-weight: 400;
+      color: var(--ink); line-height: 1.3;
+    }
+    .cv-entry-org { font-size: 0.875rem; color: var(--red); margin-bottom: 0.1rem; }
+    .cv-entry-date {
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em;
+      color: var(--ink-ghost); white-space: nowrap; align-self: start; padding-top: 3px;
+    }
+    .cv-entry-body {
+      font-size: 0.875rem; color: var(--ink-body); line-height: 1.8;
+      margin-top: 0.55rem; max-width: 580px;
+    }
+    .cv-entry-bullets {
+      margin-top: 0.65rem; list-style: none; display: flex; flex-direction: column; gap: 0.3rem;
+    }
+    .cv-entry-bullets li {
+      font-size: 0.875rem; color: var(--ink-body); line-height: 1.7;
+      padding-left: 1.1rem; position: relative;
+    }
+    .cv-entry-bullets li::before {
+      content: '—'; position: absolute; left: 0;
+      color: var(--red); font-size: 0.7rem; top: 0.1em;
+    }
+    .cv-stat { color: var(--ink); font-weight: 600; }
+
+    .cv-metrics {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
+      margin-top: 1.5rem;
+    }
+    .cv-metric-cell { background: var(--white); padding: 1.1rem 1.35rem; }
+    .cv-metric-num {
+      font-family: var(--serif); font-weight: 300;
+      font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+      color: var(--red); letter-spacing: -0.02em; line-height: 1; margin-bottom: 0.25rem;
+    }
+    .cv-metric-lbl { font-size: 0.7rem; color: var(--ink-mid); line-height: 1.4; }
+
+    .cv-skill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .cv-skill-group-label {
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.65rem;
+    }
+    .cv-skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .cv-skill-tag {
+      font-size: 0.75rem; padding: 0.18rem 0.7rem;
+      border: 1px solid var(--border); color: var(--ink-body); background: var(--bg);
+    }
+
+    .cv-interest-list { display: flex; flex-direction: column; }
+    .cv-interest-item {
+      display: flex; align-items: baseline; gap: 0.8rem;
+      padding: 0.8rem 0; border-bottom: 1px solid var(--border-soft);
+      font-size: 0.9rem; color: var(--ink-body);
+    }
+    .cv-interest-item:last-child { border-bottom: none; }
+    .cv-interest-item::before { content: '—'; color: var(--red); font-size: 0.7rem; flex-shrink: 0; }
+
+    /* CV responsive */
+    @media (max-width: 680px) {
+      .cv-topbar { padding: 0 1.25rem; }
+      .cv-page { padding: 0 1.25rem 4rem; }
+      .cv-header { grid-template-columns: 1fr; padding-top: 3rem; }
+      .cv-meta { text-align: left; }
+      .cv-section { grid-template-columns: 1fr; gap: 0.65rem; }
+      .cv-sec-label { position: static; }
+      .cv-metrics { grid-template-columns: 1fr 1fr; }
+      .cv-skill-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─────────────────────────────────────────────
+       ISASI RESEARCH SECTION
+    ───────────────────────────────────────────── */
+    .findings-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 4rem; }
+    .findings-kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); margin-bottom: 4rem; }
+    .findings-kpi { background: #111110; padding: 2.25rem 2rem; }
+    .findings-kpi-num { font-family: var(--serif); font-size: 2.75rem; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.4rem; }
+    .findings-kpi-num em { font-style: italic; color: #e8a0a0; }
+    .findings-kpi-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.5rem; }
+    .findings-kpi-note { font-size: 0.775rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .findings-model-head { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.60); margin-bottom: 1.25rem; }
+    .path-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .path-table th { font-family: var(--mono); font-size: 0.67rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.60); padding: 0.5rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .path-table td { font-size: 0.8rem; color: rgba(255,255,255,0.65); padding: 0.7rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: middle; }
+    .path-table tr.highlight-row td { color: var(--white); background: rgba(153,0,0,0.2); }
+    .path-table tr.highlight-row td:first-child { border-left: 2px solid var(--red); }
+    .path-bar { display: flex; align-items: center; gap: 0.75rem; min-width: 120px; }
+    .path-bar-track { flex: 1; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; position: relative; }
+    .path-bar-fill { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.2); position: absolute; top: 0; left: 0; }
+    .path-bar-fill.sig { background: var(--red); }
+    .path-sig { font-family: var(--mono); font-size: 0.70rem; color: #e8a0a0; }
+    .path-ns  { font-family: var(--mono); font-size: 0.70rem; color: rgba(255,255,255,0.55); }
+    .path-beta { font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+    .path-beta.sig { color: #e8a0a0; font-weight: 500; }
+    .path-beta.ns  { color: rgba(255,255,255,0.65); }
+    .findings-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.07); margin-bottom: 3rem; }
+    .findings-panel { background: rgba(255,255,255,0.04); padding: 2rem; border: 1px solid rgba(255,255,255,0.07); }
+    .findings-panel-title { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 1.25rem; letter-spacing: 0.01em; }
+    .findings-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); gap: 1rem; }
+    .findings-row:last-child { border-bottom: none; }
+    .findings-row-label { font-size: 0.775rem; color: rgba(255,255,255,0.80); flex: 1; line-height: 1.4; }
+    .findings-row-val { font-family: var(--mono); font-size: 0.72rem; white-space: nowrap; }
+    .val-hi  { color: #8fd4a0; }
+    .val-med { color: #f5c97a; }
+    .val-lo  { color: rgba(255,255,255,0.65); }
+    .val-red { color: #e8a0a0; }
+    .findings-method-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+    .fchip { font-family: var(--mono); font-size: 0.68rem; padding: 0.25rem 0.55rem; border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.70); border-radius: 2px; letter-spacing: 0.04em; }
+    .fchip.hi { border-color: rgba(153,0,0,0.4); color: #e8a0a0; background: rgba(153,0,0,0.1); }
+    .reliability-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.07); margin-bottom: 3rem; }
+    .rel-cell { background: rgba(255,255,255,0.03); padding: 1.5rem; }
+    .rel-factor { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.60); margin-bottom: 0.65rem; }
+    .rel-cr { font-family: var(--serif); font-size: 1.75rem; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.2rem; }
+    .rel-cr.excellent { color: #8fd4a0; }
+    .rel-cr.good      { color: #f5c97a; }
+    .rel-cr.accept    { color: rgba(255,255,255,0.6); }
+    .rel-badge { font-family: var(--mono); font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 2px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .rel-badge.excellent { background: rgba(143,212,160,0.15); color: #8fd4a0; }
+    .rel-badge.good      { background: rgba(245,201,122,0.15); color: #f5c97a; }
+    .rel-badge.accept    { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.70); }
+    @media (max-width: 860px) {
+      .findings-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .findings-kpi-row { grid-template-columns: 1fr 1fr; }
+      .findings-grid-2 { grid-template-columns: 1fr; }
+      .reliability-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .findings-kpi-row { grid-template-columns: 1fr; }
+      .reliability-grid { grid-template-columns: 1fr; }
+    }
+
+    /* CV print — only print cv-overlay content */
+    @media print {
+      body > *:not(#cv-overlay) { display: none !important; }
+      #cv-overlay { position: static !important; opacity: 1 !important; pointer-events: all !important; transform: none !important; overflow: visible !important; }
+      .cv-topbar { display: none !important; }
+      .cv-metric-cell { background: white !important; }
+    }
+
+    /* ── CV Page specific overrides ── */
+    body { padding-top: 56px; } /* offset for fixed nav */
+
+    .cv-page-wrap {
+      background: var(--bg);
+      min-height: 100vh;
+    }
+
+    /* Print action bar (replaces overlay topbar) */
+    .cv-actionbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 56px;
+      z-index: 100;
+    }
+    .cv-actionbar-inner {
+      max-width: 900px; margin: 0 auto; padding: 0 2.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .cv-actionbar-label {
+      font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--ink-soft);
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .cv-actionbar-label::before {
+      content: ''; width: 16px; height: 1px; background: var(--red);
+    }
+    .cv-actionbar-actions { display: flex; gap: 0.5rem; }
+    .cv-print-btn {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.03em;
+      padding: 0.32rem 0.9rem; background: transparent;
+      border: 1px solid var(--border); color: var(--ink-mid);
+      cursor: pointer; transition: all 0.18s; font-family: var(--sans);
+    }
+    .cv-print-btn:hover { color: var(--ink); border-color: var(--ink-soft); }
+    .cv-back-btn {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.03em;
+      padding: 0.32rem 0.9rem; background: var(--red); color: #fff;
+      border: 1px solid var(--red); text-decoration: none;
+      transition: background 0.18s; font-family: var(--sans);
+      display: inline-flex; align-items: center; gap: 0.35rem;
+    }
+    .cv-back-btn:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+    /* On the standalone page the cv-page has no overlay constraints */
+    .cv-page {
+      max-width: 900px; margin: 0 auto;
+      padding: 3rem 2.5rem 6rem;
+    }
+
+    /* Print: show everything normally */
+    @media print {
+      #nav, #scroll-progress, .cv-actionbar, footer, .mobile-drawer { display: none !important; }
+      body { padding-top: 0; }
+      .cv-page { padding: 0; }
+    }
+
+    @media (max-width: 680px) {
+      .cv-actionbar-inner { padding: 0 1.25rem; }
+      .cv-page { padding: 2rem 1.25rem 4rem; }
+      .cv-header { grid-template-columns: 1fr; padding-top: 2rem; }
+      .cv-meta { text-align: left; }
+      .cv-section { grid-template-columns: 1fr; gap: 0.65rem; }
+      .cv-sec-label { position: static; }
+      .cv-metrics { grid-template-columns: 1fr 1fr; }
+      .cv-skill-grid { grid-template-columns: 1fr; }
+    }
+
+
+    /* ── Skip navigation link ── */
+    .skip-nav {
+      position: absolute; top: -100px; left: 1rem;
+      background: var(--red); color: #fff;
+      padding: 0.5rem 1rem; font-size: 0.8rem;
+      font-family: var(--mono); letter-spacing: 0.04em;
+      text-decoration: none; z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-nav:focus { top: 1rem; }
+
+    /* ── Respect reduced-motion preference ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .js-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Brian N. Huh",
-    "jobTitle": "Lab Manager, Marshall Behavioral Research Lab",
-    "affiliation": {"@type": "Organization", "name": "USC Marshall School of Business", "url": "https://www.marshall.usc.edu"},
-    "alumniOf": [
-      {"@type": "CollegeOrUniversity", "name": "University of Southern California"},
-      {"@type": "CollegeOrUniversity", "name": "Harvard University"}
-    ],
-    "url": "https://brianhuh.com",
-        "sameAs": ["https://www.linkedin.com/in/brian-huh","https://www.marshall.usc.edu/people/brian-huh"],
-    "description": "Behavioral scientist at USC Marshall. Aviation human factors research, manager of the Marshall Behavioral Research Lab, research mentor.",
-    "image": "https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg"
+    "@type": "WebPage",
+    "name": "Curriculum Vitae — Brian N. Huh · USC Marshall",
+    "url": "https://brianhuh.com/cv.html",
+    "author": {
+      "@type": "Person",
+      "name": "Brian N. Huh",
+      "url": "https://brianhuh.com"
+    }
   }
   </script>
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div id="scroll-progress"></div>
 
+  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Curriculum Vitae — Brian N. Huh</h1>
+  <div id="scroll-progress"></div>
 
   <!-- ═══════════════════════════════════════════
        NAV
@@ -1139,7 +1460,7 @@
             </div>
           </div>
         </li>
-        <li><a href="cv.html" class="nav-contact">CV</a></li>
+        <li><a href="#" href="cv.html" class="nav-contact">CV</a></li>
       </ul>
 
       <!-- Hamburger (mobile only) -->
@@ -1183,503 +1504,20 @@
     </div>
   </div>
 
-
-  <main id="main-content">
-
-  <!-- ═══════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════ -->
-  <section id="hero">
-    <div class="w">
-      <div class="hero-inner">
-
-        <!-- Left: identity + bio + CTAs -->
-        <div>
-          <p class="hero-tag">
-            <span class="hero-tag-dot"></span>
-            USC Marshall School of Business &ensp;·&ensp; Los Angeles, CA
-          </p>
-          <p style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:2rem; opacity:0.7;">
-            Previously &ensp;·&ensp; Harvard &ensp;·&ensp; Columbia Business School &ensp;·&ensp; Chicago Booth &ensp;·&ensp; Stanford
-          </p>
-
-          <div class="hero-name">
-            <h1 class="h1">Brian N.<br><em>Huh</em></h1>
-          </div>
-
-          <p class="hero-domains">
-            Behavioral Scientist
-            <span class="hero-domains-sep">·</span>
-            Aviation Human Factors
-            <span class="hero-domains-sep">·</span>
-            AI Trust
-            <span class="hero-domains-sep">·</span>
-            Multi-Method Research Infrastructure
-          </p>
-
-          <div class="hero-copy">
-            <p>
-              I am a behavioral scientist who studies how people make decisions in 
-              high-stakes environments — particularly in aviation, where the consequences 
-              of those decisions are irreversible. My research applies organizational and 
-              consumer behavior frameworks to aviation accidents, AI trust, and the human 
-              systems that shape operational safety.
-            </p>
-            <p>
-              That research agenda is what drove me to build the Marshall Behavioral 
-              Research Lab into what it is. Rigorous multi-method behavioral science 
-              demands real infrastructure — participant ecosystems, measurement technology, 
-              experimental workflow, people who know how to run studies cleanly. I built 
-              what the work required. Eight years later, the lab supports 164 researchers 
-              across 11 departments, with eye-tracking, psychophysiology, online and field 
-              capabilities, and a 19,000-member participant pool. The infrastructure exists 
-              because the science demands it.
-            </p>
-          </div>
-
-          <div class="hero-btns">
-            <a href="research.html" class="btn btn-red">View Research &rarr;</a>
-            <button onclick="openCV()" class="btn btn-ghost">View CV &rarr;</button>
-          </div>
-        </div>
-
-        <!-- Right: count-up stats -->
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-num" id="hs1" data-target="110862">0</div>
-            <div class="hero-stat-label">Study participants<br>2017–2025</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num" id="hs2" data-target="851">0</div>
-            <div class="hero-stat-label">Research studies<br>supported</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num" id="hs3" data-target="540">0</div>
-            <div class="hero-stat-label">Aviation professionals across<br>47 countries, ISASI 2024–25</div>
-          </div>
-          <div class="hero-stat" style="border-bottom:1px solid var(--border);">
-            <div class="hero-stat-num" id="hs4" data-target="139">0</div>
-            <div class="hero-stat-label">Research assistants<br>trained since 2017</div>
-          </div>
-          <script>
-          (function(){
-            var els = [
-              {id:"hs1", target:110862, duration:1600, delay:0},
-              {id:"hs2", target:851,    duration:1200, delay:120},
-              {id:"hs3", target:540,    duration:1000, delay:220},
-              {id:"hs4", target:139,    duration:900,  delay:320}
-            ];
-            var fired = false;
-            function fmt(n){ return n >= 1000 ? n.toLocaleString() : String(n); }
-            function countUp(el, target, duration){
-              var start = performance.now();
-              function step(now){
-                var p = Math.min((now - start) / duration, 1);
-                var ease = 1 - Math.pow(1 - p, 3);
-                el.textContent = fmt(Math.round(ease * target));
-                if(p < 1) requestAnimationFrame(step);
-              }
-              requestAnimationFrame(step);
-            }
-            function run(){
-              if(fired) return; fired = true;
-              els.forEach(function(e){
-                var el = document.getElementById(e.id);
-                if(!el) return;
-                setTimeout(function(){ countUp(el, e.target, e.duration); }, e.delay);
-              });
-            }
-            var sentinel = document.getElementById("hs1");
-            if("IntersectionObserver" in window && sentinel){
-              new IntersectionObserver(function(entries){
-                if(entries[0].isIntersecting) run();
-              },{threshold:0.5}).observe(sentinel);
-            } else { run(); }
-          })();
-          </script>
-        </div>
-
-      </div>
-
-      <!-- Bottom keyword bar -->
-      <div class="hero-bottom-bar">
-        <span class="hero-bottom-bar-label">Focus</span>
-        <span class="hero-bottom-tag">Aviation Accidents</span>
-        <span class="hero-bottom-tag">AI Trust</span>
-        <span class="hero-bottom-tag">Human Factors</span>
-        <span class="hero-bottom-tag">Behavioral Science</span>
-        <span class="hero-bottom-tag">Sensors · Radar · Lidar</span>
-        <span class="hero-bottom-tag">Safety Operations</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="strip" class="sec dark reveal">
-    <div class="w">
-      <div class="strip-inner">
-        <p class="strip-headline">Scientist first.<br>Infrastructure by necessity.</p>
-        <p class="strip-body">
-          The research program — aviation accidents, AI trust, the behavioral science of 
-          safety-critical operations — demanded infrastructure that didn't exist. So it was built: 
-          eight years, 164 researchers, 11 departments, multi-method capability at institutional scale. 
-          The lab is what rigorous behavioral science requires.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section id="research-card" style="background:var(--white); padding:5rem 0; border-top:1px solid var(--border); min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div class="feature-inner">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-ghost); display:block; margin-bottom:1rem;">Research</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem, 3.5vw, 2.25rem); font-weight:300; color:var(--ink); line-height:1.2; margin-bottom:1.5rem;">Consumer and Organizational Behavior Applied to High-Stakes Operations</h2>
-          <p style="font-size:1rem; color:var(--ink-body); line-height:1.85; max-width:52ch; margin-bottom:2rem;">I study aviation accidents, AI trust, and the behavioral science of safety-critical operations — applying organizational and consumer behavior frameworks to understand why people make the decisions they do under pressure, and what that means for how technologies and safety systems should be designed.</p>
-          <a href="research.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:#990000;color:#fff;border-color:#990000;">View Research &rarr;</a>
-        </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">2</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Publications & working papers</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">540</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Survey respondents · ISASI 2024–25 · 47 countries</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">β = 0.727</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Professional engagement → AI trust</div>
-          </div></div>
-      </div>
-    </div>
-  </section>
-  <section id="lab-card" style="background:var(--bg); padding:5rem 0; border-top:1px solid var(--border); min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div class="feature-inner">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-ghost); display:block; margin-bottom:1rem;">Lab Management</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem, 3.5vw, 2.25rem); font-weight:300; color:var(--ink); line-height:1.2; margin-bottom:1.5rem;">The Infrastructure the Research Requires</h2>
-          <p style="font-size:1rem; color:var(--ink-body); line-height:1.85; max-width:52ch; margin-bottom:2rem;">Rigorous multi-method behavioral science demands real infrastructure. The Marshall Behavioral Research Lab — built over eight years — delivers it: 164 registered researchers, 11 departments, eye-tracking, psychophysiology, online and field capabilities, and a 19,000-member participant pool.</p>
-          <a href="lab.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:#990000;color:#fff;border-color:#990000;">View Lab &rarr;</a>
-        </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">11,176</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Research hours · FY2025</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">164</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Registered researchers</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">263%</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Participant pool growth</div>
-          </div></div>
-      </div>
-    </div>
-  </section>
-  <section id="mentorship-card" style="background:var(--ink); padding:5rem 0; border-top:1px solid transparent; min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div class="feature-inner">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:rgba(255,255,255,0.55); display:block; margin-bottom:1rem;">Student Research Assistant Pool Program</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem, 3.5vw, 2.25rem); font-weight:300; color:#fff; line-height:1.2; margin-bottom:1.5rem;">One-on-One. Inside the Lab. With a Track Record of Outcomes.</h2>
-          <p style="font-size:1rem; color:rgba(255,255,255,0.85); line-height:1.85; max-width:52ch; margin-bottom:2rem;">Brian works directly with every RA in the lab — supervising their work, developing their skills, and mentoring them one-on-one as a staff researcher who is present in the work. 139 students across 21 semesters. 392 person-semesters. Alumni who leave knowing how rigorous empirical research actually works.</p>
-          <a href="research-assistants.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">View Mentorship &rarr;</a>
-        </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">139</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">RAs in the lab since 2017</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">392</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">Person-semesters</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">53%</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">Continue 3+ semesters</div>
-          </div></div>
-      </div>
-    </div>
-  </section>
-  <section id="about" class="sec alt reveal">
-    <div class="w">
-      <div class="about-layout">
-
-        <div>
-          <div class="portrait">
-            <img src="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" alt="Brian N. Huh — Behavioral Scientist, Aviation Human Factors, USC Marshall" />
-          </div>
-        </div>
-
-        <div id="about-bio" class="about-bio">
-          <span class="label">About</span>
-
-          <p>
-            Brian is a behavioral scientist whose research applies organizational and consumer 
-            behavior frameworks to aviation accidents, AI trust, and the human systems that 
-            shape operational safety. His work asks why people make the decisions they do in 
-            high-stakes environments — and what that means for how organizations, technologies, 
-            and safety cultures should be designed.
-          </p>
-
-          <!-- Plain-language translator -->
-          <p style="font-size:0.82rem; color:var(--ink-mid); line-height:1.8; padding:1rem 1.25rem; background:var(--bg-alt); border-left:2px solid var(--border); margin-bottom:1.5rem; margin-top:1.5rem;">
-            <strong style="color:var(--ink);">For a general audience:</strong> Brian studies why people make the decisions they do in high-pressure situations — particularly in aviation, where the consequences are irreversible. To do that research properly, he built the behavioral science research infrastructure at USC Marshall from the ground up: the facilities, measurement technology, participant pool, and staff that make rigorous multi-method research possible. The lab now serves researchers across all departments. His own research focus is aviation safety and AI trust.
-          </p>
-          <p>
-            That research agenda drove him to build the Marshall Behavioral Research Lab — 
-            USC Marshall's primary behavioral science infrastructure — into what it is today. 
-            Rigorous multi-method research demands more than a survey platform: it requires 
-            participant ecosystems, measurement-grade technology, experimental workflow, and 
-            people who know how to run studies cleanly. Over eight years, he built all of it. 
-            The lab now supports 164 registered researchers across 11 departments, with 
-            eye-tracking, psychophysiology, online and field capabilities, and a 
-            19,000-member participant pool — serving roughly 60 active faculty study teams 
-            in any given year.
-          </p>
-          <p>
-            He holds an M.S. in Applied Psychology from USC Dornsife, a Graduate 
-            Certificate in Business Analytics from USC Marshall, a Certificate in 
-            Performance Leadership from Cornell ILR School, and a B.A. in Psychology 
-            from Harvard. Prior to USC, he held research roles at Harvard, Columbia 
-            Business School, Chicago Booth, and Stanford.
-          </p>
-          <p>
-            He works directly with every Research Assistant in the lab — 139 students since 2017, 
-            contributing 392 person-semesters across 21 semesters. Not a formal program at a remove: 
-            one-on-one, inside the work, as a staff researcher who is present in what students are doing. 
-            Alumni go on to positions in tech, consulting, finance, and research — not because USC Marshall 
-            is on their degree, but because they worked in a real behavioral science lab and know how 
-            rigorous empirical research actually works.
-          </p>
-
-          <div style="margin-top: 2rem; display: flex; gap: 0.85rem; flex-wrap: wrap;">
-            <button onclick="openCV()" class="btn btn-red">View CV →</button>
-            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-          </div>
-
-          <div class="affil-strip">
-            <div class="affil-cell">
-              <div class="affil-lbl">Education</div>
-              <div class="affil-val"><strong>M.S. Applied Psychology</strong> · USC Dornsife<br>B.A. Psychology · Harvard University</div>
-            </div>
-            <div class="affil-cell">
-              <div class="affil-lbl">Current Role</div>
-              <div class="affil-val"><strong>Marshall Behavioral Research Lab</strong><br>Lab Manager · USC Marshall<br><a href="https://www.marshall.usc.edu/people/brian-huh" target="_blank" rel="noopener" style="color:var(--red); font-size:0.8rem;">USC Profile →</a></div>
-            </div>
-            <div class="affil-cell">
-              <div class="affil-lbl">Prior Institutions</div>
-              <div class="affil-val">Columbia Business School · Harvard · Chicago Booth · Stanford</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="sec white reveal">
-    <div class="w">
-      <div class="contact-layout">
-
-        <div>
-          <span class="label">Contact</span>
-          <h2 class="h2">Get in Touch</h2>
-          <p class="body">
-            Inquiries regarding research collaboration, speaking engagements, 
-            institutional research partnerships, advisory roles, and research 
-            operations leadership are welcome. Email is the preferred channel 
-            for direct correspondence.
-          </p>
-          <p class="body">
-            Students interested in joining the lab's Research Assistant pool are welcome to reach out via the USC Marshall email below.
-          </p>
-
-          <div class="contact-methods">
-            <a href="/cdn-cgi/l/email-protection#cea6bba6ac8ea3afbcbda6afa2a2e0bbbdade0abaabb" class="contact-row">
-              <div class="contact-icon">@</div>
-              <div>
-                <div class="contact-row-label">Email</div>
-                <div class="contact-row-val"><span class="__cf_email__" data-cfemail="87eff2efe5c7eae6f5f4efe6ebeba9f2f4e4a9e2e3f2">[email&#160;protected]</span></div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="tel:+12138219752" class="contact-row">
-              <div class="contact-icon">☎</div>
-              <div>
-                <div class="contact-row-label">Phone</div>
-                <div class="contact-row-val">+1 (213) 821-9752</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="https://www.marshall.usc.edu/people/brian-huh" target="_blank" rel="noopener" class="contact-row">
-              <div class="contact-icon">USC</div>
-              <div>
-                <div class="contact-row-label">USC Profile</div>
-                <div class="contact-row-val">marshall.usc.edu/people/brian-huh</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener" class="contact-row">
-              <div class="contact-icon">in</div>
-              <div>
-                <div class="contact-row-label">LinkedIn</div>
-                <div class="contact-row-val">linkedin.com/in/brian-huh</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-            <a href="#" onclick="openCV();return false;" class="contact-row">
-              <div class="contact-icon">CV</div>
-              <div>
-                <div class="contact-row-label">Curriculum Vitae</div>
-                <div class="contact-row-val">View full CV</div>
-              </div>
-              <span class="contact-row-arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <div class="contact-note">
-            <h3 class="contact-note-head">Research &amp; Collaboration</h3>
-            <p class="contact-note-body">
-              Research collaboration inquiries are welcome, particularly in areas 
-              involving trust in automation, aviation human factors, behavioral 
-              methodology, or research infrastructure design.
-            </p>
-          </div>
-
-          <div class="contact-note" style="margin-top: 1px; background: var(--bg); border: 1px solid var(--border);">
-            <h3 class="contact-note-head" style="color: var(--ink);">Faculty — Run a Study</h3>
-            <p class="contact-note-body" style="color: var(--ink-mid);">
-              USC Marshall faculty and doctoral researchers: the Marshall Behavioral 
-              Research Lab supports in-person, online, field, and archival study designs 
-              across 11 departments. Email to discuss study design, participant pool 
-              options, or equipment access.
-            </p>
-            <a href="/cdn-cgi/l/email-protection#c0a8b5a8a280ada1b2b3a8a1acaceeb5b3a3eea5a4b5" style="display:inline-block; margin-top:0.85rem; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.08em; color:var(--red); text-decoration:none; border-bottom:1px solid rgba(153,0,0,0.3); padding-bottom:1px;"><span class="__cf_email__" data-cfemail="731b061b11331e1201001b121f1f5d0600105d161706">[email&#160;protected]</span> →</a>
-          </div>
-
-          <div class="contact-note" style="margin-top: 1px; background: var(--bg); border: 1px solid var(--border);">
-            <h3 class="contact-note-head" style="color: var(--ink);">Teaching &amp; Mentorship</h3>
-            <p class="contact-note-body" style="color: var(--ink-mid);">
-              The lab's Student Research Assistant Pool Program runs each semester. Students from USC Marshall interested in joining the Student Research Assistant Pool should reach out via the USC Marshall email.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  </main>
-
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════ -->
-  <footer>
-    <div class="footer-top">
-      <div>
-        <p class="footer-brand-name">Brian N. Huh</p>
-        <p class="footer-brand-sub">Behavioral Science · Human Decision Systems · Aviation &amp; Technology</p>
-      </div>
-      <div>
-        <p class="footer-col-lbl">Navigation</p>
-        <ul class="footer-list">
-          <li><a href="research.html">Research</a></li>
-          <li><a href="research.html#aviation">Aviation Human Factors</a></li>
-          <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
-          <li><a href="lab.html">Lab</a></li>
-          <li><a href="research-assistants.html">Student RA Pool</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col-lbl">Contact</p>
-        <ul class="footer-list">
-          <li><a href="/cdn-cgi/l/email-protection#cea6bba6ac8ea3afbcbda6afa2a2e0bbbdade0abaabb" class="red"><span class="__cf_email__" data-cfemail="87eff2efe5c7eae6f5f4efe6ebeba9f2f4e4a9e2e3f2">[email&#160;protected]</span></a></li>
-          <li><a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#" onclick="openCV();return false;">View CV</a></li>
-          <li><a href="https://usc.edu" target="_blank" rel="noopener">USC Marshall</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Brian N. Huh. All rights reserved.</span>
-      <span>brianhuh.com</span>
-    </div>
-  </footer>
-
-  <!-- ═══════════════════════════════════════════
-       SCRIPTS
-  ═══════════════════════════════════════════ -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Enable scroll animations (progressive enhancement)
-    document.documentElement.classList.add('js-ready');
-
-    // Nav scroll shadow
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('up', window.scrollY > 12), { passive: true });
-
-    // Active nav on scroll
-    const secs = [...document.querySelectorAll('section[id]')];
-    const links = [...document.querySelectorAll('.nav-menu a:not(.nav-contact)')];
-    const activeObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
-        }
-      });
-    }, { rootMargin: '-58px 0px -45% 0px', threshold: 0 });
-    secs.forEach(s => activeObs.observe(s));
-
-    // Scroll-triggered reveals
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-    }, { threshold: 0.04 });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-    // CV overlay
-    function openCV() {
-      var el = document.getElementById('cv-overlay');
-      el.style.display = 'block';
-      el.classList.add('open');
-      document.body.classList.add('cv-open');
-      el.scrollTop = 0;
-    }
-    function closeCV() {
-      var el = document.getElementById('cv-overlay');
-      el.classList.remove('open');
-      document.body.classList.remove('cv-open');
-      setTimeout(function() { el.style.display = 'none'; }, 350);
-    }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCV(); });
-  </script>
-
-  <!-- ═══════════════════════════════════════════
-       CV OVERLAY
-  ═══════════════════════════════════════════ -->
-  <div id="cv-overlay" role="dialog" aria-modal="true" aria-label="Curriculum Vitae" style="display:none; opacity:0; pointer-events:none;">
-
-    <!-- sticky top bar -->
-    <div class="cv-topbar">
-      <div class="cv-topbar-brand">
-        Brian N. Huh <span>Curriculum Vitae</span>
-      </div>
-      <div class="cv-topbar-right">
+  <!-- CV Action Bar -->
+  <div class="cv-actionbar">
+    <div class="cv-actionbar-inner">
+      <span class="cv-actionbar-label">Curriculum Vitae</span>
+      <div class="cv-actionbar-actions">
         <button class="cv-print-btn" onclick="window.print()" aria-label="Print or save CV as PDF">Print / Save PDF</button>
-        <button class="cv-close-btn" onclick="closeCV()" aria-label="Close CV overlay">✕ Close</button>
+        <a href="index.html" class="cv-back-btn">← Back to Site</a>
       </div>
     </div>
+  </div>
 
-    <div class="cv-page">
+  <!-- CV Content -->
+  <main class="cv-page-wrap">
+    <div class="cv-page" id="main-content">
 
       <!-- CV HEADER -->
       <header class="cv-header">
@@ -1813,30 +1651,7 @@
           .tl-stat-l{font-family:var(--mono);font-size:0.53rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-ghost);}
           @keyframes tl-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(1.6)}}
           .tl-dot-live{width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block;margin-right:4px;animation:tl-pulse 2s infinite;}
-        
-    /* ── Skip navigation link ── */
-    .skip-nav {
-      position: absolute; top: -100px; left: 1rem;
-      background: var(--red); color: #fff;
-      padding: 0.5rem 1rem; font-size: 0.8rem;
-      font-family: var(--mono); letter-spacing: 0.04em;
-      text-decoration: none; z-index: 9999;
-      transition: top 0.2s;
-    }
-    .skip-nav:focus { top: 1rem; }
-
-    /* ── Respect reduced-motion preference ── */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-      .reveal { opacity: 1 !important; transform: none !important; }
-      .js-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
-    }
-  </style>
+          </style>
 
           <!-- Legend -->
           <div class="tl-legend">
@@ -2339,12 +2154,236 @@
       </div>
 
     </div><!-- /.cv-body -->
-  </div><!-- /#cv-overlay -->
+  
 
+  <footer>
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand-name">Brian N. Huh</p>
+        <p class="footer-brand-sub">Behavioral Science · Human Decision Systems · Aviation &amp; Technology</p>
+      </div>
+      <div>
+        <p class="footer-col-lbl">Navigation</p>
+        <ul class="footer-list">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="research.html#aviation">Aviation Human Factors</a></li>
+          <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="research-assistants.html">Student RA Pool</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-lbl">Contact</p>
+        <ul class="footer-list">
+          <li><a href="/cdn-cgi/l/email-protection#cea6bba6ac8ea3afbcbda6afa2a2e0bbbdade0abaabb" class="red"><span class="__cf_email__" data-cfemail="87eff2efe5c7eae6f5f4efe6ebeba9f2f4e4a9e2e3f2">[email&#160;protected]</span></a></li>
+          <li><a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="cv.html">View CV</a></li>
+          <li><a href="https://usc.edu" target="_blank" rel="noopener">USC Marshall</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Brian N. Huh. All rights reserved.</span>
+      <span>brianhuh.com</span>
+    </div>
+  </footer>
+
+  <style>
+          .tl-wrap{position:relative;background:#fff;border:1px solid var(--border);padding:1.25rem 1.25rem 0.75rem;margin-bottom:1rem;overflow-x:auto;}
+          .tl-inner{min-width:520px;}
+          .tl-axis{position:relative;height:20px;margin-bottom:6px;}
+          .tl-tick{position:absolute;transform:translateX(-50%);font-family:var(--mono);font-size:0.55rem;color:var(--ink-ghost);letter-spacing:0.04em;}
+          .tl-lanes{position:relative;padding-top:12px;}
+          .tl-lane{position:relative;height:26px;margin-bottom:6px;}
+          .tl-lane:nth-child(odd){background:rgba(0,0,0,0.016);border-radius:2px;}
+          .tl-bar{position:absolute;top:50%;transform:translateY(-50%);border-radius:2px;cursor:pointer;display:flex;align-items:center;overflow:hidden;transition:filter 0.15s,box-shadow 0.15s;opacity:0.88;}
+          .tl-bar:hover{filter:brightness(1.1);opacity:1;z-index:10!important;}
+          .tl-bar.tl-on{filter:brightness(0.9);box-shadow:0 0 0 2px var(--ink);z-index:10!important;opacity:1;}
+          .tl-bar-lbl{font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.9);padding:0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0.03em;}
+          .tl-mline{position:absolute;top:0;bottom:0;width:1px;background:rgba(153,0,0,0.12);pointer-events:none;z-index:0;}
+          .tl-mlbl{position:absolute;top:0;left:3px;font-family:var(--mono);font-size:0.48rem;color:rgba(153,0,0,0.55);letter-spacing:0.05em;text-transform:uppercase;white-space:nowrap;}
+          .tl-detail{min-height:88px;background:var(--bg-alt);border:1px solid var(--border);border-left:3px solid var(--border);padding:1rem 1.25rem;transition:border-color 0.2s;}
+          .tl-detail.tl-active{background:#fff;border-left-color:var(--red);}
+          .tl-legend{display:flex;gap:1.25rem;margin-bottom:1rem;flex-wrap:wrap;}
+          .tl-leg-item{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:0.55rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink-mid);}
+          .tl-leg-dot{width:8px;height:8px;border-radius:1px;flex-shrink:0;}
+          .tl-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:1rem;}
+          .tl-stat{background:#fff;padding:0.85rem 1rem;text-align:center;}
+          .tl-stat-n{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--red);line-height:1;margin-bottom:0.2rem;}
+          .tl-stat-l{font-family:var(--mono);font-size:0.53rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-ghost);}
+          @keyframes tl-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(1.6)}}
+          .tl-dot-live{width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block;margin-right:4px;animation:tl-pulse 2s infinite;}
+          </style>
 
   <script>
+    document.documentElement.classList.add('js-ready');
+  </script>
 
-    // ─── MOBILE NAV ───
+
+      <script>
+      (function(){
+        var S=2011,E=2026,SPAN=E-S;
+        function pct(y){return((y-S)/SPAN*100)+'%';}
+        function fmtY(y){return y>=2026?'Present':(y%1===0?String(y):String(Math.floor(y)));}
+
+        var EVENTS=[
+          {id:'hba',cat:'edu',lbl:'B.A. Psychology',org:'Harvard University',start:2011,end:2015,lane:0,color:'#990000',note:'Foundation in psychology and behavioral research. Concurrent with multiple lab research roles at Harvard.'},
+          {id:'usc-cert',cat:'edu',lbl:'Cert. Business Analytics',org:'USC Marshall',start:2021,end:2022,lane:0,color:'#990000',note:'Graduate Certificate in Business Analytics — applied quantitative methods to research operations.'},
+          {id:'usc-ms',cat:'edu',lbl:'M.S. Applied Psychology',org:'USC Dornsife',start:2022,end:2024,lane:0,color:'#990000',note:'Graduate study in applied psychology while managing the lab full-time.'},
+          {id:'cornell',cat:'edu',lbl:'Cert. Performance Leadership',org:'Cornell ILR',start:2024,end:2024.75,lane:0,color:'#990000',note:'Performance and leadership frameworks from Cornell\'s Industrial & Labor Relations School.'},
+          {id:'hma',cat:'res',lbl:'Research Associate, Marketing',org:'Harvard University',start:2011,end:2015,lane:1,color:'#4a6fa5',note:'Consumer behavior and marketing research — concurrent undergraduate role at Harvard.'},
+          {id:'hne',cat:'res',lbl:'Research Associate, Developmental Neuroscience',org:'Harvard University',start:2012,end:2015,lane:2,color:'#4a6fa5',note:'Behavioral and neurodevelopmental research methods. Introduced psychophysiological measurement.'},
+          {id:'booth',cat:'res',lbl:'Research Associate, Analytics, Orgs & Markets',org:'Chicago Booth',start:2013,end:2015,lane:3,color:'#4a6fa5',note:'Quantitative organizational research at Chicago Booth. Early exposure to large-scale behavioral data.'},
+          {id:'stanford',cat:'res',lbl:'Research Associate, Psychophysiology Lab',org:'Stanford University',start:2013.5,end:2015,lane:4,color:'#4a6fa5',note:'Physiological measurement and experimental methodology at Stanford\'s psychophysiology laboratory.'},
+          {id:'hsoc',cat:'res',lbl:'Research Assistant, Social Psychology',org:'Harvard University',start:2012.5,end:2014.5,lane:5,color:'#4a6fa5',note:'Social psychology experimental design and human subjects research at Harvard.'},
+          {id:'columbia',cat:'exp',lbl:'Research Coordinator',org:'Columbia Business School',start:2015,end:2017,lane:1,color:'#5a7a5a',note:'Coordinated behavioral research operations at Columbia Business School before founding the Marshall lab.'},
+          {id:'usc-lab',cat:'exp',lbl:'Lab Manager',org:'Marshall Behavioral Research Lab',start:2017,end:2026,lane:1,color:'#990000',current:true,note:'Founded and manages the Marshall Behavioral Research Lab. 110,862+ cumulative participants, 11 departments, 163 studies in FY2025.'},
+        ];
+
+        var MILESTONES=[
+          {year:2015,lbl:'Harvard → Field'},
+          {year:2017,lbl:'Founded MBRL'},
+          {year:2022,lbl:'Grad School'},
+          {year:2024,lbl:'Published'},
+        ];
+
+        var CATS={edu:'Education',res:'Research Experience',exp:'Professional'};
+
+        // Group by lane
+        var lanes={};
+        EVENTS.forEach(function(e){
+          if(!lanes[e.lane])lanes[e.lane]=[];
+          lanes[e.lane].push(e);
+        });
+        var laneKeys=Object.keys(lanes).sort(function(a,b){return a-b;});
+
+        var inner=document.getElementById('tl-inner');
+        if(!inner)return;
+
+        // Build axis
+        var axisDiv=document.createElement('div');
+        axisDiv.className='tl-axis';
+        axisDiv.style.position='relative';
+        axisDiv.style.height='20px';
+        axisDiv.style.marginBottom='6px';
+        for(var y=S;y<=E;y++){
+          if(y%2===1&&y!==S&&y!==E)continue;
+          var t=document.createElement('div');
+          t.className='tl-tick';
+          t.style.left=pct(y);
+          t.textContent=y>=2026?'Now':y;
+          axisDiv.appendChild(t);
+        }
+        inner.appendChild(axisDiv);
+
+        // Container for milestone lines + lanes
+        var body=document.createElement('div');
+        body.style.position='relative';
+        body.style.paddingTop='10px';
+
+        // Milestone lines
+        MILESTONES.forEach(function(m){
+          var ml=document.createElement('div');
+          ml.className='tl-mline';
+          ml.style.left=pct(m.year);
+          var mlbl=document.createElement('div');
+          mlbl.className='tl-mlbl';
+          mlbl.textContent=m.lbl;
+          ml.appendChild(mlbl);
+          body.appendChild(ml);
+        });
+
+        // Lanes
+        var activeId=null;
+        laneKeys.forEach(function(lk,li){
+          var lane=document.createElement('div');
+          lane.className='tl-lane';
+          lanes[lk].forEach(function(ev){
+            var left=parseFloat(pct(ev.start));
+            var width=parseFloat(pct(ev.end))-left;
+            var bar=document.createElement('div');
+            bar.className='tl-bar';
+            bar.style.left=pct(ev.start);
+            bar.style.width=Math.max(width,0.8)+'%';
+            bar.style.height=ev.current?'24px':'19px';
+            bar.style.background=ev.current?'linear-gradient(90deg,#990000,#780000)':ev.color;
+            if(ev.current)bar.style.borderLeft='3px solid #c9a227';
+            bar.style.boxShadow=ev.current?'0 1px 6px rgba(153,0,0,0.25)':'none';
+            bar.style.zIndex='1';
+            bar.style.animationDelay=(li*0.04)+'s';
+            var lbl=document.createElement('span');
+            lbl.className='tl-bar-lbl';
+            lbl.textContent=ev.org;
+            bar.appendChild(lbl);
+
+            function showDetail(ev){
+              var det=document.getElementById('tl-detail');
+              det.classList.add('tl-active');
+              det.style.borderLeftColor=ev.color;
+              var dur=ev.end>=2026?(2026-ev.start)+'+ yrs':Math.round((ev.end-ev.start)*10)/10+' yrs';
+              var liveHtml=ev.current?'<span class="tl-dot-live"></span>':'';
+              det.innerHTML='<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;">'
+                +'<div>'
+                +'<p style="font-family:var(--mono);font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:'+ev.color+';margin-bottom:0.2rem;">'+CATS[ev.cat]+'</p>'
+                +'<p style="font-family:var(--serif);font-size:0.95rem;font-weight:400;color:var(--ink);margin-bottom:0.1rem;">'+ev.lbl+'</p>'
+                +'<p style="font-size:0.75rem;color:var(--ink-soft);margin-bottom:0.55rem;">'+ev.org+'</p>'
+                +'<p style="font-size:0.8rem;color:var(--ink-body);line-height:1.75;">'+ev.note+'</p>'
+                +'</div>'
+                +'<div style="text-align:right;flex-shrink:0;">'
+                +'<p style="font-family:var(--mono);font-size:0.75rem;font-weight:500;color:var(--ink);">'+fmtY(ev.start)+' – '+fmtY(ev.end)+'</p>'
+                +'<p style="font-family:var(--mono);font-size:0.6rem;color:var(--ink-soft);margin-top:0.15rem;">'+liveHtml+dur+'</p>'
+                +'</div>'
+                +'</div>';
+            }
+
+            bar.addEventListener('mouseenter',function(){showDetail(ev);});
+            bar.addEventListener('mouseleave',function(){
+              if(activeId&&activeId!==ev.id)return;
+              if(!activeId){
+                var det=document.getElementById('tl-detail');
+                det.classList.remove('tl-active');
+                det.style.borderLeftColor='var(--border)';
+                det.innerHTML='<p style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-ghost);">← Hover or click any bar for details</p>';
+              }
+            });
+            bar.addEventListener('click',function(){
+              document.querySelectorAll('.tl-bar').forEach(function(b){b.classList.remove('tl-on');});
+              if(activeId===ev.id){activeId=null;}
+              else{activeId=ev.id;bar.classList.add('tl-on');showDetail(ev);}
+            });
+            lane.appendChild(bar);
+          });
+          body.appendChild(lane);
+        });
+
+        // Bottom rule
+        var rule=document.createElement('div');
+        rule.style.cssText='height:1px;background:var(--border);margin-top:6px;';
+        body.appendChild(rule);
+        inner.appendChild(body);
+      })();
+      </script>
+
+  <script>
+  // Scroll progress
+  (function(){
+    var bar = document.getElementById('scroll-progress');
+    if(!bar) return;
+    window.addEventListener('scroll', function(){
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      var docH = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (docH > 0 ? (scrollTop / docH) * 100 : 0) + '%';
+    }, { passive: true });
+  })();
+  // Nav scroll shadow
+  const nav = document.getElementById('nav');
+  if(nav) window.addEventListener('scroll', () => nav.classList.toggle('up', window.scrollY > 12), { passive: true });
+  </script>
+
+  <script>
+        // ─── MOBILE NAV ───
     (function() {
       var hamburger = document.getElementById('nav-hamburger');
       var drawer = document.getElementById('mobile-drawer');
@@ -2457,30 +2496,16 @@
   </script>
 
 
-
   <script>
-  // Scroll progress bar
-  (function(){
-    var bar = document.getElementById('scroll-progress');
-    if(!bar) return;
-    window.addEventListener('scroll', function(){
-      var scrollTop = window.scrollY || document.documentElement.scrollTop;
-      var docH = document.documentElement.scrollHeight - window.innerHeight;
-      bar.style.width = (docH > 0 ? (scrollTop / docH) * 100 : 0) + '%';
-    }, { passive: true });
-  })();
-  </script>
-
-  <script>
-  // Active nav highlighting
   (function(){
     var path = window.location.pathname;
-    var links = document.querySelectorAll('.nav-menu > li > a');
-    links.forEach(function(a){
-      if(a.getAttribute('href') && path.indexOf(a.getAttribute('href').replace('.html','')) > -1 && a.getAttribute('href') !== 'index.html'){
-        a.style.fontWeight = '600';
-        a.style.color = 'var(--ink)';
-      }
+    var filename = path.split('/').pop() || 'index.html';
+    if(!filename) filename = 'index.html';
+    document.querySelectorAll('.nav-menu a').forEach(function(a){
+      var href = (a.getAttribute('href') || '').split('#')[0].split('/').pop() || 'index.html';
+      if(href && href === filename) { a.classList.add('on'); a.setAttribute('aria-current','page'); }
     });
   })();
-  </scri
+  </script>
+</body>
+</html>

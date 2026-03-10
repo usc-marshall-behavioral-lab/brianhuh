@@ -121,14 +121,14 @@
 
     .h1 {
       font-family: var(--serif); font-weight: 300;
-      font-size: clamp(3.25rem, 8.5vw, 6rem);
+      font-size: clamp(3.5rem, 9vw, 6.5rem);
       line-height: 0.97; letter-spacing: -0.03em; color: var(--ink);
     }
     .h1 em { font-style: italic; color: var(--red); }
 
     .h2 {
       font-family: var(--serif); font-weight: 400;
-      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
       line-height: 1.2; letter-spacing: -0.015em; color: var(--ink);
       margin-bottom: 1.1rem;
     }
@@ -510,7 +510,7 @@
       border: 1px solid rgba(153,0,0,0.25); color: var(--red);
     }
     .essay-featured-title {
-      font-family: var(--serif); font-size: clamp(1.1rem, 2vw, 1.375rem); font-weight: 400;
+      font-family: var(--serif); font-size: 1.1875rem; font-weight: 400;
       line-height: 1.3; color: var(--ink); margin-bottom: 1rem;
     }
     .essay-featured-body {
@@ -556,7 +556,7 @@
       text-transform: uppercase; color: var(--red); margin-bottom: 0.85rem;
     }
     .article-title {
-      font-family: var(--serif); font-size: 1.0625rem; font-weight: 400;
+      font-family: var(--serif); font-size: 1.1875rem; font-weight: 400;
       line-height: 1.3; color: var(--ink); margin-bottom: 0.7rem; transition: color 0.2s;
     }
     .article-excerpt { font-size: 0.8125rem; color: var(--ink-mid); line-height: 1.75; flex: 1; }
@@ -627,7 +627,6 @@
     .alumni-now { font-size: 0.78rem; color: var(--ink-mid); line-height: 1.5; }
     .alumni-now strong { color: var(--ink); }
     @media (max-width: 860px) { .team-grid { grid-template-columns: 1fr 1fr; } .alumni-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } }
 
     .about-bio p { font-size: 1.0625rem; color: var(--ink-body); line-height: 1.85; margin-bottom: 1.2rem; }
     .about-bio p:first-child {
@@ -751,13 +750,15 @@
       .essay-related { flex-direction: row; flex-wrap: wrap; padding-top: 0; }
       .sec { padding: 4.5rem 0; }
       /* Hero collapses to single column on tablet */
-
+      .about-layout { grid-template-columns: 1fr; }
+      .portrait { max-width: 140px; margin: 0 auto; }
+    }
 
     @media (max-width: 600px) {
       .w, .nav-w, .footer-top, .footer-bottom { padding-left: 1.25rem; padding-right: 1.25rem; }
       .writing-grid { grid-template-columns: 1fr; }
       .card-grid { grid-template-columns: 1fr; }
-      .focus-chips { }
+      .team-grid { grid-template-columns: 1fr; }
       .affil-strip { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
@@ -767,6 +768,10 @@
       .sec { padding: 3.5rem 0; }
       .nav-menu { display: none; }
       .nav-hamburger { display: flex; }
+      /* Beta chart rows: collapse label on very small screens */
+      #isasi-beta-chart > div { grid-template-columns: 1fr 60px !important; gap: 0.4rem !important; }
+      #isasi-beta-chart > div > div:first-child { text-align: left; font-size: 0.65rem; }
+      .contact-note { padding: 1.75rem; }
     }
 
 
@@ -1068,9 +1073,45 @@
       color: white; line-height: 1; letter-spacing: -0.02em; }
     .findings-stat-label { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.12em;
       text-transform: uppercase; color: rgba(255,255,255,0.70); margin-top: 0.4rem; }
-    a.feat-row:hover { background: var(--bg-alt) !important; }</style>
+    a.feat-row:hover { background: var(--bg-alt) !important; }
+    /* ── Skip navigation link ── */
+    .skip-nav {
+      position: absolute; top: -100px; left: 1rem;
+      background: var(--red); color: #fff;
+      padding: 0.5rem 1rem; font-size: 0.8rem;
+      font-family: var(--mono); letter-spacing: 0.04em;
+      text-decoration: none; z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-nav:focus { top: 1rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .js-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Research — Brian N. Huh · USC Marshall",
+    "url": "https://brianhuh.com/research.html",
+    "author": {
+      "@type": "Person",
+      "name": "Brian N. Huh",
+      "url": "https://brianhuh.com"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
 
   <!-- ═══════════════════════════════════════════
        NAV
@@ -1090,7 +1131,7 @@
             <a href="research.html#findings">AI Trust &amp; Technology</a>
             <a href="research.html#research-writing">Publications &amp; Writing</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.28); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
             </div>
           </div>
         </li>
@@ -1102,7 +1143,7 @@
             <a href="lab.html#systems-stats">Stats &amp; Growth</a>
             <a href="lab.html#lab-writing">Field Research</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.28); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team</span>
             </div>
           </div>
         </li>
@@ -1110,14 +1151,14 @@
           <a href="index.html#about">About</a>
           <div class="nav-dropdown" style="display:none;">
             <a href="index.html#about">Bio &amp; Background</a>
-            <a href="mentorship.html">Mentorship</a>
+            <a href="research-assistants.html">Mentorship</a>
             <a href="index.html#contact">Contact</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.28); letter-spacing:0; text-transform:none;">Bio · Mentorship · Contact</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Bio · Mentorship · Contact</span>
             </div>
           </div>
         </li>
-        <li><a href="#" onclick="openCV();return false;" class="nav-contact">CV</a></li>
+        <li><a href="cv.html" class="nav-contact">CV</a></li>
       </ul>
 
       <!-- Hamburger (mobile only) -->
@@ -1139,7 +1180,7 @@
           <a href="research.html#research-writing">Publications &amp; Writing</a>
           <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Aviation human factors · AI trust · Publications</span>
         </div>
-        <a href="lab.html" class="mobile-nav-section">Operations</a>
+        <a href="lab.html" class="mobile-nav-section">Lab</a>
         <div class="mobile-nav-group">
           <a href="lab.html#lab-people">People</a>
           <a href="lab.html#systems-coral">Infrastructure</a>
@@ -1150,12 +1191,12 @@
         <a href="index.html#about" class="mobile-nav-section">About</a>
         <div class="mobile-nav-group">
           <a href="index.html#about">Bio &amp; Background</a>
-          <a href="mentorship.html">Mentorship</a>
+          <a href="research-assistants.html">Mentorship</a>
           <a href="index.html#contact">Contact</a>
           <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Bio · Mentorship · Contact</span>
         </div>
         <div class="mobile-nav-cta">
-          <button onclick="openCV()" style="background:var(--red);color:#fff;border:none;padding:0.75rem 1.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;width:100%;">View CV →</button>
+          <a href="cv.html" style="display:block; background:var(--red);color:#fff;padding:0.75rem 1.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;text-align:center;text-decoration:none;">Curriculum Vitae →</a>
         </div>
       </nav>
     </div>
@@ -1165,8 +1206,8 @@
   <div style="background:var(--white); border-bottom:1px solid var(--border); padding:3.5rem 0 2.5rem;">
     <div class="w">
       <a href="index.html" style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:1.5rem;">← Brian N. Huh</a>
-      <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); display:block; margin-bottom:0.6rem;">Research Program</span>
-      <h1 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem,4vw,2.75rem); font-weight:300; color:var(--ink); line-height:1.2;">Consumer and Organizational Behavior Applied to High-Stakes Operations</h1>
+      <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); display:block; margin-bottom:0.6rem;">Research</span>
+      <h1 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(2.25rem, 5vw, 3.25rem); font-weight:300; color:var(--ink); line-height:1.2;">Consumer and Organizational Behavior Applied to High-Stakes Operations</h1>
       <p style="font-size:0.9rem; color:var(--ink-mid); max-width:58ch; line-height:1.7; margin-top:0.75rem;">Aviation accidents · AI trust · Behavioral science of safety-critical operations</p>
     </div>
   </div>
@@ -1177,7 +1218,9 @@
     </div>
   </div>
 
-    <section id="research" class="sec white reveal">
+    <main id="main-content">
+
+  <section id="research" class="sec white reveal">
     <div class="w">
       <div class="research-layout">
 
@@ -1207,9 +1250,9 @@
 
           <!-- Filter tabs -->
           <div id="research-filter-tabs" style="display:flex; gap:0; margin-bottom:1.5rem; border:1px solid var(--border); width:fit-content;">
-            <button onclick="researchFilter('all', this)" class="rf-tab rf-active" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:var(--ink); color:#fff; border:none; cursor:pointer; transition:all 0.15s;">All</button>
-            <button onclick="researchFilter('published', this)" class="rf-tab" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:transparent; color:var(--ink-mid); border:none; border-left:1px solid var(--border); cursor:pointer; transition:all 0.15s;">Published</button>
-            <button onclick="researchFilter('active', this)" class="rf-tab" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:transparent; color:var(--ink-mid); border:none; border-left:1px solid var(--border); cursor:pointer; transition:all 0.15s;">In Progress</button>
+            <button onclick="researchFilter('all', this)" onkeydown="if(event.key===\'Enter\'||event.key===\' \')this.click()" class="rf-tab rf-active" aria-label="Show all publications" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:var(--ink); color:#fff; border:none; cursor:pointer; transition:all 0.15s;">All</button>
+            <button onclick="researchFilter('published', this)" onkeydown="if(event.key===\'Enter\'||event.key===\' \')this.click()" class="rf-tab" aria-label="Show published work only" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:transparent; color:var(--ink-mid); border:none; border-left:1px solid var(--border); cursor:pointer; transition:all 0.15s;">Published</button>
+            <button onclick="researchFilter('active', this)" onkeydown="if(event.key===\'Enter\'||event.key===\' \')this.click()" class="rf-tab" aria-label="Show work in progress only" style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; padding:0.4rem 1rem; background:transparent; color:var(--ink-mid); border:none; border-left:1px solid var(--border); cursor:pointer; transition:all 0.15s;">In Progress</button>
           </div>
 
 
@@ -1251,11 +1294,11 @@
 
           <a id="research-isasi" href="research.html#findings" class="feat-row" data-status="published" style="background:var(--bg-alt); padding-left:1.25rem; display:flex; text-decoration:none;">
             <div style="flex:1;">
-              <div class="feat-title">Professional Engagement as the Dominant Predictor of AI Trust in Aviation Safety Investigations</div>
-              <div class="feat-sub">ISASI Human Factors Working Group needs assessment survey · N=269 · EFA→CFA→SEM · August–September 2024</div>
-              <div style="margin-top:0.5rem; font-family:var(--mono); font-size:0.62rem; color:var(--red); letter-spacing:0.06em;">β = 0.727 · R² = 48.9% · p &lt; 0.001 — View full findings →</div>
+              <div class="feat-title">Trust-Centered Investigations: Integrating Human Factors and Behavioral Science with AI in Aviation Safety</div>
+              <div class="feat-sub">Working paper · ISASI Human Factors Working Group · N=540 · 47 countries · Presented ISASI Annual Seminar 2024 (Lisbon) &amp; 2025 (Denver)</div>
+              <div style="margin-top:0.5rem; font-family:var(--mono); font-size:0.62rem; color:var(--red); letter-spacing:0.06em;">β = 0.727 · R² = 48.9% · Introduces ATAI instrument · HF maturity paradox · organizational threshold analysis — View findings →</div>
             </div>
-            <span class="feat-badge wip" style="align-self:flex-start; margin-top:0.1rem;">2024</span>
+            <span class="feat-badge wip" style="align-self:flex-start; margin-top:0.1rem;">working paper</span>
           </a>
 
           <p id="rf-active-label" style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.11em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:0.75rem; margin-top:1.5rem;">Active &amp; In Progress</p>
@@ -1281,6 +1324,14 @@
               <div class="feat-sub">Manuscript in development</div>
             </div>
             <span class="feat-badge wip">in prep</span>
+          </div>
+
+          <div class="feat-row" data-status="active">
+            <div>
+              <div class="feat-title">Choice Architecture and AI Recommendation Systems in Safety-Critical Environments</div>
+              <div class="feat-sub">Developing research thread — how AI systems structure the decision environments of safety professionals; what nudge principles apply, which don't, and why</div>
+            </div>
+            <span class="feat-badge wip">developing</span>
           </div>
 
           <div class="feat-row" data-status="active">
@@ -1390,7 +1441,7 @@
             <div style="padding:1.1rem 1.25rem; border-bottom:1px solid var(--border-soft); display:grid; grid-template-columns:1fr auto; gap:1rem; align-items:start;">
               <div>
                 <div style="font-size:0.875rem; font-weight:600; color:var(--ink); margin-bottom:0.2rem;">ISASI Annual Seminar 2025 — Denver, CO</div>
-                <div style="font-size:0.775rem; color:var(--ink-mid); line-height:1.6;">Presented AI trust research to aviation professionals from 49 countries. Introduced a composite trust model: curiosity + learned risk + perceived utility + structural access + message framing — each a distinct psychological mechanism.</div>
+                <div style="font-size:0.775rem; color:var(--ink-mid); line-height:1.6;">Presented AI trust research to aviation professionals from 47 countries. Introduced a composite trust model: curiosity + learned risk + perceived utility + structural access + message framing — each a distinct psychological mechanism.</div>
               </div>
               <span style="font-family:var(--mono); font-size:0.67rem; color:var(--ink-ghost); white-space:nowrap;">2025</span>
             </div>
@@ -1425,17 +1476,15 @@
       <!-- Header -->
       <div class="findings-intro">
         <div>
-          <span class="label dim">Research Findings · ISASI Human Factors Working Group · 2024</span>
+          <span class="label dim">Research Findings · ISASI Human Factors Working Group · 2024–2025</span>
           <h2 class="h2 dark-h2">
             What Predicts AI Trust<br><em>Among Aviation Safety<br>Investigators?</em>
           </h2>
           <p style="font-family:var(--mono); font-size:0.72rem; color:rgba(255,255,255,0.55); line-height:1.7; margin-bottom:1rem; padding:0.75rem 1rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.5);">
-            A structural equation modeling study of 269 aviation safety professionals examined what predicts trust in AI tools within investigative practice. A single factor accounted for nearly half the variance in trust scores. The dominant predictor was not demographic — not age, seniority, or organizational affiliation — but the degree to which investigators maintained active professional engagement with their field.
+            A multi-level study of 540 aviation safety professionals — 269 for individual-level factor analysis, 172 for organizational analysis — examined what predicts AI trust and human factors effectiveness in investigative practice. Individual professional engagement explained nearly half the variance in trust. More surprisingly, organizations with mature human factors programs showed marginally lower AI trust — not resistance, but informed skepticism from professionals who understand human-system failure modes.
           </p>
           <p class="dark-body">
-            A survey-based structural equation modeling study examining what predicts 
-            AI trust among professional aviation safety investigators. Conducted in 
-            collaboration with the ISASI Human Factors Working Group, August–September 2024.
+            Working paper: <em>Trust-Centered Investigations: Integrating Human Factors and Behavioral Science with AI in Aviation Safety.</em> Conducted in collaboration with the ISASI Human Factors Working Group, August–September 2024. Introduces the AI Trust Assessment Index (ATAI), a validated instrument for assessing individual readiness and guiding organizational AI integration strategy.
           </p>
         </div>
         <div>
@@ -1443,18 +1492,24 @@
           <div style="display:flex; flex-direction:column; gap:0.5rem;">
             <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
               <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Population</span>
-              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">Aviation safety investigators</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">Aviation safety professionals</span>
             </div>
             <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Survey responses</span>
-              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">N = 540 total · 269 complete</span>
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Sample</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">N = 540 total · 47 countries</span>
             </div>
             <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Analysis method</span>
-              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">EFA → CFA → SEM</span>
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Individual analysis</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">n = 269 · EFA → CFA → SEM</span>
             </div>
             <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Factors tested</span>
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Organizational analysis</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">n = 172 · piecewise regression</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:0.8rem; color:rgba(255,255,255,0.75);">Instrument developed</span>
+              <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">ATAI · α = .96 · CR = .92</span>
+            </div>
               <span style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,255,255,0.75);">6 latent constructs</span>
             </div>
             <div style="padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.06);">
@@ -1475,35 +1530,45 @@
       </div>
 
       <!-- KPI Row -->
-      <div class="findings-kpi-row">
+      <div class="findings-kpi-row" style="grid-template-columns: repeat(5, 1fr);">
         <div class="findings-kpi">
           <div class="findings-kpi-label">Primary Finding</div>
           <div class="findings-kpi-num"><em>β</em> = 0.727</div>
-          <div class="findings-kpi-note">Professional Engagement path coefficient to AI Trust — the only significant predictor in the model (p &lt; 0.001)</div>
+          <div class="findings-kpi-note">Professional Engagement → AI Trust. The only significant predictor (p &lt; 0.001)</div>
         </div>
         <div class="findings-kpi">
           <div class="findings-kpi-label">Variance Explained</div>
           <div class="findings-kpi-num">48.9<em>%</em></div>
-          <div class="findings-kpi-note">R² — Professional Engagement alone accounts for nearly half the variance in AI Trust scores across investigators</div>
+          <div class="findings-kpi-note">R² — individual professional engagement alone accounts for nearly half the variance in trust scores</div>
         </div>
         <div class="findings-kpi">
-          <div class="findings-kpi-label">Sample</div>
-          <div class="findings-kpi-num">269</div>
-          <div class="findings-kpi-note">Aviation safety professionals with complete AI Trust data, from 540 total ISASI needs assessment respondents</div>
+          <div class="findings-kpi-label">Full Sample</div>
+          <div class="findings-kpi-num">540</div>
+          <div class="findings-kpi-note">Aviation safety professionals · 47 countries · 18.4 years average experience</div>
+        </div>
+        <div class="findings-kpi">
+          <div class="findings-kpi-label">HF Maturity Paradox</div>
+          <div class="findings-kpi-num"><em>β</em> = −0.11</div>
+          <div class="findings-kpi-note">Mature HF programs → marginally lower AI trust (p = .054) — informed skepticism, not resistance</div>
+        </div>
+        <div class="findings-kpi">
+          <div class="findings-kpi-label">Mid-Career Advantage</div>
+          <div class="findings-kpi-num">74<em>%</em></div>
+          <div class="findings-kpi-note">Stronger engagement–trust relationship among 3–10 year professionals vs. senior investigators</div>
         </div>
       </div>
 
       <!-- Structural Paths Table -->
       <div style="margin-bottom:3rem;">
         <div class="findings-model-head">Structural Equation Model — All Paths to AI Trust</div>
-        <table class="path-table">
+        <table class="path-table" aria-label="Structural equation model path coefficients — predictors of AI trust">
           <thead>
             <tr>
-              <th>Predictor</th>
-              <th>β</th>
-              <th>Reliability</th>
-              <th>Effect Size</th>
-              <th>Significance</th>
+              <th scope="col">Predictor</th>
+              <th scope="col">β</th>
+              <th scope="col">Reliability</th>
+              <th scope="col">Effect Size</th>
+              <th scope="col">Significance</th>
             </tr>
           </thead>
           <tbody>
@@ -1706,7 +1771,7 @@
               <p style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:0.5rem;">Click any component to expand</p>
               <div style="display:flex; flex-direction:column; gap:0.3rem;" id="trust-model-list">
 
-                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                <div role="button" tabindex="0" aria-expanded="false" class="tm-item" onclick="tmToggle(this)" onkeydown="if(event.key==='Enter'||event.key===' ')tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
                   <div style="display:flex; justify-content:space-between; align-items:center;">
                     <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Curiosity</span>
                     <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
@@ -1714,7 +1779,7 @@
                   <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">The intrinsic motivation to explore AI tools out of genuine interest, independent of organizational pressure. Investigators high in curiosity seek out AI applications on their own initiative — predicting higher baseline trust and adoption readiness.</div>
                 </div>
 
-                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                <div role="button" tabindex="0" aria-expanded="false" class="tm-item" onclick="tmToggle(this)" onkeydown="if(event.key==='Enter'||event.key===' ')tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
                   <div style="display:flex; justify-content:space-between; align-items:center;">
                     <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Learned Risk</span>
                     <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
@@ -1722,7 +1787,7 @@
                   <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">Calibrated wariness derived from direct experience with past technology failures or misapplication. Distinct from simple resistance — learned risk reflects informed skepticism that can actually improve the quality of AI adoption by prompting verification behaviors rather than blind reliance.</div>
                 </div>
 
-                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                <div role="button" tabindex="0" aria-expanded="false" class="tm-item" onclick="tmToggle(this)" onkeydown="if(event.key==='Enter'||event.key===' ')tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
                   <div style="display:flex; justify-content:space-between; align-items:center;">
                     <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Perceived Utility</span>
                     <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
@@ -1730,7 +1795,7 @@
                   <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">The investigator's confidence that a specific AI tool meaningfully improves investigative outcomes — not AI in the abstract, but this tool for this task. Perceived utility is task-specific and context-dependent, which means training programs must demonstrate concrete investigative applications rather than general capability claims.</div>
                 </div>
 
-                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                <div role="button" tabindex="0" aria-expanded="false" class="tm-item" onclick="tmToggle(this)" onkeydown="if(event.key==='Enter'||event.key===' ')tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
                   <div style="display:flex; justify-content:space-between; align-items:center;">
                     <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Structural Access</span>
                     <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
@@ -1738,7 +1803,7 @@
                   <div class="tm-body" style="display:none; font-size:0.72rem; color:rgba(255,255,255,0.60); line-height:1.65; margin-top:0.4rem; padding-top:0.4rem; border-top:1px solid rgba(255,255,255,0.07);">Whether the investigator is organizationally included in AI-enabled workflows — assigned to AI-assisted investigations, given access to AI platforms, included in tool evaluation. Structural access predicts trust because exposure drives familiarity; its absence explains why institutional mandates alone fail to produce adoption.</div>
                 </div>
 
-                <div class="tm-item" onclick="tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
+                <div role="button" tabindex="0" aria-expanded="false" class="tm-item" onclick="tmToggle(this)" onkeydown="if(event.key==='Enter'||event.key===' ')tmToggle(this)" style="cursor:pointer; padding:0.55rem 0.75rem; background:rgba(255,255,255,0.04); border-left:2px solid rgba(153,0,0,0.4); transition:background 0.15s;">
                   <div style="display:flex; justify-content:space-between; align-items:center;">
                     <span style="font-size:0.775rem; color:rgba(255,255,255,0.85); font-weight:500;">Message Framing</span>
                     <span class="tm-chevron" style="font-family:var(--mono); font-size:0.65rem; color:rgba(153,0,0,0.8); transition:transform 0.2s;">+</span>
@@ -1848,7 +1913,7 @@
           </div>
           <div class="article-foot">
             <span class="article-meta">Essay · In Development · 2026 · 6 min read</span>
-            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" aria-label="Toggle abstract" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
           </div>
         </div>
 
@@ -1861,7 +1926,7 @@
           </div>
           <div class="article-foot">
             <span class="article-meta">Research Note · In Development · 5 min read</span>
-            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" aria-label="Toggle abstract" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
           </div>
         </div>
 
@@ -1870,11 +1935,11 @@
           <h3 class="article-title">What ISASI's Human Factors Working Group Is Getting Right</h3>
           <p class="article-excerpt">The 2024 ISASI conference in Lisbon put human factors at the center of safety investigation practice. A look at what the field is learning — and what behavioral science still has to offer.</p>
           <div class="article-abstract" style="display:none; margin-bottom:1rem;">
-            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">The 2024 ISASI Annual Seminar in Denver brought together 269 aviation safety professionals from 49 countries. The human factors working group sessions were notable for what they emphasized: not just the presence of human error in accidents, but the systemic and organizational conditions that shape it. This essay argues that the working group's framework aligns closely with consumer and organizational behavior research in ways that could meaningfully strengthen both fields.</p>
+            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">The 2024–2025 ISASI surveys reached 540 aviation safety professionals across 47 countries. The human factors working group sessions were notable for what they emphasized: not just the presence of human error in accidents, but the systemic and organizational conditions that shape it. This essay argues that the working group's framework aligns closely with consumer and organizational behavior research in ways that could meaningfully strengthen both fields.</p>
           </div>
           <div class="article-foot">
             <span class="article-meta">Essay · In Development · 5 min read</span>
-            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" aria-label="Toggle abstract" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
           </div>
         </div>
 
@@ -1887,7 +1952,7 @@
           </div>
           <div class="article-foot">
             <span class="article-meta">Framework Contribution · Active · ISASI · 3 min read</span>
-            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" aria-label="Toggle abstract" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
           </div>
         </div>
 
@@ -1900,7 +1965,7 @@
           </div>
           <div class="article-foot">
             <span class="article-meta">Essay · In Development · 7 min read</span>
-            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
+            <button class="article-expand" onclick="toggleAbstract(this)" aria-expanded="false" aria-label="Toggle abstract" style="background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--red);padding:0;text-transform:uppercase;">+ Abstract</button>
           </div>
         </div>
 
@@ -1911,6 +1976,8 @@
     <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
+  </main>
+
   <footer>
     <div class="footer-top">
       <div>
@@ -1923,10 +1990,8 @@
           <li><a href="research.html">Research</a></li>
           <li><a href="research.html#aviation">Aviation Human Factors</a></li>
           <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
-          <li><a href="lab.html">Operations</a></li>
-          <li><a href="mentorship.html">Mentorship</a></li>
-          <li></li>
-          <li></li>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="research-assistants.html">Student RA Pool</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -1934,9 +1999,9 @@
       <div>
         <p class="footer-col-lbl">Contact</p>
         <ul class="footer-list">
-          <li><a href="/cdn-cgi/l/email-protection#d1b9b4bdbdbe91b3a3b8b0bfb9a4b9ffb2bebc" class="red"><span class="__cf_email__" data-cfemail="264e434a4a496644544f47484e534e0845494b">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#cea6bba6ac8ea3afbcbda6afa2a2e0bbbdade0abaabb" class="red"><span class="__cf_email__" data-cfemail="87eff2efe5c7eae6f5f4efe6ebeba9f2f4e4a9e2e3f2">[email&#160;protected]</span></a></li>
           <li><a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#" onclick="openCV();return false;">View CV</a></li>
+          <li><a href="cv.html">View CV</a></li>
           <li><a href="https://usc.edu" target="_blank" rel="noopener">USC Marshall</a></li>
         </ul>
       </div>
@@ -2004,8 +2069,8 @@
         Brian N. Huh <span>Curriculum Vitae</span>
       </div>
       <div class="cv-topbar-right">
-        <button class="cv-print-btn" onclick="window.print()">Print / Save PDF</button>
-        <button class="cv-close-btn" onclick="closeCV()">✕ Close</button>
+        <button class="cv-print-btn" onclick="window.print()" aria-label="Print or save CV as PDF">Print / Save PDF</button>
+        <button class="cv-close-btn" onclick="closeCV()" aria-label="Close CV overlay">✕ Close</button>
       </div>
     </div>
 
@@ -2130,7 +2195,7 @@
               <li>Scaled annual research participants from <span class="cv-stat">5,295</span> (FY2017–18) to <span class="cv-stat">19,194</span> (FY2024–25) — a 262% increase</li>
               <li>Delivered <span class="cv-stat">11,176 research hours</span> in FY2025, a <span class="cv-stat">44.6% year-over-year increase</span>; in-person hours grew 122% in a single year</li>
 
-              <li>Hired, trained, and managed <span class="cv-stat">137 unique student assistants</span> over eight years; current team of 37 with a 90.6% continuous service rate</li>
+              <li>Hired, trained, and managed <span class="cv-stat">139 unique student assistants</span> over eight years; current team of 37 with a 90.6% continuous service rate</li>
               <li>Expanded lab capabilities by implementing interdisciplinary research tools including eye-tracking (Tobii) and psychophysiology (BioPac); coordinated peer benchmarking with Wharton, Booth, Columbia, Stanford, and Kellogg</li>
               <li>Developed automation solutions to streamline day-to-day operations, improving efficiency while maintaining service delivery quality</li>
               <li>Reduced RA onboarding time ~40% through a SharePoint wiki consolidating 25+ living SOPs and orientation materials</li>
@@ -2233,12 +2298,12 @@
           <div class="cv-entry">
             <div class="cv-entry-head">
               <div>
-                <div class="cv-entry-title">AI Trust Among Aviation Safety Professionals — SEM Study</div>
-                <div class="cv-entry-org">ISASI Human Factors Working Group needs assessment · N=269 · 49 countries</div>
+                <div class="cv-entry-title">Trust-Centered Investigations: Integrating Human Factors and Behavioral Science with AI in Aviation Safety</div>
+                <div class="cv-entry-org">Working paper · ISASI Human Factors Working Group · N=540 · 47 countries</div>
               </div>
-              <div class="cv-entry-date">2024</div>
+              <div class="cv-entry-date">2024–2025</div>
             </div>
-            <div class="cv-entry-body">Structural equation modeling study (EFA→CFA→SEM) identifying professional engagement as the dominant predictor of AI trust among aviation safety investigators (β=0.727, R²=48.9%, p&lt;0.001). Presented at ISASI Annual Seminar 2024 (Lisbon, Portugal) and ISASI Annual Seminar 2025 (Denver, CO). Introduced composite trust model — curiosity, learned risk, perceived utility, structural access, and message framing — as distinct psychological mechanisms each requiring different intervention strategies.</div>
+            <div class="cv-entry-body">Working paper. Multi-level study of 540 aviation safety professionals across 47 countries — 269 for individual-level SEM (EFA→CFA→SEM), 172 for organizational analysis. Primary finding: professional engagement explains 48.9% of AI trust variance (β=0.727, p&lt;0.001). Introduces the AI Trust Assessment Index (ATAI; α=.96, CR=.92). Key findings: HF maturity paradox (β=−0.11, informed skepticism vs. resistance), mid-career advantage (74% stronger engagement-trust relationship at 3–10 years), organizational threshold at integration level 3.5. Presented at ISASI Annual Seminar 2024 (Lisbon) and ISASI Annual Seminar 2025 (Denver).</div>
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
@@ -2280,12 +2345,12 @@
           <div class="cv-entry">
             <div class="cv-entry-head">
               <div>
-                <div class="cv-entry-title">Research Skills, Academic Writing &amp; Critical Reading</div>
-                <div class="cv-entry-org">Private Mentorship &amp; Tutoring</div>
+                <div class="cv-entry-title">Student Research Assistant Pool Program</div>
+                <div class="cv-entry-org">Marshall Behavioral Research Lab · USC Marshall</div>
               </div>
               <div class="cv-entry-date">Ongoing</div>
             </div>
-            <div class="cv-entry-body">Works with undergraduate and graduate students on research reasoning, academic writing, analytical reading, and argument structure. Limited engagements per term; emphasis on building durable intellectual skills.</div>
+            <div class="cv-entry-body">Manages the Student Research Assistant Pool — 139 students across 21 semesters, 392 person-semesters — working directly with every RA as a hands-on staff researcher. Develops research skills, analytical thinking, and professional capability through the day-to-day work of running real studies.</div>
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
@@ -2635,6 +2700,18 @@
     btn.textContent = open ? '+ Abstract' : '− Abstract';
     btn.setAttribute('aria-expanded', !open);
   }
+  </script>
+
+  <script>
+  (function(){
+    var path = window.location.pathname;
+    var filename = path.split('/').pop() || 'index.html';
+    if(!filename) filename = 'index.html';
+    document.querySelectorAll('.nav-menu a').forEach(function(a){
+      var href = (a.getAttribute('href') || '').split('#')[0].split('/').pop() || 'index.html';
+      if(href && href === filename) { a.classList.add('on'); a.setAttribute('aria-current','page'); }
+    });
+  })();
   </script>
 </body>
 </html>

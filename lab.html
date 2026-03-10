@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marshall Behavioral Research Lab — Brian N. Huh · USC Marshall</title>
-  <meta name="description" content="Lab Manager of the Marshall Behavioral Research Lab at USC Marshall. Research infrastructure, Research Assistant program, operational statistics, and applied writing and field research observations from active studies." />
+  <meta name="description" content="Lab Manager of the Marshall Behavioral Research Lab at USC Marshall. Research infrastructure, Student Research Assistant Pool Program, operational statistics, and applied writing and field research observations from active studies." />
 
   <!-- Open Graph / Social sharing -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://brianhuh.com/" />
   <meta property="og:title" content="Marshall Behavioral Research Lab — Brian N. Huh · USC Marshall" />
-  <meta property="og:description" content="Lab Manager of the Marshall Behavioral Research Lab at USC Marshall. Research infrastructure, Research Assistant program, operational statistics, and applied writing and field research observations from active studies." />
+  <meta property="og:description" content="Lab Manager of the Marshall Behavioral Research Lab at USC Marshall. Research infrastructure, Student Research Assistant Pool Program, operational statistics, and applied writing and field research observations from active studies." />
   <meta property="og:image"       content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="twitter:title" content="Marshall Behavioral Research Lab — Brian N. Huh · USC Marshall" />
-  <meta name="twitter:description" content="Lab Manager of the Marshall Behavioral Research Lab at USC Marshall. Research infrastructure, Research Assistant program, operational statistics, and applied writing and field research observations from active studies." />
+  <meta name="twitter:description" content="Lab Manager of the Marshall Behavioral Research Lab at USC Marshall. Research infrastructure, Student Research Assistant Pool Program, operational statistics, and applied writing and field research observations from active studies." />
   <meta name="twitter:image"      content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
 
   <!-- Favicon: crimson BH monogram -->
@@ -121,14 +121,14 @@
 
     .h1 {
       font-family: var(--serif); font-weight: 300;
-      font-size: clamp(3.25rem, 8.5vw, 6rem);
+      font-size: clamp(3.5rem, 9vw, 6.5rem);
       line-height: 0.97; letter-spacing: -0.03em; color: var(--ink);
     }
     .h1 em { font-style: italic; color: var(--red); }
 
     .h2 {
       font-family: var(--serif); font-weight: 400;
-      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
       line-height: 1.2; letter-spacing: -0.015em; color: var(--ink);
       margin-bottom: 1.1rem;
     }
@@ -627,7 +627,6 @@
     .alumni-now { font-size: 0.78rem; color: var(--ink-mid); line-height: 1.5; }
     .alumni-now strong { color: var(--ink); }
     @media (max-width: 860px) { .team-grid { grid-template-columns: 1fr 1fr; } .alumni-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } }
 
     .about-bio p { font-size: 1.0625rem; color: var(--ink-body); line-height: 1.85; margin-bottom: 1.2rem; }
     .about-bio p:first-child {
@@ -751,13 +750,16 @@
       .essay-related { flex-direction: row; flex-wrap: wrap; padding-top: 0; }
       .sec { padding: 4.5rem 0; }
       /* Hero collapses to single column on tablet */
-
+      /* Portrait: center when stacked above bio */
+      .about-layout { grid-template-columns: 1fr; }
+      .portrait { max-width: 140px; margin: 0 auto; }
+    }
 
     @media (max-width: 600px) {
       .w, .nav-w, .footer-top, .footer-bottom { padding-left: 1.25rem; padding-right: 1.25rem; }
       .writing-grid { grid-template-columns: 1fr; }
       .card-grid { grid-template-columns: 1fr; }
-      .focus-chips { }
+      .team-grid { grid-template-columns: 1fr; }
       .affil-strip { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
@@ -767,6 +769,8 @@
       .sec { padding: 3.5rem 0; }
       .nav-menu { display: none; }
       .nav-hamburger { display: flex; }
+      /* Inline grid collapses */
+      .contact-note { padding: 1.75rem; }
     }
 
 
@@ -1069,10 +1073,67 @@
     .findings-stat-label { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.12em;
       text-transform: uppercase; color: rgba(255,255,255,0.70); margin-top: 0.4rem; }
     a.feat-row:hover { background: var(--bg-alt) !important; }</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Marshall Behavioral Research Lab — Brian N. Huh · USC Marshall",
+    "url": "https://brianhuh.com/lab.html",
+    "author": {
+      "@type": "Person",
+      "name": "Brian N. Huh",
+      "url": "https://brianhuh.com"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+  <main id="main-content">
 
   <!-- ═══════════════════════════════════════════
+       LAB HERO
+  ═══════════════════════════════════════════ -->
+  <section id="lab-hero" style="padding-top:7rem; padding-bottom:0; background:var(--bg); border-bottom:3px solid var(--red);">
+    <div class="w">
+      <div style="padding-bottom:3.5rem;">
+        <p style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:1.8rem; display:flex; align-items:center; gap:0.7rem;">
+          <span style="width:5px;height:5px;background:var(--red);border-radius:50%;display:inline-block;flex-shrink:0;"></span>
+          USC Marshall School of Business &ensp;·&ensp; Office of the Associate Vice Dean for Research
+        </p>
+        <h1 style="font-family:'IBM Plex Serif',Georgia,serif; font-weight:300; font-size:clamp(3.5rem, 9vw, 6.5rem); line-height:0.97; letter-spacing:-0.03em; color:var(--ink); margin-bottom:1.75rem;">
+          Marshall<br><em style="font-style:italic; color:var(--red);">Behavioral Lab</em>
+        </h1>
+        <p style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-soft); display:flex; align-items:center; gap:1rem; flex-wrap:wrap; margin-bottom:2.5rem;">
+          Research Infrastructure
+          <span style="color:var(--border);">·</span>
+          11 Departments
+          <span style="color:var(--border);">·</span>
+          164 Researchers
+          <span style="color:var(--border);">·</span>
+          19,194 Annual Participants
+        </p>
+        <p style="max-width:580px; font-size:1.0625rem; color:var(--ink-body); line-height:1.85; margin-bottom:2.75rem;">
+          The Marshall Behavioral Research Lab is USC Marshall's primary behavioral science research infrastructure — built from two departments to eleven over eight years. It supports in-person, online, and field studies across all of Marshall's academic units, with a team of research assistants, a 19,000-member participant pool, and specialized measurement technology including eye-tracking and psychophysiology.
+        </p>
+        <div style="display:flex; gap:0.85rem; flex-wrap:wrap;">
+          <a href="#systems" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:500;letter-spacing:0.03em;padding:0.62rem 1.35rem;background:var(--red);color:#fff;border:1px solid var(--red);transition:all 0.2s;text-decoration:none;">Lab Overview &rarr;</a>
+          <a href="#lab-people" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:500;letter-spacing:0.03em;padding:0.62rem 1.35rem;background:transparent;color:var(--ink-mid);border:1px solid var(--border);transition:all 0.2s;text-decoration:none;">Meet the Team &rarr;</a>
+        </div>
+      </div>
+      <!-- Stats bar -->
+      <div style="border-top:1px solid var(--border); padding:1rem 0; display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;">
+        <span style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-ghost);margin-right:0.5rem;">Metrics</span>
+        <span style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-soft);padding:0.28rem 0.75rem;border:1px solid var(--border);">11,176 Research Hours · FY2025</span>
+        <span style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-soft);padding:0.28rem 0.75rem;border:1px solid var(--border);">263% Pool Growth</span>
+        <span style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-soft);padding:0.28rem 0.75rem;border:1px solid var(--border);">8 Years · Est. 2017</span>
+        <span style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-soft);padding:0.28rem 0.75rem;border:1px solid var(--border);">Noldus Reference Lab</span>
+      </div>
+    </div>
+  </section>
+
+ <!-- ═══════════════════════════════════════════
        NAV
   ═══════════════════════════════════════════ -->
   <nav id="nav" aria-label="Main navigation">
@@ -1090,7 +1151,7 @@
             <a href="research.html#findings">AI Trust &amp; Technology</a>
             <a href="research.html#research-writing">Publications &amp; Writing</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.28); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
             </div>
           </div>
         </li>
@@ -1102,7 +1163,7 @@
             <a href="lab.html#systems-stats">Stats &amp; Growth</a>
             <a href="lab.html#lab-writing">Field Research</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.28); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team</span>
             </div>
           </div>
         </li>
@@ -1110,14 +1171,14 @@
           <a href="index.html#about">About</a>
           <div class="nav-dropdown" style="display:none;">
             <a href="index.html#about">Bio &amp; Background</a>
-            <a href="mentorship.html">Mentorship</a>
+            <a href="research-assistants.html">Mentorship</a>
             <a href="index.html#contact">Contact</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.28); letter-spacing:0; text-transform:none;">Bio · Mentorship · Contact</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Bio · Mentorship · Contact</span>
             </div>
           </div>
         </li>
-        <li><a href="#" onclick="openCV();return false;" class="nav-contact">CV</a></li>
+        <li><a href="cv.html" class="nav-contact">CV</a></li>
       </ul>
 
       <!-- Hamburger (mobile only) -->
@@ -1139,7 +1200,7 @@
           <a href="research.html#research-writing">Publications &amp; Writing</a>
           <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Aviation human factors · AI trust · Publications</span>
         </div>
-        <a href="lab.html" class="mobile-nav-section">Operations</a>
+        <a href="lab.html" class="mobile-nav-section">Lab</a>
         <div class="mobile-nav-group">
           <a href="lab.html#lab-people">People</a>
           <a href="lab.html#systems-coral">Infrastructure</a>
@@ -1150,12 +1211,12 @@
         <a href="index.html#about" class="mobile-nav-section">About</a>
         <div class="mobile-nav-group">
           <a href="index.html#about">Bio &amp; Background</a>
-          <a href="mentorship.html">Mentorship</a>
+          <a href="research-assistants.html">Mentorship</a>
           <a href="index.html#contact">Contact</a>
           <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Bio · Mentorship · Contact</span>
         </div>
         <div class="mobile-nav-cta">
-          <button onclick="openCV()" style="background:var(--red);color:#fff;border:none;padding:0.75rem 1.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;width:100%;">View CV →</button>
+          <a href="cv.html" style="display:block; background:var(--red);color:#fff;padding:0.75rem 1.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;text-align:center;text-decoration:none;">Curriculum Vitae →</a>
         </div>
       </nav>
     </div>
@@ -1165,7 +1226,7 @@
     <div class="w">
       <a href="index.html" style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:1.5rem;">← Brian N. Huh</a>
       <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); display:block; margin-bottom:0.6rem;">Marshall Behavioral Research Lab</span>
-      <h1 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem,4vw,2.75rem); font-weight:300; color:var(--ink); line-height:1.2;">Marshall Behavioral Research Lab</h1>
+      <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem, 3.5vw, 2.25rem); font-weight:300; color:var(--ink); line-height:1.2;">Marshall Behavioral Research Lab</h2>
       <p style="font-size:0.9rem; color:var(--ink-mid); max-width:58ch; line-height:1.7; margin-top:0.75rem;">Research support operations · Marshall Behavioral Lab</p>
     </div>
   </div>
@@ -1213,7 +1274,7 @@
           <!-- Strategic Pivot: COVID → In-Person -->
           <div style="margin: 2.5rem 0; padding: 1.75rem 2rem; background: var(--bg-alt); border: 1px solid var(--border);">
             <p style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.11em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:1rem;">Operational Adaptation</p>
-            <h3 style="font-family:var(--serif); font-size:1.1rem; font-weight:400; color:var(--ink); margin-bottom:0.9rem; line-height:1.4;">From Remote-First to In-Person — A Deliberate Strategic Shift</h3>
+            <h3 style="font-family:var(--serif); font-size:1.1875rem; font-weight:400; color:var(--ink); margin-bottom:0.9rem; line-height:1.4;">From Remote-First to In-Person — A Deliberate Strategic Shift</h3>
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
               <div>
                 <p style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.10em; text-transform:uppercase; color:var(--red); margin-bottom:0.6rem;">2020 – 2022 · Remote-First</p>
@@ -1242,7 +1303,7 @@
             </div>
             <div class="area-row">
               <span class="area-num">04</span>
-              <span class="area-text">Team development &amp; Research Assistant program direction</span>
+              <span class="area-text">Team development &amp; Student Research Assistant Pool Program direction</span>
             </div>
             <div class="area-row">
               <span class="area-num">05</span>
@@ -1351,7 +1412,7 @@
       <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
         <div>
           <span class="label">Community Research</span>
-          <h3 style="font-family: var(--serif); font-size: 1.25rem; font-weight: 400; color: var(--ink); margin: 0.5rem 0 0.85rem;">Compensated Participant Pool</h3>
+          <h3 style="font-family: var(--serif); font-size: 1.1875rem; font-weight: 400; color: var(--ink); margin: 0.5rem 0 0.85rem;">Compensated Participant Pool</h3>
           <p style="font-size: 0.8125rem; color: var(--ink-body); line-height: 1.75; margin-bottom: 0.75rem;">A community panel of Greater Los Angeles residents for studies requiring non-student, professionally diverse samples. 91% non-student, 79% California-based.</p>
           <p style="font-size: 0.73rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 1.25rem;">The lab operates five distinct subject pools to serve the full range of research designs: <em>MKT Pool</em>, <em>MOR Pool</em>, <em>MOR Field Study Pool</em>, <em>Compensated Community Pool</em>, and <em>Third-Party Online Pool</em> — allowing faculty to match sample type to methodology.</p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
@@ -1375,7 +1436,7 @@
         </div>
         <div>
           <span class="label">Technology Initiative</span>
-          <h3 style="font-family: var(--serif); font-size: 1.25rem; font-weight: 400; color: var(--ink); margin: 0.5rem 0 0.85rem;">Pop-Up Lab Initiative</h3>
+          <h3 style="font-family: var(--serif); font-size: 1.1875rem; font-weight: 400; color: var(--ink); margin: 0.5rem 0 0.85rem;">Pop-Up Lab Initiative</h3>
           <p style="font-size: 0.8125rem; color: var(--ink-body); line-height: 1.75; margin-bottom: 1.25rem;">Mobile lab deployments at satellite locations across Los Angeles — bringing behavioral studies to participants in real-world settings with full RA staffing and equipment support. In an era of AI-generated responses and bot contamination in online panels, in-person field data provides verifiable, authentic behavioral measurement that cannot be replicated remotely.</p>
 
           <!-- Field stats -->
@@ -1422,7 +1483,7 @@
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
           <div>
             <span class="label">Technology Initiative</span>
-            <h3 class="h2" style="font-size: 1.6rem; margin-top: 0.5rem; margin-bottom: 1rem;">CORAL Platform</h3>
+            <h3 class="h2" style="font-size: 1.1875rem; margin-top: 0.5rem; margin-bottom: 1rem;">CORAL Platform</h3>
             <p style="font-family: var(--mono); font-size: 0.70rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 1.25rem;">Coordinated Operations for Research Assistant Logistics</p>
             <p class="body">
               A custom scheduling and operations management platform developed through a formal academic 
@@ -1569,105 +1630,430 @@
         </div>
       </div>
 
-      <!-- Lab Growth Chart -->
-      <div style="margin-top: 3rem; padding: 2rem; background: var(--white); border: 1px solid var(--border); border-top: 2px solid var(--red);">
-        <p style="font-family:var(--mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:0.3rem;">Lab Growth</p>
-        <p style="font-family:var(--serif); font-size:1.1rem; color:var(--ink); margin-bottom:0.25rem;">Annual Research Participants — FY2018 to FY2025</p>
-        <p style="font-size:0.72rem; color:var(--ink-soft); margin-bottom:2rem;">5,295 → 19,194 participants &ensp;·&ensp; 262% total growth &ensp;·&ensp; Intermediate years interpolated</p>
+      <!-- Lab Growth Dashboard -->
+      <div id="lab-growth-dashboard" style="margin-top:3rem;">
 
-        <div id="growth-chart" style="position:relative; height:180px; display:flex; align-items:flex-end; gap:8px; padding-bottom:28px; padding-left:32px;">
+        <!-- Section header -->
+        <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+          <div>
+            <p style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:14px;height:1px;background:var(--red);"></span>Brian N. Huh · Marshall Behavioral Research Lab · 2017–2025</p>
+            <h3 style="font-family:var(--serif); font-size:1.1875rem; font-weight:400; color:var(--ink); margin:0; line-height:1.2;">Eight Years of Scale</h3>
+          </div>
+          <p style="font-size:0.775rem; color:var(--ink-soft); max-width:44ch; line-height:1.7; margin:0;">From two departments and 5,295 annual participants to eleven departments, 164 registered researchers, and 110,862 served cumulatively across 851 studies.</p>
         </div>
 
+        <!-- KPI strip -->
+        <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-bottom:1.5rem;">
+          <div style="background:var(--white); padding:1rem 1rem;">
+            <div style="font-family:var(--serif); font-size:1.35rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.18rem;">263%</div>
+            <div style="font-family:var(--mono); font-size:0.53rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); line-height:1.35;">Participant growth</div>
+            <div style="font-family:var(--mono); font-size:0.52rem; color:var(--red); margin-top:0.1rem;">FY18 → FY25</div>
+          </div>
+          <div style="background:var(--white); padding:1rem 1rem;">
+            <div style="font-family:var(--serif); font-size:1.35rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.18rem;">110,862</div>
+            <div style="font-family:var(--mono); font-size:0.53rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); line-height:1.35;">Cumulative participants</div>
+            <div style="font-family:var(--mono); font-size:0.52rem; color:var(--red); margin-top:0.1rem;">851 studies</div>
+          </div>
+          <div style="background:var(--white); padding:1rem 1rem;">
+            <div style="font-family:var(--serif); font-size:1.35rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.18rem;">2 → 11</div>
+            <div style="font-family:var(--mono); font-size:0.53rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); line-height:1.35;">Departments served</div>
+            <div style="font-family:var(--mono); font-size:0.52rem; color:var(--red); margin-top:0.1rem;">Founded 2017</div>
+          </div>
+          <div style="background:var(--white); padding:1rem 1rem;">
+            <div style="font-family:var(--serif); font-size:1.35rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.18rem;">164</div>
+            <div style="font-family:var(--mono); font-size:0.53rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); line-height:1.35;">Registered researchers</div>
+            <div style="font-family:var(--mono); font-size:0.52rem; color:var(--red); margin-top:0.1rem;">Faculty + doctoral</div>
+          </div>
+          <div style="background:var(--white); padding:1rem 1rem;">
+            <div style="font-family:var(--serif); font-size:1.35rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.18rem;">9,902</div>
+            <div style="font-family:var(--mono); font-size:0.53rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); line-height:1.35;">Pool registrants</div>
+            <div style="font-family:var(--mono); font-size:0.52rem; color:var(--red); margin-top:0.1rem;">+340% growth</div>
+          </div>
+          <div style="background:var(--white); padding:1rem 1rem;">
+            <div style="font-family:var(--serif); font-size:1.35rem; font-weight:300; color:var(--red); line-height:1; margin-bottom:0.18rem;">11,176</div>
+            <div style="font-family:var(--mono); font-size:0.53rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft); line-height:1.35;">Research hours FY25</div>
+            <div style="font-family:var(--mono); font-size:0.52rem; color:var(--red); margin-top:0.1rem;">+44.6% YoY</div>
+          </div>
+        </div>
+
+        <!-- Tab buttons -->
+        <div id="lgd-tabs" style="display:flex; gap:1px; background:var(--border); border:1px solid var(--border); margin-bottom:1px;">
+          <button onclick="lgdTab('participants')" id="lgd-tab-participants" style="flex:1; padding:0.6rem 0.25rem; font-family:var(--mono); font-size:0.6rem; letter-spacing:0.09em; text-transform:uppercase; border:none; cursor:pointer; background:#990000; color:#fff; transition:all 0.15s;">Participants &amp; Pool</button>
+          <button onclick="lgdTab('infrastructure')" id="lgd-tab-infrastructure" style="flex:1; padding:0.6rem 0.25rem; font-family:var(--mono); font-size:0.6rem; letter-spacing:0.09em; text-transform:uppercase; border:none; cursor:pointer; background:#fff; color:#6e6e6a; transition:all 0.15s;">Infrastructure</button>
+          <button onclick="lgdTab('hours')" id="lgd-tab-hours" style="flex:1; padding:0.6rem 0.25rem; font-family:var(--mono); font-size:0.6rem; letter-spacing:0.09em; text-transform:uppercase; border:none; cursor:pointer; background:#fff; color:#6e6e6a; transition:all 0.15s;">Research Hours</button>
+          <button onclick="lgdTab('ra')" id="lgd-tab-ra" style="flex:1; padding:0.6rem 0.25rem; font-family:var(--mono); font-size:0.6rem; letter-spacing:0.09em; text-transform:uppercase; border:none; cursor:pointer; background:#fff; color:#6e6e6a; transition:all 0.15s;">RA Program</button>
+        </div>
+
+        <!-- TAB PANELS -->
+
+        <!-- ── PARTICIPANTS ── -->
+        <div id="lgd-panel-participants" style="display:block;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border);">
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid var(--red);">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:var(--red);"></span>Annual Participants</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">5,295 → 19,194 · +263%</p>
+              <div style="position:relative; height:200px;"><canvas id="lgd-c1"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* FY18 and FY25 exact; intermediate years interpolated</p>
+            </div>
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid var(--red);">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:var(--red);"></span>Pool Registrants</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">~2,250 → 9,902 · +340%</p>
+              <div style="position:relative; height:200px;"><canvas id="lgd-c2"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* 2017 estimated; FY25 = 9,902 confirmed</p>
+            </div>
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid #181816;">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:#181816; margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:#181816;"></span>Cumulative Participants</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">Running total 2017–2025 · 851 studies</p>
+              <div style="position:relative; height:180px;"><canvas id="lgd-c3"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* FY25 confirmed at 110,862</p>
+            </div>
+
+            <div style="background:#990000; padding:1.75rem; display:flex; flex-direction:column; justify-content:center;">
+              <p style="font-family:var(--mono); font-size:0.56rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:1rem;">Growth summary</p>
+              <div style="display:flex; flex-direction:column; gap:0;">
+                <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.55rem 0; border-bottom:1px solid rgba(255,255,255,0.12); gap:0.5rem; flex-wrap:wrap;">
+                  <span style="font-family:var(--mono); font-size:0.58rem; color:rgba(255,255,255,0.6); letter-spacing:0.04em; flex:1;">Annual participants</span>
+                  <span style="font-family:var(--serif); font-size:0.85rem; color:#fff;">5,295 → 19,194</span>
+                  <span style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.9); font-weight:500;">+263%</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.55rem 0; border-bottom:1px solid rgba(255,255,255,0.12); gap:0.5rem; flex-wrap:wrap;">
+                  <span style="font-family:var(--mono); font-size:0.58rem; color:rgba(255,255,255,0.6); letter-spacing:0.04em; flex:1;">Pool registrants</span>
+                  <span style="font-family:var(--serif); font-size:0.85rem; color:#fff;">~2,250 → 9,902</span>
+                  <span style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.9); font-weight:500;">+340%</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.55rem 0; gap:0.5rem; flex-wrap:wrap;">
+                  <span style="font-family:var(--mono); font-size:0.58rem; color:rgba(255,255,255,0.6); letter-spacing:0.04em; flex:1;">Cumulative total</span>
+                  <span style="font-family:var(--serif); font-size:0.85rem; color:#fff;">110,862</span>
+                  <span style="font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.9); font-weight:500;">8 yrs</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── INFRASTRUCTURE ── -->
+        <div id="lgd-panel-infrastructure" style="display:none;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border);">
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid var(--red);">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:var(--red);"></span>Departments Served</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">2 at founding → 11 today</p>
+              <div style="position:relative; height:200px;"><canvas id="lgd-c4"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* 2017 and 2025 exact; intermediate years estimated</p>
+            </div>
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid #5a7a5a;">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:#5a7a5a; margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:#5a7a5a;"></span>Registered Researchers</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">~18 → 164 faculty, doctoral &amp; visiting</p>
+              <div style="position:relative; height:200px;"><canvas id="lgd-c5"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* 2017 and 2025 exact; intermediate years estimated</p>
+            </div>
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid var(--red);">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:var(--red);"></span>Researcher Composition FY2025</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">164 registered across 11 departments</p>
+              <div style="display:flex; flex-direction:column; gap:0;">
+                <div style="display:flex; align-items:center; gap:0.7rem; padding:0.5rem 0; border-bottom:1px solid var(--border);">
+                  <div style="width:7px;height:7px;background:#990000;border-radius:1px;flex-shrink:0;"></div>
+                  <span style="font-family:var(--mono); font-size:0.6rem; color:var(--ink-mid); flex:1; letter-spacing:0.03em;">Faculty</span>
+                  <div style="width:110px; height:4px; background:var(--border); border-radius:2px; position:relative;"><div style="width:42%; height:100%; background:#990000; border-radius:2px;"></div></div>
+                  <span style="font-family:var(--mono); font-size:0.62rem; color:var(--ink); font-weight:500; width:18px; text-align:right;">69</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.7rem; padding:0.5rem 0; border-bottom:1px solid var(--border);">
+                  <div style="width:7px;height:7px;background:#4a6fa5;border-radius:1px;flex-shrink:0;"></div>
+                  <span style="font-family:var(--mono); font-size:0.6rem; color:var(--ink-mid); flex:1; letter-spacing:0.03em;">Doctoral students</span>
+                  <div style="width:110px; height:4px; background:var(--border); border-radius:2px; position:relative;"><div style="width:13%; height:100%; background:#4a6fa5; border-radius:2px;"></div></div>
+                  <span style="font-family:var(--mono); font-size:0.62rem; color:var(--ink); font-weight:500; width:18px; text-align:right;">22</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.7rem; padding:0.5rem 0; border-bottom:1px solid var(--border);">
+                  <div style="width:7px;height:7px;background:#5a7a5a;border-radius:1px;flex-shrink:0;"></div>
+                  <span style="font-family:var(--mono); font-size:0.6rem; color:var(--ink-mid); flex:1; letter-spacing:0.03em;">Postdocs &amp; visiting</span>
+                  <div style="width:110px; height:4px; background:var(--border); border-radius:2px; position:relative;"><div style="width:11%; height:100%; background:#5a7a5a; border-radius:2px;"></div></div>
+                  <span style="font-family:var(--mono); font-size:0.62rem; color:var(--ink); font-weight:500; width:18px; text-align:right;">18</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.7rem; padding:0.5rem 0;">
+                  <div style="width:7px;height:7px;background:#c9c5be;border-radius:1px;flex-shrink:0;"></div>
+                  <span style="font-family:var(--mono); font-size:0.6rem; color:var(--ink-mid); flex:1; letter-spacing:0.03em;">Masters &amp; other</span>
+                  <div style="width:110px; height:4px; background:var(--border); border-radius:2px; position:relative;"><div style="width:34%; height:100%; background:#c9c5be; border-radius:2px;"></div></div>
+                  <span style="font-family:var(--mono); font-size:0.62rem; color:var(--ink); font-weight:500; width:18px; text-align:right;">55</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid #c9a227;">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:#c9a227; margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:#c9a227;"></span>Study Teams Supported</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">~42 in FY18 → ~200 in FY25 · 851 cumulative</p>
+              <div style="position:relative; height:180px;"><canvas id="lgd-c6"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* Intermediate values estimated; cumulative total confirmed</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── HOURS ── -->
+        <div id="lgd-panel-hours" style="display:none;">
+          <div style="display:grid; grid-template-columns:3fr 2fr; gap:1px; background:var(--border); border:1px solid var(--border);">
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid var(--red);">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:var(--red);"></span>Research Hours by Year</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">In-person vs. online · FY2022–FY2025</p>
+              <div style="position:relative; height:260px;"><canvas id="lgd-c7"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* FY22–FY24 approximate; FY25 = 11,176 confirmed</p>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:1px;">
+              <div style="background:var(--ink); padding:1.75rem; flex:1; display:flex; flex-direction:column; justify-content:center;">
+                <p style="font-family:var(--mono); font-size:0.54rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:0.9rem;">FY2025 highlights</p>
+                <div style="display:flex; flex-direction:column; gap:0;">
+                  <div style="display:flex; justify-content:space-between; padding:0.38rem 0; border-bottom:1px solid rgba(255,255,255,0.07);"><span style="font-family:var(--mono); font-size:0.57rem; color:rgba(255,255,255,0.5); letter-spacing:0.04em;">Total hours</span><span style="font-family:var(--serif); font-size:0.875rem; color:#fff;">11,176</span></div>
+                  <div style="display:flex; justify-content:space-between; padding:0.38rem 0; border-bottom:1px solid rgba(255,255,255,0.07);"><span style="font-family:var(--mono); font-size:0.57rem; color:rgba(255,255,255,0.5); letter-spacing:0.04em;">YoY increase</span><span style="font-family:var(--serif); font-size:0.875rem; color:#fff;">+44.6%</span></div>
+                  <div style="display:flex; justify-content:space-between; padding:0.38rem 0; border-bottom:1px solid rgba(255,255,255,0.07);"><span style="font-family:var(--mono); font-size:0.57rem; color:rgba(255,255,255,0.5); letter-spacing:0.04em;">In-person hours</span><span style="font-family:var(--serif); font-size:0.875rem; color:#fff;">6,438</span></div>
+                  <div style="display:flex; justify-content:space-between; padding:0.38rem 0; border-bottom:1px solid rgba(255,255,255,0.07);"><span style="font-family:var(--mono); font-size:0.57rem; color:rgba(255,255,255,0.5); letter-spacing:0.04em;">In-person YoY</span><span style="font-family:var(--serif); font-size:0.875rem; color:#fff;">+122%</span></div>
+                  <div style="display:flex; justify-content:space-between; padding:0.38rem 0;"><span style="font-family:var(--mono); font-size:0.57rem; color:rgba(255,255,255,0.5); letter-spacing:0.04em;">Online hours</span><span style="font-family:var(--serif); font-size:0.875rem; color:#fff;">4,738</span></div>
+                </div>
+              </div>
+              <div style="background:#fdf5f5; border:1px solid var(--border); border-top:3px solid var(--red); padding:1.25rem 1.4rem;">
+                <p style="font-family:var(--mono); font-size:0.54rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.45rem;">In-person surge</p>
+                <p style="font-family:var(--serif); font-size:0.9rem; color:var(--ink); line-height:1.6; margin:0; font-style:italic;">In-person hours more than doubled in a single year — 122% growth — as lab capacity expanded to meet faculty demand.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── RA PROGRAM ── -->
+        <div id="lgd-panel-ra" style="display:none;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border);">
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid var(--red);">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:var(--red);"></span>Cumulative RAs Trained</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">139 students · 21 semesters</p>
+              <div style="position:relative; height:200px;"><canvas id="lgd-c8"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* 2017 and 2025 exact; intermediate years estimated</p>
+            </div>
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid #4a6fa5;">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:#4a6fa5; margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:#4a6fa5;"></span>Person-Semesters Accumulated</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">16 in 2017 → 392 today</p>
+              <div style="position:relative; height:200px;"><canvas id="lgd-c9"></canvas></div>
+              <p style="font-family:var(--mono); font-size:0.54rem; color:var(--ink-soft); margin-top:0.5rem; letter-spacing:0.04em;">* Intermediate values estimated; 2025 = 392 confirmed</p>
+            </div>
+
+            <div style="background:var(--ink); padding:1.75rem; display:flex; flex-direction:column; justify-content:center;">
+              <p style="font-family:var(--mono); font-size:0.54rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:1rem;">Retention &amp; continuity</p>
+              <div style="margin-bottom:0.9rem;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><span style="font-family:var(--mono); font-size:0.57rem; color:rgba(255,255,255,0.5);">Continue 3+ semesters</span><span style="font-family:var(--serif); font-size:0.9rem; color:#fff;">53%</span></div>
+                <div style="height:3px; background:rgba(255,255,255,0.09); border-radius:2px;"><div style="width:53%; height:100%; background:#990000; border-radius:2px;"></div></div>
+              </div>
+              <div style="margin-bottom:0.9rem;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><span style="font-family:var(--mono); font-size:0.57rem; color:rgba(255,255,255,0.5);">Continuous service rate</span><span style="font-family:var(--serif); font-size:0.9rem; color:#fff;">90.6%</span></div>
+                <div style="height:3px; background:rgba(255,255,255,0.09); border-radius:2px;"><div style="width:90.6%; height:100%; background:#990000; border-radius:2px;"></div></div>
+              </div>
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><span style="font-family:var(--mono); font-size:0.57rem; color:rgba(255,255,255,0.5);">Active this AY (of 139)</span><span style="font-family:var(--serif); font-size:0.9rem; color:#fff;">37</span></div>
+                <div style="height:3px; background:rgba(255,255,255,0.09); border-radius:2px;"><div style="width:27%; height:100%; background:#990000; border-radius:2px;"></div></div>
+              </div>
+            </div>
+
+            <div style="background:var(--white); padding:1.5rem 1.75rem; border-top:3px solid var(--red);">
+              <p style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem;"><span style="display:inline-block;width:12px;height:1px;background:var(--red);"></span>Current Pool · AY 2025–26</p>
+              <p style="font-family:var(--serif); font-size:0.9375rem; color:var(--ink); margin:0 0 1.1rem;">37 active RAs · shared research &amp; teaching</p>
+              <div style="display:flex; flex-direction:column; gap:0;">
+                <div style="padding:1rem 0; border-bottom:1px solid var(--border);">
+                  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.25rem;"><span style="font-size:0.875rem; color:var(--ink); font-weight:500;">Graduate RAs</span><span style="font-family:var(--serif); font-size:1.5rem; font-weight:300; color:#4a6fa5; line-height:1;">16</span></div>
+                  <div style="font-family:var(--mono); font-size:0.56rem; color:var(--ink-soft); letter-spacing:0.04em; margin-bottom:0.45rem;">MOR · MKT · Field Study</div>
+                  <div style="height:4px; background:var(--border); border-radius:2px;"><div style="width:43%; height:100%; background:#4a6fa5; border-radius:2px;"></div></div>
+                </div>
+                <div style="padding:1rem 0; border-bottom:1px solid var(--border);">
+                  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.25rem;"><span style="font-size:0.875rem; color:var(--ink); font-weight:500;">Undergraduate RAs</span><span style="font-family:var(--serif); font-size:1.5rem; font-weight:300; color:var(--red); line-height:1;">21</span></div>
+                  <div style="font-family:var(--mono); font-size:0.56rem; color:var(--ink-soft); letter-spacing:0.04em; margin-bottom:0.45rem;">Research support + BUAD 304, 307, 497</div>
+                  <div style="height:4px; background:var(--border); border-radius:2px;"><div style="width:57%; height:100%; background:#990000; border-radius:2px;"></div></div>
+                </div>
+                <div style="margin-top:0.85rem; padding:0.75rem 1rem; background:var(--bg); border:1px solid var(--border);">
+                  <p style="font-family:var(--mono); font-size:0.54rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Shared pool model</p>
+                  <p style="font-size:0.775rem; color:var(--ink-mid); line-height:1.65; margin:0;">A single pool serves both research support and teaching assistance — building breadth across the lab's full scope.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Chart.js CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
         <script>
-          (function() {
-            var data = [
-              { yr: "FY18", val: 5295, exact: true },
-              { yr: "FY19", val: 6600, exact: false },
-              { yr: "FY20", val: 8200, exact: false },
-              { yr: "FY21", val: 9600, exact: false },
-              { yr: "FY22", val: 11500, exact: false },
-              { yr: "FY23", val: 14000, exact: false },
-              { yr: "FY24", val: 16100, exact: false },
-              { yr: "FY25", val: 19194, exact: true },
-            ];
-            var maxVal = 21000;
-            var chartH = 150;
-            var container = document.getElementById("growth-chart");
-            if (!container) return;
-            // Gridlines
-            [5000, 10000, 15000, 20000].forEach(function(v) {
-              var pct = v / maxVal;
-              var btm = Math.round(pct * chartH);
-              var line = document.createElement("div");
-              line.style.cssText = "position:absolute;left:28px;right:0;bottom:" + btm + "px;border-top:1px dashed #e5e2db;pointer-events:none;z-index:0;";
-              var lbl = document.createElement("span");
-              lbl.style.cssText = "position:absolute;left:-28px;top:-8px;font-family:monospace;font-size:9px;color:#9b9b95;";
-              lbl.textContent = (v/1000).toFixed(0)+"k";
-              line.appendChild(lbl);
-              container.appendChild(line);
-            });
-            // Bars
-            data.forEach(function(d, i) {
-              var pct = d.val / maxVal;
-              var h = Math.round(pct * chartH);
-              var wrap = document.createElement("div");
-              wrap.style.cssText = "flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;position:relative;z-index:1;height:" + chartH + "px;";
-              var bar = document.createElement("div");
-              bar.style.cssText = "width:100%;height:0;background:" + (d.exact ? "#990000" : "#d4d1cb") + ";border-radius:2px 2px 0 0;transition:height 1s cubic-bezier(.4,0,.2,1) " + (i*0.09) + "s;";
-              bar.dataset.h = h;
-              // Floating tooltip on hover
-              var tip = document.getElementById("gc-tooltip");
-              if(!tip){ tip = document.createElement("div"); tip.id="gc-tooltip"; tip.style.cssText="position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-family:monospace;font-size:10px;padding:4px 9px;border-radius:2px;white-space:nowrap;opacity:0;transition:opacity 0.15s;z-index:10;transform:translateX(-50%);"; container.appendChild(tip); }
-              bar.addEventListener("mouseenter", function(e){
-                tip.textContent = d.yr + ": " + (d.exact ? d.val.toLocaleString() : "~" + (Math.round(d.val/100)*100).toLocaleString());
-                var bRect = bar.getBoundingClientRect();
-                var cRect = container.getBoundingClientRect();
-                tip.style.left = (bRect.left - cRect.left + bRect.width/2) + "px";
-                tip.style.bottom = (bRect.height + 6) + "px";
-                tip.style.opacity = "1";
-              });
-              bar.addEventListener("mouseleave", function(){ tip.style.opacity = "0"; });
-              wrap.appendChild(bar);
-              // X label
-              var xlbl = document.createElement("div");
-              xlbl.style.cssText = "position:absolute;bottom:-22px;font-family:monospace;font-size:9px;color:" + (d.exact ? "#4d4d4a" : "#9b9b95") + ";white-space:nowrap;";
-              xlbl.textContent = d.yr;
-              wrap.appendChild(xlbl);
-              // Value on top (exact only)
-              if (d.exact) {
-                var vlbl = document.createElement("div");
-                vlbl.style.cssText = "position:absolute;bottom:" + (h+4) + "px;font-family:monospace;font-size:9px;color:#990000;font-weight:600;white-space:nowrap;opacity:0;transition:opacity 0.4s " + (0.9+i*0.09) + "s;";
-                vlbl.dataset.ready = "1";
-                vlbl.textContent = d.val.toLocaleString();
-                wrap.appendChild(vlbl);
+        (function(){
+          // ── Shared defaults ──
+          Chart.defaults.font.family = "'IBM Plex Mono', monospace";
+          Chart.defaults.font.size = 9;
+          Chart.defaults.color = '#6e6e6a';
+
+          var RED    = '#990000';
+          var BLUE   = '#4a6fa5';
+          var GREEN  = '#5a7a5a';
+          var GOLD   = '#c9a227';
+          var GRAY   = '#c9c5be';
+          var BORDER = '#e5e2db';
+
+          function gradient(ctx, color, alpha1, alpha2) {
+            var g = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
+            g.addColorStop(0, color.replace(')', ', ' + alpha1 + ')').replace('rgb', 'rgba'));
+            g.addColorStop(1, color.replace(')', ', ' + alpha2 + ')').replace('rgb', 'rgba'));
+            return g;
+          }
+
+          function hexAlpha(hex, a) {
+            var r = parseInt(hex.slice(1,3),16), g2 = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+            return 'rgba('+r+','+g2+','+b+','+a+')';
+          }
+
+          var gridOpts = {
+            color: BORDER,
+            drawBorder: false,
+          };
+          var tickOpts = { color: '#9b9b97', font: { size: 9 } };
+          var noLine = { display: false };
+
+          function baseOptions(yFormatter) {
+            return {
+              responsive: true,
+              maintainAspectRatio: false,
+              animation: { duration: 900, easing: 'easeOutQuart' },
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  backgroundColor: '#181816',
+                  titleColor: 'rgba(255,255,255,0.45)',
+                  bodyColor: 'rgba(255,255,255,0.85)',
+                  titleFont: { family: 'monospace', size: 9 },
+                  bodyFont: { family: 'monospace', size: 10, weight: '500' },
+                  padding: 8,
+                  cornerRadius: 0,
+                  callbacks: {
+                    label: function(ctx) {
+                      return '  ' + ctx.dataset.label + ': ' + (yFormatter ? yFormatter(ctx.parsed.y) : ctx.parsed.y.toLocaleString());
+                    }
+                  }
+                }
+              },
+              scales: {
+                x: { grid: noLine, ticks: tickOpts, border: { display: false } },
+                y: {
+                  grid: gridOpts,
+                  ticks: Object.assign({}, tickOpts, { callback: yFormatter || function(v){ return v >= 1000 ? (v/1000).toFixed(0)+'k' : v; } }),
+                  border: { display: false }
+                }
               }
-              container.appendChild(wrap);
-            });
-            // Animate on scroll
-            var animated = false;
-            function animate() {
-              if (animated) return; animated = true;
-              container.querySelectorAll("[data-h]").forEach(function(bar) {
-                bar.style.height = bar.dataset.h + "px";
-              });
-              setTimeout(function() {
-                container.querySelectorAll("[data-ready]").forEach(function(el) {
-                  el.style.opacity = "1";
-                });
-              }, 700);
-            }
-            if ("IntersectionObserver" in window) {
-              new IntersectionObserver(function(entries) {
-                if (entries[0].isIntersecting) animate();
-              }, { threshold: 0.3 }).observe(container);
-            } else { animate(); }
+            };
+          }
+
+          var labels8 = ['FY18','FY19','FY20','FY21','FY22','FY23','FY24','FY25'];
+          var labels9 = ['2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+          var labels4 = ['FY22','FY23','FY24','FY25'];
+
+          // ── C1: Annual participants ──
+          (function(){
+            var canvas = document.getElementById('lgd-c1'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            var grad = ctx.createLinearGradient(0,0,0,200);
+            grad.addColorStop(0, hexAlpha(RED, 0.14)); grad.addColorStop(1, hexAlpha(RED, 0));
+            new Chart(ctx, { type:'line', data:{ labels:labels8, datasets:[{ label:'Annual participants', data:[5295,6600,8200,9600,11500,14000,16100,19194], borderColor:RED, borderWidth:2, backgroundColor:grad, fill:true, tension:0.35, pointBackgroundColor:[RED,GRAY,GRAY,GRAY,GRAY,GRAY,GRAY,RED], pointRadius:[4,3,3,3,3,3,3,4], pointHoverRadius:6 }]}, options:baseOptions() });
           })();
+
+          // ── C2: Pool registrants ──
+          (function(){
+            var canvas = document.getElementById('lgd-c2'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            var grad = ctx.createLinearGradient(0,0,0,200);
+            grad.addColorStop(0, hexAlpha(BLUE, 0.15)); grad.addColorStop(1, hexAlpha(BLUE, 0));
+            new Chart(ctx, { type:'line', data:{ labels:labels8, datasets:[{ label:'Pool registrants', data:[2250,3100,4200,5400,6600,7800,8900,9902], borderColor:BLUE, borderWidth:2, backgroundColor:grad, fill:true, tension:0.35, pointBackgroundColor:[GRAY,GRAY,GRAY,GRAY,GRAY,GRAY,GRAY,BLUE], pointRadius:[3,3,3,3,3,3,3,4], pointHoverRadius:6 }]}, options:baseOptions() });
+          })();
+
+          // ── C3: Cumulative participants ──
+          (function(){
+            var canvas = document.getElementById('lgd-c3'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            var grad = ctx.createLinearGradient(0,0,0,180);
+            grad.addColorStop(0, 'rgba(24,24,22,0.09)'); grad.addColorStop(1, 'rgba(24,24,22,0)');
+            new Chart(ctx, { type:'line', data:{ labels:labels8, datasets:[{ label:'Cumulative', data:[5295,11895,20095,29695,41195,55195,71295,110862], borderColor:'#181816', borderWidth:2, backgroundColor:grad, fill:true, tension:0.35, pointBackgroundColor:'#181816', pointRadius:3, pointHoverRadius:6 }]}, options:baseOptions() });
+          })();
+
+          // ── C4: Departments ──
+          (function(){
+            var canvas = document.getElementById('lgd-c4'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            var opts = baseOptions(function(v){return v;});
+            opts.scales.y.max = 13; opts.scales.y.ticks.stepSize = 3;
+            new Chart(ctx, { type:'bar', data:{ labels:labels9, datasets:[{ label:'Departments', data:[2,3,5,6,7,9,10,11,11], backgroundColor:labels9.map(function(l,i){ return i===0||i===8 ? RED : hexAlpha(RED,0.45); }), borderRadius:2, borderSkipped:false }]}, options:opts });
+          })();
+
+          // ── C5: Researchers ──
+          (function(){
+            var canvas = document.getElementById('lgd-c5'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            var grad = ctx.createLinearGradient(0,0,0,200);
+            grad.addColorStop(0, hexAlpha(GREEN, 0.18)); grad.addColorStop(1, hexAlpha(GREEN, 0));
+            new Chart(ctx, { type:'line', data:{ labels:labels9, datasets:[{ label:'Researchers', data:[18,28,45,62,85,110,138,155,164], borderColor:GREEN, borderWidth:2, backgroundColor:grad, fill:true, tension:0.35, pointBackgroundColor:GREEN, pointRadius:3, pointHoverRadius:6 }]}, options:baseOptions() });
+          })();
+
+          // ── C6: Study teams ──
+          (function(){
+            var canvas = document.getElementById('lgd-c6'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            new Chart(ctx, { type:'bar', data:{ labels:labels9, datasets:[{ label:'Study teams', data:[42,68,95,110,135,158,172,188,200], backgroundColor:GOLD, borderRadius:2, borderSkipped:false }]}, options:baseOptions() });
+          })();
+
+          // ── C7: Research hours stacked ──
+          (function(){
+            var canvas = document.getElementById('lgd-c7'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            var opts = baseOptions(function(v){ return (v/1000).toFixed(1)+'k'; });
+            opts.scales.x.stacked = true;
+            opts.scales.y.stacked = true;
+            opts.plugins.legend = { display:true, labels:{ color:'#4d4d4a', font:{family:'monospace',size:9}, boxWidth:10, boxHeight:8, padding:16 }};
+            new Chart(ctx, { type:'bar', data:{ labels:labels4, datasets:[
+              { label:'In-Person', data:[1200,2100,2900,6438], backgroundColor:RED, borderRadius:0, borderSkipped:false },
+              { label:'Online',    data:[3600,4100,4830,4738], backgroundColor:GRAY, borderRadius:2, borderSkipped:false }
+            ]}, options:opts });
+          })();
+
+          // ── C8: Cumulative RAs ──
+          (function(){
+            var canvas = document.getElementById('lgd-c8'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            var grad = ctx.createLinearGradient(0,0,0,200);
+            grad.addColorStop(0, hexAlpha(RED, 0.14)); grad.addColorStop(1, hexAlpha(RED, 0));
+            new Chart(ctx, { type:'line', data:{ labels:labels9, datasets:[{ label:'Cumulative RAs', data:[8,22,38,52,72,96,118,132,139], borderColor:RED, borderWidth:2, backgroundColor:grad, fill:true, tension:0.35, pointBackgroundColor:[RED,GRAY,GRAY,GRAY,GRAY,GRAY,GRAY,GRAY,RED], pointRadius:[4,3,3,3,3,3,3,3,4], pointHoverRadius:6 }]}, options:baseOptions(function(v){return v;}) });
+          })();
+
+          // ── C9: Person-semesters ──
+          (function(){
+            var canvas = document.getElementById('lgd-c9'); if(!canvas)return;
+            var ctx = canvas.getContext('2d');
+            new Chart(ctx, { type:'bar', data:{ labels:labels9, datasets:[{ label:'Person-semesters', data:[16,40,72,108,180,252,316,368,392], backgroundColor:BLUE, borderRadius:2, borderSkipped:false }]}, options:baseOptions(function(v){return v;}) });
+          })();
+
+          // ── Tab switching ──
+          window.lgdTab = function(id) {
+            ['participants','infrastructure','hours','ra'].forEach(function(t) {
+              var panel = document.getElementById('lgd-panel-' + t);
+              var btn   = document.getElementById('lgd-tab-' + t);
+              if (panel) panel.style.display = t === id ? 'block' : 'none';
+              if (btn) { btn.style.background = t === id ? '#990000' : '#fff'; btn.style.color = t === id ? '#fff' : '#6e6e6a'; }
+            });
+            // Re-render charts in newly shown panel (Chart.js needs resize)
+            setTimeout(function(){ window.dispatchEvent(new Event('resize')); }, 50);
+          };
+
+        })();
         </script>
 
-        <div style="margin-top:1rem; display:flex; gap:1.5rem; flex-wrap:wrap;">
-          <div style="display:flex; gap:0.5rem; align-items:center;"><div style="width:10px; height:10px; background:#990000; border-radius:1px;"></div><span style="font-family:var(--mono); font-size:0.63rem; color:var(--ink-soft);">Confirmed</span></div>
-          <div style="display:flex; gap:0.5rem; align-items:center;"><div style="width:10px; height:10px; background:#d4d1cb; border-radius:1px;"></div><span style="font-family:var(--mono); font-size:0.63rem; color:var(--ink-soft);">Interpolated</span></div>
-        </div>
+        <p style="font-family:var(--mono); font-size:0.52rem; color:var(--ink-soft); margin-top:1.25rem; letter-spacing:0.04em; line-height:1.6;">Marshall Behavioral Research Lab · USC Marshall · FY2017–18 through FY2024–25. Confirmed endpoints: annual participants (5,295 / 19,194), pool (9,902), hours (11,176), departments (2/11), researchers (164), RAs (139/37/392), person-semesters (392). Intermediate year values interpolated — replace with actuals when available.</p>
+
       </div>
 
     </div>
@@ -1696,18 +2082,41 @@
         .oc-rl{font-size:.63rem;color:var(--ink-soft);line-height:1.35;}
         .oc-svg{position:absolute;top:0;left:0;pointer-events:none;z-index:0;overflow:visible;}
         .oc-info{margin-top:1rem;padding:.875rem 1.125rem;background:var(--bg-alt);border:1px solid var(--border);border-left:3px solid var(--red);display:none;}
-        </style>
+      
+    /* ── Skip navigation link ── */
+    .skip-nav {
+      position: absolute; top: -100px; left: 1rem;
+      background: var(--red); color: #fff;
+      padding: 0.5rem 1rem; font-size: 0.8rem;
+      font-family: var(--mono); letter-spacing: 0.04em;
+      text-decoration: none; z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-nav:focus { top: 1rem; }
+
+    /* ── Respect reduced-motion preference ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .js-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+  </style>
         <div style="position:relative;">
           <svg class="oc-svg" id="oc-svg" overflow="visible"></svg>
           <div class="oc-grid">
             <div style="grid-column:2;grid-row:1;" class="oc-node" id="ocn-fiss"
-              data-name="Peer Fiss" data-role="Assoc. Vice Dean for Research · Marshall School of Business"
+              data-name="Associate Vice Dean for Research" data-role="Assoc. Vice Dean for Research · Marshall School of Business"
               data-note="Brian's direct supervisor and the institutional authority for Marshall research operations. Oversees the lab's strategic direction and institutional partnerships.">
-              <div class="oc-code">A</div><div class="oc-nm">Peer Fiss</div><div class="oc-rl">AVD for Research</div>
+              <div class="oc-code">A</div><div class="oc-nm">Assoc. Vice Dean</div><div class="oc-rl">AVD for Research</div>
             </div>
             <div style="grid-column:1;grid-row:2;" class="oc-node oc-gov" id="ocn-committee"
               data-name="Lab Committee" data-role="Faculty Governance · Marshall Behavioral Lab"
-              data-note="Chair: Scott Wiltermuth. Members: Kristin Diehl, Joseph Priester, Sarah Townsend, Stephanie Tully. Sets research participation policies and provides governance oversight.">
+              data-note="A standing faculty committee that sets research participation policies and provides governance oversight for the lab.">
               <div class="oc-code">J</div><div class="oc-nm">Lab Committee</div><div class="oc-rl">Faculty Governance</div>
             </div>
             <div style="grid-column:2;grid-row:2;" class="oc-node oc-hub" id="ocn-brian"
@@ -1738,7 +2147,7 @@
             <div style="grid-column:2/4;grid-row:4;" class="oc-node oc-pool" id="ocn-ra"
               data-name="Research &amp; Teaching Assistant Pool" data-role="37 Active Assistants · AY 2025–26"
               data-note="Graduate: 16 · Undergraduate: 21. Shared pool serves both research support (study execution, data collection) and teaching assistance (BUAD 304, 307, 497).">
-              <div class="oc-code">C · D</div><div class="oc-nm">RA Pool · 37 Active</div><div class="oc-rl">Research &amp; Teaching Assistants</div>
+              <div class="oc-code">C · D</div><div class="oc-nm">SRA Pool · 37 Active</div><div class="oc-rl">Research &amp; Teaching Assistants</div>
             </div>
           </div>
           <div class="oc-info" id="oc-info">
@@ -1933,7 +2342,7 @@
       <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
         <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 0.75rem;">
           <div>
-            <h3 style="font-family: var(--serif); font-size: 1.15rem; font-weight: 400; color: var(--ink); margin: 0.35rem 0 0;">Recent observations from active research</h3>
+            <h3 style="font-family: var(--serif); font-size: 1.1875rem; font-weight: 400; color: var(--ink); margin: 0.35rem 0 0;">Recent observations from active research</h3>
           </div>
           <a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener" style="font-family: var(--mono); font-size: 0.70rem; letter-spacing: 0.08em; color: var(--red); text-decoration: none; border-bottom: 1px solid rgba(153,0,0,0.3); padding-bottom: 1px; white-space: nowrap;">All posts on LinkedIn →</a>
         </div>
@@ -1945,7 +2354,7 @@
           </div>
           <div style="background: var(--white); padding: 1.75rem 2rem;">
             <p style="font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem;">Field Research · Denver 2025</p>
-            <p style="font-size: 0.84rem; color: var(--ink-body); line-height: 1.78; margin-bottom: 1.25rem;">The ISASI Annual Seminar in Denver brought together 269 aviation safety professionals from 49 countries. What the survey data reveal about seniority and AI trust does not align with standard technology adoption models. Experience does not produce resistance — it produces calibrated skepticism. These are behaviorally distinct phenomena and require different intervention strategies.</p>
+            <p style="font-size: 0.84rem; color: var(--ink-body); line-height: 1.78; margin-bottom: 1.25rem;">The ISASI Annual Seminar in Denver drew aviation safety professionals from 47 countries — the largest gathering of the field globally. What the survey data reveal about seniority and AI trust does not align with standard technology adoption models. Experience does not produce resistance — it produces calibrated skepticism. These are behaviorally distinct phenomena and require different intervention strategies.</p>
             <a href="https://lnkd.in/gT7ByF_Z" target="_blank" rel="noopener" style="font-family: var(--mono); font-size: 0.67rem; letter-spacing: 0.07em; color: var(--ink-ghost); text-decoration: none;">ISASI Forum Vol. 57 →</a>
           </div>
           <div style="background: var(--white); padding: 1.75rem 2rem;">
@@ -1958,6 +2367,8 @@
 
     </div>
   </section>
+
+  <section id="about" class="sec alt reveal">
     <div class="w">
       <div class="about-layout">
 
@@ -2002,11 +2413,12 @@
             Business School, Chicago Booth, and Stanford.
           </p>
           <p>
-            His mentorship program has trained 139 students since 2017. Alumni have gone on 
-            to positions in tech, consulting, finance, and research — not simply because 
-            USC Marshall is on their degree, but because they worked in a real behavioral 
-            science lab, handled real data, and understand how rigorous empirical research 
-            actually works.
+            He works directly with every Research Assistant in the lab — 139 students since 2017, 
+            392 person-semesters across 21 semesters. Not a formal program at a remove: 
+            one-on-one, inside the work, as a staff researcher present in what students are doing. 
+            Alumni go on to positions in tech, consulting, finance, and research — not because of 
+            the degree alone, but because they worked in a real behavioral science lab and know how 
+            rigorous empirical research actually works.
           </p>
 
           <div style="margin-top: 2rem; display: flex; gap: 0.85rem; flex-wrap: wrap;">
@@ -2034,15 +2446,11 @@
     </div>
   </section>
 
-
-
-
-    </div>
-  </section>
-
     <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
+  </main>
+
   <footer>
     <div class="footer-top">
       <div>
@@ -2055,10 +2463,8 @@
           <li><a href="research.html">Research</a></li>
           <li><a href="research.html#aviation">Aviation Human Factors</a></li>
           <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
-          <li><a href="lab.html">Operations</a></li>
-          <li><a href="mentorship.html">Mentorship</a></li>
-          <li></li>
-          <li></li>
+          <li><a href="lab.html">Lab</a></li>
+          <li><a href="research-assistants.html">Student RA Pool</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -2066,9 +2472,9 @@
       <div>
         <p class="footer-col-lbl">Contact</p>
         <ul class="footer-list">
-          <li><a href="/cdn-cgi/l/email-protection#d1b9b4bdbdbe91b3a3b8b0bfb9a4b9ffb2bebc" class="red"><span class="__cf_email__" data-cfemail="264e434a4a496644544f47484e534e0845494b">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#cea6bba6ac8ea3afbcbda6afa2a2e0bbbdade0abaabb" class="red"><span class="__cf_email__" data-cfemail="87eff2efe5c7eae6f5f4efe6ebeba9f2f4e4a9e2e3f2">[email&#160;protected]</span></a></li>
           <li><a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#" onclick="openCV();return false;">View CV</a></li>
+          <li><a href="cv.html">View CV</a></li>
           <li><a href="https://usc.edu" target="_blank" rel="noopener">USC Marshall</a></li>
         </ul>
       </div>
@@ -2136,8 +2542,8 @@
         Brian N. Huh <span>Curriculum Vitae</span>
       </div>
       <div class="cv-topbar-right">
-        <button class="cv-print-btn" onclick="window.print()">Print / Save PDF</button>
-        <button class="cv-close-btn" onclick="closeCV()">✕ Close</button>
+        <button class="cv-print-btn" onclick="window.print()" aria-label="Print or save CV as PDF">Print / Save PDF</button>
+        <button class="cv-close-btn" onclick="closeCV()" aria-label="Close CV overlay">✕ Close</button>
       </div>
     </div>
 
@@ -2262,7 +2668,7 @@
               <li>Scaled annual research participants from <span class="cv-stat">5,295</span> (FY2017–18) to <span class="cv-stat">19,194</span> (FY2024–25) — a 262% increase</li>
               <li>Delivered <span class="cv-stat">11,176 research hours</span> in FY2025, a <span class="cv-stat">44.6% year-over-year increase</span>; in-person hours grew 122% in a single year</li>
 
-              <li>Hired, trained, and managed <span class="cv-stat">137 unique student assistants</span> over eight years; current team of 37 with a 90.6% continuous service rate</li>
+              <li>Hired, trained, and managed <span class="cv-stat">139 unique student assistants</span> over eight years; current team of 37 with a 90.6% continuous service rate</li>
               <li>Expanded lab capabilities by implementing interdisciplinary research tools including eye-tracking (Tobii) and psychophysiology (BioPac); coordinated peer benchmarking with Wharton, Booth, Columbia, Stanford, and Kellogg</li>
               <li>Developed automation solutions to streamline day-to-day operations, improving efficiency while maintaining service delivery quality</li>
               <li>Reduced RA onboarding time ~40% through a SharePoint wiki consolidating 25+ living SOPs and orientation materials</li>
@@ -2365,12 +2771,12 @@
           <div class="cv-entry">
             <div class="cv-entry-head">
               <div>
-                <div class="cv-entry-title">AI Trust Among Aviation Safety Professionals — SEM Study</div>
-                <div class="cv-entry-org">ISASI Human Factors Working Group needs assessment · N=269 · 49 countries</div>
+                <div class="cv-entry-title">Trust-Centered Investigations: Integrating Human Factors and Behavioral Science with AI in Aviation Safety</div>
+                <div class="cv-entry-org">Working paper · ISASI Human Factors Working Group · N=540 · 47 countries</div>
               </div>
-              <div class="cv-entry-date">2024</div>
+              <div class="cv-entry-date">2024–2025</div>
             </div>
-            <div class="cv-entry-body">Structural equation modeling study (EFA→CFA→SEM) identifying professional engagement as the dominant predictor of AI trust among aviation safety investigators (β=0.727, R²=48.9%, p&lt;0.001). Presented at ISASI Annual Seminar 2024 (Lisbon, Portugal) and ISASI Annual Seminar 2025 (Denver, CO). Introduced composite trust model — curiosity, learned risk, perceived utility, structural access, and message framing — as distinct psychological mechanisms each requiring different intervention strategies.</div>
+            <div class="cv-entry-body">Working paper. Multi-level study of 540 aviation safety professionals across 47 countries — 269 for individual-level SEM (EFA→CFA→SEM), 172 for organizational analysis. Primary finding: professional engagement explains 48.9% of AI trust variance (β=0.727, p&lt;0.001). Introduces the AI Trust Assessment Index (ATAI; α=.96, CR=.92). Key findings: HF maturity paradox (β=−0.11, informed skepticism vs. resistance), mid-career advantage (74% stronger engagement-trust relationship at 3–10 years), organizational threshold at integration level 3.5. Presented at ISASI Annual Seminar 2024 (Lisbon) and ISASI Annual Seminar 2025 (Denver).</div>
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
@@ -2412,12 +2818,12 @@
           <div class="cv-entry">
             <div class="cv-entry-head">
               <div>
-                <div class="cv-entry-title">Research Skills, Academic Writing &amp; Critical Reading</div>
-                <div class="cv-entry-org">Private Mentorship &amp; Tutoring</div>
+                <div class="cv-entry-title">Student Research Assistant Pool Program</div>
+                <div class="cv-entry-org">Marshall Behavioral Research Lab · USC Marshall</div>
               </div>
               <div class="cv-entry-date">Ongoing</div>
             </div>
-            <div class="cv-entry-body">Works with undergraduate and graduate students on research reasoning, academic writing, analytical reading, and argument structure. Limited engagements per term; emphasis on building durable intellectual skills.</div>
+            <div class="cv-entry-body">Manages the Student Research Assistant Pool — 139 students across 21 semesters, 392 person-semesters — working directly with every RA as a hands-on staff researcher. Develops research skills, analytical thinking, and professional capability through the day-to-day work of running real studies.</div>
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
@@ -2690,25 +3096,6 @@
   </script>
 
   <script>
-    // ISASI Beta bars animation
-    (function() {
-      var container = document.getElementById("isasi-beta-chart");
-      if (!container) return;
-      var animated = false;
-      function animate() {
-        if (animated) return; animated = true;
-        container.querySelectorAll(".beta-bar").forEach(function(bar) {
-          bar.style.width = bar.dataset.w + "%";
-        });
-      }
-      if ("IntersectionObserver" in window) {
-        new IntersectionObserver(function(entries) {
-          if (entries[0].isIntersecting) animate();
-        }, { threshold: 0.3 }).observe(container);
-      } else { animate(); }
-    })();
-  </script>
-  <script>
   (function(){
     var path = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-menu > li > a').forEach(function(a){
@@ -2768,6 +3155,18 @@
       }
     }
   }
+  </script>
+
+  <script>
+  (function(){
+    var path = window.location.pathname;
+    var filename = path.split('/').pop() || 'index.html';
+    if(!filename) filename = 'index.html';
+    document.querySelectorAll('.nav-menu a').forEach(function(a){
+      var href = (a.getAttribute('href') || '').split('#')[0].split('/').pop() || 'index.html';
+      if(href && href === filename) { a.classList.add('on'); a.setAttribute('aria-current','page'); }
+    });
+  })();
   </script>
 </body>
 </html>
