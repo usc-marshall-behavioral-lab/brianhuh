@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Curriculum Vitae — Brian N. Huh · USC Marshall</title>
-  <meta name="description" content="Curriculum vitae of Brian N. Huh — behavioral scientist, lab manager, aviation human factors researcher at USC Marshall School of Business." />
+  <meta name="description" content="Curriculum vitae of Brian N. Huh — behavioral scientist, Lab Manager, aviation human factors researcher at USC Marshall School of Business." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://brianhuh.com/cv.html" />
   <meta property="og:title" content="CV — Brian N. Huh · USC Marshall" />
-  <meta property="og:description" content="Curriculum vitae of Brian N. Huh — behavioral scientist, aviation human factors researcher, and lab manager at USC Marshall." />
+  <meta property="og:description" content="Curriculum vitae of Brian N. Huh — behavioral scientist, aviation human factors researcher, and Lab Manager at USC Marshall." />
   <meta property="og:image" content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://brianhuh.com/cv.html" />
@@ -1427,36 +1427,36 @@
       </a>
       <ul class="nav-menu">
         <li class="has-dropdown">
-          <a href="research.html">Research</a>
-          <div class="nav-dropdown" style="display:none;">
-            <a href="research.html#aviation">Aviation Human Factors</a>
-            <a href="research.html#findings">AI Trust &amp; Technology</a>
-            <a href="research.html#research-writing">Publications &amp; Writing</a>
+          <a href="research.html" aria-haspopup="true" aria-expanded="false">Research</a>
+          <div class="nav-dropdown" role="list" style="display:none;">
+            <a href="research.html#aviation" role="listitem">Aviation Human Factors</a>
+            <a href="research.html#findings" role="listitem">AI Trust &amp; Technology</a>
+            <a href="research.html#research-writing" role="listitem">Publications &amp; Writing</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
               <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
             </div>
           </div>
         </li>
         <li class="has-dropdown">
-          <a href="lab.html">Lab</a>
-          <div class="nav-dropdown" style="display:none;">
-            <a href="lab.html#lab-people">People</a>
-            <a href="lab.html#systems-coral">Infrastructure</a>
-            <a href="lab.html#systems-stats">Stats &amp; Growth</a>
-            <a href="lab.html#lab-writing">Field Research</a>
+          <a href="lab.html" aria-haspopup="true" aria-expanded="false">Lab</a>
+          <div class="nav-dropdown" role="list" style="display:none;">
+            <a href="lab.html#lab-people" role="listitem">People</a>
+            <a href="lab.html#systems-coral" role="listitem">Infrastructure</a>
+            <a href="lab.html#systems-stats" role="listitem">Stats &amp; Growth</a>
+            <a href="lab.html#lab-writing" role="listitem">Lab Notes</a>
+            <a href="lab.html#ra-pool" role="listitem">Student RA Pool</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team · RA Pool</span>
             </div>
           </div>
         </li>
         <li class="has-dropdown">
-          <a href="index.html#about">About</a>
-          <div class="nav-dropdown" style="display:none;">
-            <a href="index.html#about">Bio &amp; Background</a>
-            <a href="research-assistants.html">Mentorship</a>
-            <a href="index.html#contact">Contact</a>
+          <a href="index.html#about" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="nav-dropdown" role="list" style="display:none;">
+            <a href="index.html#about" role="listitem">Bio &amp; Background</a>
+            <a href="index.html#contact" role="listitem">Contact</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Bio · Mentorship · Contact</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Bio · Contact</span>
             </div>
           </div>
         </li>
@@ -1464,14 +1464,14 @@
       </ul>
 
       <!-- Hamburger (mobile only) -->
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- Mobile drawer -->
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" style="display:none;">
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true" style="display:none;">
     <div class="mobile-drawer-inner">
       <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close menu">✕</button>
       <nav class="mobile-nav">
@@ -1487,15 +1487,15 @@
           <a href="lab.html#lab-people">People</a>
           <a href="lab.html#systems-coral">Infrastructure</a>
           <a href="lab.html#systems-stats">Stats &amp; Growth</a>
-          <a href="lab.html#lab-writing">Field Research</a>
-          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Marshall Behavioral Lab · Infrastructure · Team</span>
+          <a href="lab.html#lab-writing">Lab Notes</a>
+          <a href="lab.html#ra-pool">Student RA Pool</a>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Marshall Behavioral Lab · Infrastructure · Team · RA Pool</span>
         </div>
         <a href="index.html#about" class="mobile-nav-section">About</a>
         <div class="mobile-nav-group">
           <a href="index.html#about">Bio &amp; Background</a>
-          <a href="research-assistants.html">Mentorship</a>
           <a href="index.html#contact">Contact</a>
-          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Bio · Mentorship · Contact</span>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Bio · Contact</span>
         </div>
         <div class="mobile-nav-cta">
           <a href="cv.html" style="display:block; background:var(--red);color:#fff;padding:0.75rem 1.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;text-align:center;text-decoration:none;">Curriculum Vitae →</a>
@@ -1841,7 +1841,7 @@
             <div class="cv-entry-body">Leads research operations in the Office of the Associate Vice Dean for Research, serving as the senior operational leader for the Marshall Behavioral Research Lab. The lab serves faculty and researchers across all of Marshall's academic units, centers, and institutes — facilitating experimental and archival studies in field, online, and in-person settings through a team of research assistants with dedicated administrative, technical, and support leads. Selected by faculty committee to establish the lab in 2017; role expanded substantially into full strategic and operational leadership across 11 departments.</div>
             <ul class="cv-entry-bullets">
               <li>Grew lab from <span class="cv-stat">2 departments</span> to <span class="cv-stat">11</span>, supporting <span class="cv-stat">164 registered researchers</span> including 69 faculty, 22 doctoral students, postdocs, and visiting scholars</li>
-              <li>Scaled annual research participants from <span class="cv-stat">5,295</span> (FY2017–18) to <span class="cv-stat">19,194</span> (FY2024–25) — a 262% increase</li>
+              <li>Scaled annual research participants from <span class="cv-stat">5,295</span> (FY2017–18) to <span class="cv-stat">19,194</span> (FY2024–25) — a 263% increase</li>
               <li>Delivered <span class="cv-stat">11,176 research hours</span> in FY2025, a <span class="cv-stat">44.6% year-over-year increase</span>; in-person hours grew 122% in a single year</li>
 
               <li>Hired, trained, and managed <span class="cv-stat">139 unique student assistants</span> over eight years; current team of 37 with a 90.6% continuous service rate</li>
@@ -1952,7 +1952,7 @@
               </div>
               <div class="cv-entry-date">2024–2025</div>
             </div>
-            <div class="cv-entry-body">Working paper. Multi-level study of 540 aviation safety professionals across 47 countries — 269 for individual-level SEM (EFA→CFA→SEM), 172 for organizational analysis. Primary finding: professional engagement explains 48.9% of AI trust variance (β=0.727, p&lt;0.001). Introduces the AI Trust Assessment Index (ATAI; α=.96, CR=.92). Key findings: HF maturity paradox (β=−0.11, informed skepticism vs. resistance), mid-career advantage (74% stronger engagement-trust relationship at 3–10 years), organizational threshold at integration level 3.5. Presented at ISASI Annual Seminar 2024 (Lisbon) and ISASI Annual Seminar 2025 (Denver).</div>
+            <div class="cv-entry-body">Working paper. Multi-level study of 540 aviation safety professionals across 47 countries — 269 for individual-level SEM (EFA→CFA→SEM), 172 for organizational analysis. Primary finding: professional engagement explains 48.9% of AI trust variance (β = 0.727, p&lt;0.001). Introduces the AI Trust Assessment Index (ATAI; α=.96, CR=.92). Key findings: HF maturity paradox (β = −0.11, informed skepticism vs. resistance), mid-career advantage (74% stronger engagement-trust relationship at 3–10 years), organizational threshold at integration level 3.5. Presented at ISASI Annual Seminar 2024 (Lisbon) and ISASI Annual Seminar 2025 (Denver).</div>
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
@@ -2165,12 +2165,12 @@
       <div>
         <p class="footer-col-lbl">Navigation</p>
         <ul class="footer-list">
-          <li><a href="research.html">Research</a></li>
+          <li><a href="research.html" aria-haspopup="true" aria-expanded="false">Research</a></li>
           <li><a href="research.html#aviation">Aviation Human Factors</a></li>
           <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
-          <li><a href="lab.html">Lab</a></li>
-          <li><a href="research-assistants.html">Student RA Pool</a></li>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="lab.html" aria-haspopup="true" aria-expanded="false">Lab</a></li>
+          <li><a href="lab.html#ra-pool">Student RA Pool</a></li>
+          <li><a href="index.html#about" aria-haspopup="true" aria-expanded="false">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </div>
@@ -2215,7 +2215,32 @@
           .tl-stat-l{font-family:var(--mono);font-size:0.53rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-ghost);}
           @keyframes tl-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(1.6)}}
           .tl-dot-live{width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block;margin-right:4px;animation:tl-pulse 2s infinite;}
-          </style>
+          
+    /* ─── PAPER GRAIN ─── */
+    body::after {
+      content: '';
+      position: fixed; inset: 0; z-index: 9999;
+      pointer-events: none;
+      opacity: 0.028;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+
+    /* ─── DROP CAP ─── */
+    .about-bio > p:first-of-type::first-letter {
+      font-family: var(--serif);
+      font-size: 3.8rem;
+      font-weight: 300;
+      color: var(--red);
+      float: left;
+      line-height: 0.82;
+      margin-right: 0.08em;
+      margin-top: 0.08em;
+      letter-spacing: -0.02em;
+    }
+
+</style>
 
   <script>
     document.documentElement.classList.add('js-ready');
@@ -2390,21 +2415,34 @@
       var closeBtn = document.getElementById('mobile-drawer-close');
       if (!hamburger || !drawer) return;
 
+      var focusableSelectors = 'a[href], button:not([disabled]), [tabindex="0"]';
+
+      function getFocusable() {
+        return Array.from(drawer.querySelectorAll(focusableSelectors)).filter(function(el) {
+          return !el.closest('[hidden]') && el.offsetParent !== null;
+        });
+      }
+
       function openDrawer() {
         drawer.style.display = 'block';
         drawer.classList.add('open');
+        drawer.removeAttribute('aria-hidden');
         hamburger.classList.add('open');
         hamburger.setAttribute('aria-expanded', 'true');
-        drawer.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        // Move focus into drawer
+        var first = getFocusable()[0];
+        if (first) setTimeout(function() { first.focus(); }, 50);
       }
+
       function closeDrawer() {
         drawer.classList.remove('open');
         drawer.style.display = 'none';
+        drawer.setAttribute('aria-hidden', 'true');
         hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
-        drawer.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        hamburger.focus();
       }
 
       hamburger.addEventListener('click', function() {
@@ -2417,9 +2455,18 @@
         a.addEventListener('click', closeDrawer);
       });
 
-      // Close on ESC
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeDrawer();
+      // Focus trap
+      drawer.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') { closeDrawer(); return; }
+        if (e.key !== 'Tab') return;
+        var focusable = getFocusable();
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
       });
     })();
 
@@ -2428,67 +2475,124 @@
       var items = document.querySelectorAll('.has-dropdown');
       var closeTimers = new WeakMap();
 
-      var closeAll = function() {
-        items.forEach(function(li) {
-          var d = li.querySelector('.nav-dropdown');
-          if (d) { d.classList.remove('open'); d.style.display = 'none'; }
-          var t = closeTimers.get(li);
-          if (t) { clearTimeout(t); closeTimers.delete(li); }
+      function openDropdown(li, link, dropdown) {
+        var t = closeTimers.get(li);
+        if (t) { clearTimeout(t); closeTimers.delete(li); }
+        // Close all others first
+        items.forEach(function(other) {
+          if (other !== li) {
+            var d = other.querySelector('.nav-dropdown');
+            var a = other.querySelector('a');
+            if (d) { d.classList.remove('open'); d.style.display = 'none'; }
+            if (a) a.setAttribute('aria-expanded', 'false');
+          }
         });
-      };
+        dropdown.classList.add('open');
+        dropdown.style.display = 'block';
+        link.setAttribute('aria-expanded', 'true');
+      }
 
-      items.forEach(function(li) {
-        var link = li.querySelector('a');
-        var dropdown = li.querySelector('.nav-dropdown');
-        if (!dropdown) return;
-
-        // Desktop: hover — open immediately, close with delay
-        li.addEventListener('mouseenter', function() {
-          var t = closeTimers.get(li);
-          if (t) { clearTimeout(t); closeTimers.delete(li); }
-          closeAll();
-          dropdown.classList.add('open');
-          dropdown.style.display = 'block';
-        });
-        li.addEventListener('mouseleave', function() {
+      function closeDropdown(li, link, dropdown, delay) {
+        if (delay) {
           var t = setTimeout(function() {
             dropdown.classList.remove('open');
             dropdown.style.display = 'none';
-          }, 120);
+            link.setAttribute('aria-expanded', 'false');
+          }, delay);
           closeTimers.set(li, t);
-        });
+        } else {
+          var t2 = closeTimers.get(li);
+          if (t2) { clearTimeout(t2); closeTimers.delete(li); }
+          dropdown.classList.remove('open');
+          dropdown.style.display = 'none';
+          link.setAttribute('aria-expanded', 'false');
+        }
+      }
 
-        // Keep open when hovering the dropdown itself
+      items.forEach(function(li) {
+        var link = li.querySelector(':scope > a');
+        var dropdown = li.querySelector('.nav-dropdown');
+        if (!dropdown) return;
+
+        // Hover: open immediately, close with short delay
+        li.addEventListener('mouseenter', function() {
+          openDropdown(li, link, dropdown);
+        });
+        li.addEventListener('mouseleave', function() {
+          closeDropdown(li, link, dropdown, 120);
+        });
         dropdown.addEventListener('mouseenter', function() {
           var t = closeTimers.get(li);
           if (t) { clearTimeout(t); closeTimers.delete(li); }
         });
         dropdown.addEventListener('mouseleave', function() {
-          var t = setTimeout(function() {
-            dropdown.classList.remove('open');
-            dropdown.style.display = 'none';
-          }, 80);
-          closeTimers.set(li, t);
+          closeDropdown(li, link, dropdown, 80);
         });
 
-        // Touch / click: toggle
+        // Click / touch: toggle
         link.addEventListener('click', function(e) {
           var isOpen = dropdown.classList.contains('open');
-          closeAll();
-          if (!isOpen) {
+          if (isOpen) {
+            closeDropdown(li, link, dropdown, 0);
+          } else {
             e.preventDefault();
-            dropdown.classList.add('open');
-            dropdown.style.display = 'block';
+            openDropdown(li, link, dropdown);
+          }
+        });
+
+        // Keyboard: Enter/Space toggle; Escape closes
+        link.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            var isOpen = dropdown.classList.contains('open');
+            if (isOpen) { closeDropdown(li, link, dropdown, 0); }
+            else { openDropdown(li, link, dropdown); dropdown.querySelector('a') && dropdown.querySelector('a').focus(); }
+          }
+          if (e.key === 'Escape') {
+            closeDropdown(li, link, dropdown, 0);
+            link.focus();
+          }
+        });
+
+        // Keyboard: Escape from inside dropdown
+        dropdown.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeDropdown(li, link, dropdown, 0);
+            link.focus();
+          }
+          // Tab out of last item closes dropdown
+          if (e.key === 'Tab') {
+            var focusable = Array.from(dropdown.querySelectorAll('a[href]'));
+            var last = focusable[focusable.length - 1];
+            if (document.activeElement === last && !e.shiftKey) {
+              closeDropdown(li, link, dropdown, 0);
+            }
           }
         });
       });
 
-      // Click outside closes all dropdowns
+      // Click outside closes all
       document.addEventListener('click', function(e) {
         if (!e.target.closest('.has-dropdown')) {
-          document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
-            d.classList.remove('open');
-            d.style.display = 'none';
+          items.forEach(function(li) {
+            var d = li.querySelector('.nav-dropdown');
+            var a = li.querySelector(':scope > a');
+            if (d) { d.classList.remove('open'); d.style.display = 'none'; }
+            if (a) a.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+      // Global Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          items.forEach(function(li) {
+            var d = li.querySelector('.nav-dropdown');
+            var a = li.querySelector(':scope > a');
+            if (d && d.classList.contains('open')) {
+              d.classList.remove('open'); d.style.display = 'none';
+              if (a) { a.setAttribute('aria-expanded', 'false'); a.focus(); }
+            }
           });
         }
       });

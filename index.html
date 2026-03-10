@@ -720,6 +720,7 @@
        RESPONSIVE
     ───────────────────────────────────────────── */
     @media (max-width: 840px) {
+      #overview > .w > div[style*="repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
       .research-layout, .avi-layout, .sys-layout,
       .teaching-layout, .about-layout, .strip-inner, .contact-layout
       { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1106,36 +1107,36 @@
       </a>
       <ul class="nav-menu">
         <li class="has-dropdown">
-          <a href="research.html">Research</a>
-          <div class="nav-dropdown" style="display:none;">
-            <a href="research.html#aviation">Aviation Human Factors</a>
-            <a href="research.html#findings">AI Trust &amp; Technology</a>
-            <a href="research.html#research-writing">Publications &amp; Writing</a>
+          <a href="research.html" aria-haspopup="true" aria-expanded="false">Research</a>
+          <div class="nav-dropdown" role="list" style="display:none;">
+            <a href="research.html#aviation" role="listitem">Aviation Human Factors</a>
+            <a href="research.html#findings" role="listitem">AI Trust &amp; Technology</a>
+            <a href="research.html#research-writing" role="listitem">Publications &amp; Writing</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
               <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
             </div>
           </div>
         </li>
         <li class="has-dropdown">
-          <a href="lab.html">Lab</a>
-          <div class="nav-dropdown" style="display:none;">
-            <a href="lab.html#lab-people">People</a>
-            <a href="lab.html#systems-coral">Infrastructure</a>
-            <a href="lab.html#systems-stats">Stats &amp; Growth</a>
-            <a href="lab.html#lab-writing">Field Research</a>
+          <a href="lab.html" aria-haspopup="true" aria-expanded="false">Lab</a>
+          <div class="nav-dropdown" role="list" style="display:none;">
+            <a href="lab.html#lab-people" role="listitem">People</a>
+            <a href="lab.html#systems-coral" role="listitem">Infrastructure</a>
+            <a href="lab.html#systems-stats" role="listitem">Stats &amp; Growth</a>
+            <a href="lab.html#lab-writing" role="listitem">Lab Notes</a>
+            <a href="lab.html#ra-pool" role="listitem">Student RA Pool</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Marshall Behavioral Lab · Infrastructure · Team · RA Pool</span>
             </div>
           </div>
         </li>
         <li class="has-dropdown">
-          <a href="index.html#about">About</a>
-          <div class="nav-dropdown" style="display:none;">
-            <a href="index.html#about">Bio &amp; Background</a>
-            <a href="research-assistants.html">Mentorship</a>
-            <a href="index.html#contact">Contact</a>
+          <a href="index.html#about" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="nav-dropdown" role="list" style="display:none;">
+            <a href="index.html#about" role="listitem">Bio &amp; Background</a>
+            <a href="index.html#contact" role="listitem">Contact</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Bio · Mentorship · Contact</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Bio · Contact</span>
             </div>
           </div>
         </li>
@@ -1143,14 +1144,14 @@
       </ul>
 
       <!-- Hamburger (mobile only) -->
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- Mobile drawer -->
-  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" style="display:none;">
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true" style="display:none;">
     <div class="mobile-drawer-inner">
       <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close menu">✕</button>
       <nav class="mobile-nav">
@@ -1166,15 +1167,15 @@
           <a href="lab.html#lab-people">People</a>
           <a href="lab.html#systems-coral">Infrastructure</a>
           <a href="lab.html#systems-stats">Stats &amp; Growth</a>
-          <a href="lab.html#lab-writing">Field Research</a>
-          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Marshall Behavioral Lab · Infrastructure · Team</span>
+          <a href="lab.html#lab-writing">Lab Notes</a>
+          <a href="lab.html#ra-pool">Student RA Pool</a>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Marshall Behavioral Lab · Infrastructure · Team · RA Pool</span>
         </div>
         <a href="index.html#about" class="mobile-nav-section">About</a>
         <div class="mobile-nav-group">
           <a href="index.html#about">Bio &amp; Background</a>
-          <a href="research-assistants.html">Mentorship</a>
           <a href="index.html#contact">Contact</a>
-          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Bio · Mentorship · Contact</span>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Bio · Contact</span>
         </div>
         <div class="mobile-nav-cta">
           <a href="cv.html" style="display:block; background:var(--red);color:#fff;padding:0.75rem 1.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;text-align:center;text-decoration:none;">Curriculum Vitae →</a>
@@ -1204,7 +1205,7 @@
           </p>
 
           <div class="hero-name">
-            <h1 class="h1">Brian N.<br><em>Huh</em></h1>
+            <h1 class="h1">Brian N.<br><span class="hero-em-wrap"><em>Huh</em></span></h1>
           </div>
 
           <p class="hero-domains">
@@ -1214,14 +1215,14 @@
             <span class="hero-domains-sep">·</span>
             AI Trust
             <span class="hero-domains-sep">·</span>
-            Multi-Method Research Infrastructure
+            Research Infrastructure & Methodology
           </p>
 
           <div class="hero-copy">
             <p>
               I am a behavioral scientist who studies how people make decisions in 
               high-stakes environments — particularly in aviation, where the consequences 
-              of those decisions are irreversible. My research applies organizational and 
+              of those decisions are often irreversible. My research applies organizational and 
               consumer behavior frameworks to aviation accidents, AI trust, and the human 
               systems that shape operational safety.
             </p>
@@ -1246,18 +1247,22 @@
         <!-- Right: count-up stats -->
         <div class="hero-stats">
           <div class="hero-stat">
+            <div class="stat-tip">110,862 study participants · Marshall Behavioral Research Lab · 2017–2025</div>
             <div class="hero-stat-num" id="hs1" data-target="110862">0</div>
             <div class="hero-stat-label">Study participants<br>2017–2025</div>
           </div>
           <div class="hero-stat">
+            <div class="stat-tip">851 studies supported · across 11 departments · USC Marshall</div>
             <div class="hero-stat-num" id="hs2" data-target="851">0</div>
             <div class="hero-stat-label">Research studies<br>supported</div>
           </div>
           <div class="hero-stat">
+            <div class="stat-tip">540 aviation professionals · 47 countries · ISASI 2024–25</div>
             <div class="hero-stat-num" id="hs3" data-target="540">0</div>
             <div class="hero-stat-label">Aviation professionals across<br>47 countries, ISASI 2024–25</div>
           </div>
           <div class="hero-stat" style="border-bottom:1px solid var(--border);">
+            <div class="stat-tip">139 research assistants trained · 392 person-semesters · 21 semesters</div>
             <div class="hero-stat-num" id="hs4" data-target="139">0</div>
             <div class="hero-stat-label">Research assistants<br>trained since 2017</div>
           </div>
@@ -1317,12 +1322,13 @@
   <section id="strip" class="sec dark reveal">
     <div class="w">
       <div class="strip-inner">
-        <p class="strip-headline">Scientist first.<br>Infrastructure by necessity.</p>
+        <p class="strip-headline">Research. Infrastructure. Mentorship.</p>
         <p class="strip-body">
-          The research program — aviation accidents, AI trust, the behavioral science of 
-          safety-critical operations — demanded infrastructure that didn't exist. So it was built: 
-          eight years, 164 researchers, 11 departments, multi-method capability at institutional scale. 
-          The lab is what rigorous behavioral science requires.
+          Three distinct bodies of work — a research program in aviation safety and AI trust, 
+          an institutional research infrastructure serving 11 departments, and a training 
+          program that has produced 139 researchers across 21 semesters. Each is 
+          documented separately. Each is the result of the same commitment to rigorous 
+          empirical work done at a level that is measurable.
         </p>
       </div>
     </div>
@@ -1330,81 +1336,87 @@
 
 
 
-  <section id="research-card" style="background:var(--white); padding:5rem 0; border-top:1px solid var(--border); min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div class="feature-inner">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-ghost); display:block; margin-bottom:1rem;">Research</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem, 3.5vw, 2.25rem); font-weight:300; color:var(--ink); line-height:1.2; margin-bottom:1.5rem;">Consumer and Organizational Behavior Applied to High-Stakes Operations</h2>
-          <p style="font-size:1rem; color:var(--ink-body); line-height:1.85; max-width:52ch; margin-bottom:2rem;">I study aviation accidents, AI trust, and the behavioral science of safety-critical operations — applying organizational and consumer behavior frameworks to understand why people make the decisions they do under pressure, and what that means for how technologies and safety systems should be designed.</p>
-          <a href="research.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:#990000;color:#fff;border-color:#990000;">View Research &rarr;</a>
+  <section id="overview" class="sec white reveal">
+    <div class="w">
+      <span class="label">Research · Lab · People</span>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:2.5rem;">
+
+        <!-- Research -->
+        <div style="background:var(--white); padding:2.5rem 2.25rem; display:flex; flex-direction:column; gap:1.5rem;">
+          <div>
+            <p style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Research</p>
+            <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:var(--ink); line-height:1.3; margin-bottom:0.85rem;">Aviation Accidents &amp; AI Trust</h2>
+            <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">Consumer and organizational behavior frameworks applied to aviation accidents, AI adoption, and safety-critical decision-making.</p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:1.25rem; display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">ISASI respondents</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">540</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">Professional engagement → AI trust</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">β = 0.727</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">Publications &amp; working papers</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">2</span>
+            </div>
+          </div>
+          <a href="research.html" style="margin-top:auto; font-family:var(--mono); font-size:0.65rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--red); text-decoration:none; border-bottom:1px solid rgba(153,0,0,0.3); padding-bottom:2px; align-self:flex-start;">View Research &rarr;</a>
         </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">2</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Publications & working papers</div>
+
+        <!-- Lab -->
+        <div style="background:var(--bg); padding:2.5rem 2.25rem; display:flex; flex-direction:column; gap:1.5rem;">
+          <div>
+            <p style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Lab Management</p>
+            <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:var(--ink); line-height:1.3; margin-bottom:0.85rem;">Marshall Behavioral Research Lab</h2>
+            <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">USC Marshall's primary behavioral science research infrastructure — serving 11 departments across in-person, online, and field study modes since 2017.</p>
           </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">540</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Survey respondents · ISASI 2024–25 · 47 countries</div>
+          <div style="border-top:1px solid var(--border); padding-top:1.25rem; display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">Research hours · FY2025</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">11,176</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">Registered researchers</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">164</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">Annual participant pool</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">19,194</span>
+            </div>
           </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">β = 0.727</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Professional engagement → AI trust</div>
-          </div></div>
+          <a href="lab.html" style="margin-top:auto; font-family:var(--mono); font-size:0.65rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--red); text-decoration:none; border-bottom:1px solid rgba(153,0,0,0.3); padding-bottom:2px; align-self:flex-start;">View Lab &rarr;</a>
+        </div>
+
+        <!-- RA Pool -->
+        <div style="background:var(--white); padding:2.5rem 2.25rem; display:flex; flex-direction:column; gap:1.5rem;">
+          <div>
+            <p style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Student RA Pool</p>
+            <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:var(--ink); line-height:1.3; margin-bottom:0.85rem;">Research Training With Outcomes</h2>
+            <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">139 students since 2017 — working directly inside the lab, on live studies and real data, under direct supervision. Not a program at a remove.</p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:1.25rem; display:flex; flex-direction:column; gap:0.6rem;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">RAs trained since 2017</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">139</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">Person-semesters</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">392</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <span style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-ghost);">Continue 3+ semesters</span>
+              <span style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.1rem; font-weight:300; color:var(--red);">53%</span>
+            </div>
+          </div>
+          <a href="lab.html#ra-pool" style="margin-top:auto; font-family:var(--mono); font-size:0.65rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--red); text-decoration:none; border-bottom:1px solid rgba(153,0,0,0.3); padding-bottom:2px; align-self:flex-start;">View RA Pool &rarr;</a>
+        </div>
+
       </div>
     </div>
   </section>
-  <section id="lab-card" style="background:var(--bg); padding:5rem 0; border-top:1px solid var(--border); min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div class="feature-inner">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--ink-ghost); display:block; margin-bottom:1rem;">Lab Management</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem, 3.5vw, 2.25rem); font-weight:300; color:var(--ink); line-height:1.2; margin-bottom:1.5rem;">The Infrastructure the Research Requires</h2>
-          <p style="font-size:1rem; color:var(--ink-body); line-height:1.85; max-width:52ch; margin-bottom:2rem;">Rigorous multi-method behavioral science demands real infrastructure. The Marshall Behavioral Research Lab — built over eight years — delivers it: 164 registered researchers, 11 departments, eye-tracking, psychophysiology, online and field capabilities, and a 19,000-member participant pool.</p>
-          <a href="lab.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:#990000;color:#fff;border-color:#990000;">View Lab &rarr;</a>
-        </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">11,176</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Research hours · FY2025</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">164</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Registered researchers</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid var(--border);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:var(--red); line-height:1;">263%</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); margin-top:0.2rem;">Participant pool growth</div>
-          </div></div>
-      </div>
-    </div>
-  </section>
-  <section id="mentorship-card" style="background:var(--ink); padding:5rem 0; border-top:1px solid transparent; min-height:calc(100vh - 72px); display:flex; align-items:center;">
-    <div class="w" style="width:100%;">
-      <div class="feature-inner">
-        <div>
-          <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:rgba(255,255,255,0.55); display:block; margin-bottom:1rem;">Student Research Assistant Pool Program</span>
-          <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(1.75rem, 3.5vw, 2.25rem); font-weight:300; color:#fff; line-height:1.2; margin-bottom:1.5rem;">One-on-One. Inside the Lab. With a Track Record of Outcomes.</h2>
-          <p style="font-size:1rem; color:rgba(255,255,255,0.85); line-height:1.85; max-width:52ch; margin-bottom:2rem;">Brian works directly with every RA in the lab — supervising their work, developing their skills, and mentoring them one-on-one as a staff researcher who is present in the work. 139 students across 21 semesters. 392 person-semesters. Alumni who leave knowing how rigorous empirical research actually works.</p>
-          <a href="research-assistants.html" class="btn" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.7rem 1.5rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; cursor:pointer; background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);">View Mentorship &rarr;</a>
-        </div>
-        <div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">139</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">RAs in the lab since 2017</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">392</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">Person-semesters</div>
-          </div>
-          <div style="padding:1rem 0; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.75rem; font-weight:300; color:#fff; line-height:1;">53%</div>
-            <div style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.50); margin-top:0.2rem;">Continue 3+ semesters</div>
-          </div></div>
-      </div>
-    </div>
-  </section>
+  
   <section id="about" class="sec alt reveal">
     <div class="w">
       <div class="about-layout">
@@ -1419,39 +1431,33 @@
           <span class="label">About</span>
 
           <p>
-            Brian is a behavioral scientist whose research applies organizational and consumer 
-            behavior frameworks to aviation accidents, AI trust, and the human systems that 
-            shape operational safety. His work asks why people make the decisions they do in 
-            high-stakes environments — and what that means for how organizations, technologies, 
-            and safety cultures should be designed.
-          </p>
-
-          <!-- Plain-language translator -->
-          <p style="font-size:0.82rem; color:var(--ink-mid); line-height:1.8; padding:1rem 1.25rem; background:var(--bg-alt); border-left:2px solid var(--border); margin-bottom:1.5rem; margin-top:1.5rem;">
-            <strong style="color:var(--ink);">For a general audience:</strong> Brian studies why people make the decisions they do in high-pressure situations — particularly in aviation, where the consequences are irreversible. To do that research properly, he built the behavioral science research infrastructure at USC Marshall from the ground up: the facilities, measurement technology, participant pool, and staff that make rigorous multi-method research possible. The lab now serves researchers across all departments. His own research focus is aviation safety and AI trust.
+            My research sits at the intersection of organizational behavior and 
+            consumer behavior — applied not to markets or firms in the conventional sense, 
+            but to the human systems that govern aviation safety and the adoption of AI 
+            in high-stakes operational environments. The theoretical frameworks are 
+            behavioral; the questions are operational; the objective is applied.
           </p>
           <p>
-            That research agenda drove him to build the Marshall Behavioral Research Lab — 
-            USC Marshall's primary behavioral science infrastructure — into what it is today. 
-            Rigorous multi-method research demands more than a survey platform: it requires 
-            participant ecosystems, measurement-grade technology, experimental workflow, and 
-            people who know how to run studies cleanly. Over eight years, he built all of it. 
-            The lab now supports 164 registered researchers across 11 departments, with 
-            eye-tracking, psychophysiology, online and field capabilities, and a 
-            19,000-member participant pool — serving roughly 60 active faculty study teams 
-            in any given year.
+            My path moved through Harvard, Columbia Business School, Chicago Booth, 
+            and Stanford before landing at USC Marshall — where in 2017 I was 
+            selected by faculty committee to establish what would become the Marshall 
+            Behavioral Research Lab. I built it because the science demanded it: 
+            rigorous multi-method behavioral research cannot happen without participant 
+            ecosystems, measurement-grade technology, and staff who know how to run 
+            studies cleanly. Eight years of that work is documented in the Lab section. 
+            My own research is documented in Research.
           </p>
           <p>
-            He holds an M.S. in Applied Psychology from USC Dornsife, a Graduate 
+            I hold an M.S. in Applied Psychology from USC Dornsife, a Graduate 
             Certificate in Business Analytics from USC Marshall, a Certificate in 
             Performance Leadership from Cornell ILR School, and a B.A. in Psychology 
-            from Harvard. Prior to USC, he held research roles at Harvard, Columbia 
+            from Harvard. Prior to USC, I held research roles at Harvard, Columbia 
             Business School, Chicago Booth, and Stanford.
           </p>
           <p>
-            He works directly with every Research Assistant in the lab — 139 students since 2017, 
+            I work directly with every Research Assistant in the lab — 139 students since 2017, 
             contributing 392 person-semesters across 21 semesters. Not a formal program at a remove: 
-            one-on-one, inside the work, as a staff researcher who is present in what students are doing. 
+            one-on-one, inside the work, as a staff researcher present in what students are doing. 
             Alumni go on to positions in tech, consulting, finance, and research — not because USC Marshall 
             is on their degree, but because they worked in a real behavioral science lab and know how 
             rigorous empirical research actually works.
@@ -1490,10 +1496,9 @@
           <span class="label">Contact</span>
           <h2 class="h2">Get in Touch</h2>
           <p class="body">
-            Inquiries regarding research collaboration, speaking engagements, 
-            institutional research partnerships, advisory roles, and research 
-            operations leadership are welcome. Email is the preferred channel 
-            for direct correspondence.
+            Inquiries regarding research collaboration, institutional research 
+            partnerships, and research operations are welcome. Email is the 
+            preferred channel for direct correspondence.
           </p>
           <p class="body">
             Students interested in joining the lab's Research Assistant pool are welcome to reach out via the USC Marshall email below.
@@ -1592,12 +1597,12 @@
       <div>
         <p class="footer-col-lbl">Navigation</p>
         <ul class="footer-list">
-          <li><a href="research.html">Research</a></li>
+          <li><a href="research.html" aria-haspopup="true" aria-expanded="false">Research</a></li>
           <li><a href="research.html#aviation">Aviation Human Factors</a></li>
           <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
-          <li><a href="lab.html">Lab</a></li>
-          <li><a href="research-assistants.html">Student RA Pool</a></li>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="lab.html" aria-haspopup="true" aria-expanded="false">Lab</a></li>
+          <li><a href="lab.html#ra-pool">Student RA Pool</a></li>
+          <li><a href="index.html#about" aria-haspopup="true" aria-expanded="false">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </div>
@@ -1641,7 +1646,7 @@
     secs.forEach(s => activeObs.observe(s));
 
     // Scroll-triggered reveals
-    const revealObs = new IntersectionObserver(entries => {
+    var revealObs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
     }, { threshold: 0.04 });
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
@@ -1836,7 +1841,70 @@
       .reveal { opacity: 1 !important; transform: none !important; }
       .js-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
     }
-  </style>
+  
+    /* ─── PAPER GRAIN ─── */
+    body::after {
+      content: '';
+      position: fixed; inset: 0; z-index: 9999;
+      pointer-events: none;
+      opacity: 0.028;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+
+    /* ─── HERO NAME UNDERLINE DRAW ─── */
+    .hero-em-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .hero-em-wrap::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 100%; height: 2px;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left center;
+      animation: drawline 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.92s forwards;
+    }
+    @keyframes drawline {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+
+
+    /* ─── STAT TOOLTIPS ─── */
+    .hero-stat { position: relative; cursor: default; }
+    .stat-tip {
+      position: absolute; left: 0; bottom: calc(100% + 8px);
+      background: var(--ink); color: rgba(255,255,255,0.88);
+      font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.07em;
+      line-height: 1.6; padding: 0.6rem 0.85rem;
+      white-space: nowrap; pointer-events: none; z-index: 200;
+      opacity: 0; transform: translateY(4px);
+      transition: opacity 0.18s, transform 0.18s;
+      border-left: 2px solid var(--red);
+    }
+    .hero-stat:hover .stat-tip {
+      opacity: 1; transform: translateY(0);
+    }
+
+
+    /* ─── DROP CAP ─── */
+    .about-bio > p:first-of-type::first-letter {
+      font-family: var(--serif);
+      font-size: 3.8rem;
+      font-weight: 300;
+      color: var(--red);
+      float: left;
+      line-height: 0.82;
+      margin-right: 0.08em;
+      margin-top: 0.08em;
+      letter-spacing: -0.02em;
+    }
+
+</style>
 
           <!-- Legend -->
           <div class="tl-legend">
@@ -2026,7 +2094,7 @@
             <div class="cv-entry-body">Leads research operations in the Office of the Associate Vice Dean for Research, serving as the senior operational leader for the Marshall Behavioral Research Lab. The lab serves faculty and researchers across all of Marshall's academic units, centers, and institutes — facilitating experimental and archival studies in field, online, and in-person settings through a team of research assistants with dedicated administrative, technical, and support leads. Selected by faculty committee to establish the lab in 2017; role expanded substantially into full strategic and operational leadership across 11 departments.</div>
             <ul class="cv-entry-bullets">
               <li>Grew lab from <span class="cv-stat">2 departments</span> to <span class="cv-stat">11</span>, supporting <span class="cv-stat">164 registered researchers</span> including 69 faculty, 22 doctoral students, postdocs, and visiting scholars</li>
-              <li>Scaled annual research participants from <span class="cv-stat">5,295</span> (FY2017–18) to <span class="cv-stat">19,194</span> (FY2024–25) — a 262% increase</li>
+              <li>Scaled annual research participants from <span class="cv-stat">5,295</span> (FY2017–18) to <span class="cv-stat">19,194</span> (FY2024–25) — a 263% increase</li>
               <li>Delivered <span class="cv-stat">11,176 research hours</span> in FY2025, a <span class="cv-stat">44.6% year-over-year increase</span>; in-person hours grew 122% in a single year</li>
 
               <li>Hired, trained, and managed <span class="cv-stat">139 unique student assistants</span> over eight years; current team of 37 with a 90.6% continuous service rate</li>
@@ -2137,7 +2205,7 @@
               </div>
               <div class="cv-entry-date">2024–2025</div>
             </div>
-            <div class="cv-entry-body">Working paper. Multi-level study of 540 aviation safety professionals across 47 countries — 269 for individual-level SEM (EFA→CFA→SEM), 172 for organizational analysis. Primary finding: professional engagement explains 48.9% of AI trust variance (β=0.727, p&lt;0.001). Introduces the AI Trust Assessment Index (ATAI; α=.96, CR=.92). Key findings: HF maturity paradox (β=−0.11, informed skepticism vs. resistance), mid-career advantage (74% stronger engagement-trust relationship at 3–10 years), organizational threshold at integration level 3.5. Presented at ISASI Annual Seminar 2024 (Lisbon) and ISASI Annual Seminar 2025 (Denver).</div>
+            <div class="cv-entry-body">Working paper. Multi-level study of 540 aviation safety professionals across 47 countries — 269 for individual-level SEM (EFA→CFA→SEM), 172 for organizational analysis. Primary finding: professional engagement explains 48.9% of AI trust variance (β = 0.727, p&lt;0.001). Introduces the AI Trust Assessment Index (ATAI; α=.96, CR=.92). Key findings: HF maturity paradox (β = −0.11, informed skepticism vs. resistance), mid-career advantage (74% stronger engagement-trust relationship at 3–10 years), organizational threshold at integration level 3.5. Presented at ISASI Annual Seminar 2024 (Lisbon) and ISASI Annual Seminar 2025 (Denver).</div>
           </div>
           <div class="cv-entry">
             <div class="cv-entry-head">
@@ -2351,21 +2419,34 @@
       var closeBtn = document.getElementById('mobile-drawer-close');
       if (!hamburger || !drawer) return;
 
+      var focusableSelectors = 'a[href], button:not([disabled]), [tabindex="0"]';
+
+      function getFocusable() {
+        return Array.from(drawer.querySelectorAll(focusableSelectors)).filter(function(el) {
+          return !el.closest('[hidden]') && el.offsetParent !== null;
+        });
+      }
+
       function openDrawer() {
         drawer.style.display = 'block';
         drawer.classList.add('open');
+        drawer.removeAttribute('aria-hidden');
         hamburger.classList.add('open');
         hamburger.setAttribute('aria-expanded', 'true');
-        drawer.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        // Move focus into drawer
+        var first = getFocusable()[0];
+        if (first) setTimeout(function() { first.focus(); }, 50);
       }
+
       function closeDrawer() {
         drawer.classList.remove('open');
         drawer.style.display = 'none';
+        drawer.setAttribute('aria-hidden', 'true');
         hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
-        drawer.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        hamburger.focus();
       }
 
       hamburger.addEventListener('click', function() {
@@ -2378,9 +2459,18 @@
         a.addEventListener('click', closeDrawer);
       });
 
-      // Close on ESC
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeDrawer();
+      // Focus trap
+      drawer.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') { closeDrawer(); return; }
+        if (e.key !== 'Tab') return;
+        var focusable = getFocusable();
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
       });
     })();
 
@@ -2389,67 +2479,124 @@
       var items = document.querySelectorAll('.has-dropdown');
       var closeTimers = new WeakMap();
 
-      var closeAll = function() {
-        items.forEach(function(li) {
-          var d = li.querySelector('.nav-dropdown');
-          if (d) { d.classList.remove('open'); d.style.display = 'none'; }
-          var t = closeTimers.get(li);
-          if (t) { clearTimeout(t); closeTimers.delete(li); }
+      function openDropdown(li, link, dropdown) {
+        var t = closeTimers.get(li);
+        if (t) { clearTimeout(t); closeTimers.delete(li); }
+        // Close all others first
+        items.forEach(function(other) {
+          if (other !== li) {
+            var d = other.querySelector('.nav-dropdown');
+            var a = other.querySelector('a');
+            if (d) { d.classList.remove('open'); d.style.display = 'none'; }
+            if (a) a.setAttribute('aria-expanded', 'false');
+          }
         });
-      };
+        dropdown.classList.add('open');
+        dropdown.style.display = 'block';
+        link.setAttribute('aria-expanded', 'true');
+      }
 
-      items.forEach(function(li) {
-        var link = li.querySelector('a');
-        var dropdown = li.querySelector('.nav-dropdown');
-        if (!dropdown) return;
-
-        // Desktop: hover — open immediately, close with delay
-        li.addEventListener('mouseenter', function() {
-          var t = closeTimers.get(li);
-          if (t) { clearTimeout(t); closeTimers.delete(li); }
-          closeAll();
-          dropdown.classList.add('open');
-          dropdown.style.display = 'block';
-        });
-        li.addEventListener('mouseleave', function() {
+      function closeDropdown(li, link, dropdown, delay) {
+        if (delay) {
           var t = setTimeout(function() {
             dropdown.classList.remove('open');
             dropdown.style.display = 'none';
-          }, 120);
+            link.setAttribute('aria-expanded', 'false');
+          }, delay);
           closeTimers.set(li, t);
-        });
+        } else {
+          var t2 = closeTimers.get(li);
+          if (t2) { clearTimeout(t2); closeTimers.delete(li); }
+          dropdown.classList.remove('open');
+          dropdown.style.display = 'none';
+          link.setAttribute('aria-expanded', 'false');
+        }
+      }
 
-        // Keep open when hovering the dropdown itself
+      items.forEach(function(li) {
+        var link = li.querySelector(':scope > a');
+        var dropdown = li.querySelector('.nav-dropdown');
+        if (!dropdown) return;
+
+        // Hover: open immediately, close with short delay
+        li.addEventListener('mouseenter', function() {
+          openDropdown(li, link, dropdown);
+        });
+        li.addEventListener('mouseleave', function() {
+          closeDropdown(li, link, dropdown, 120);
+        });
         dropdown.addEventListener('mouseenter', function() {
           var t = closeTimers.get(li);
           if (t) { clearTimeout(t); closeTimers.delete(li); }
         });
         dropdown.addEventListener('mouseleave', function() {
-          var t = setTimeout(function() {
-            dropdown.classList.remove('open');
-            dropdown.style.display = 'none';
-          }, 80);
-          closeTimers.set(li, t);
+          closeDropdown(li, link, dropdown, 80);
         });
 
-        // Touch / click: toggle
+        // Click / touch: toggle
         link.addEventListener('click', function(e) {
           var isOpen = dropdown.classList.contains('open');
-          closeAll();
-          if (!isOpen) {
+          if (isOpen) {
+            closeDropdown(li, link, dropdown, 0);
+          } else {
             e.preventDefault();
-            dropdown.classList.add('open');
-            dropdown.style.display = 'block';
+            openDropdown(li, link, dropdown);
+          }
+        });
+
+        // Keyboard: Enter/Space toggle; Escape closes
+        link.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            var isOpen = dropdown.classList.contains('open');
+            if (isOpen) { closeDropdown(li, link, dropdown, 0); }
+            else { openDropdown(li, link, dropdown); dropdown.querySelector('a') && dropdown.querySelector('a').focus(); }
+          }
+          if (e.key === 'Escape') {
+            closeDropdown(li, link, dropdown, 0);
+            link.focus();
+          }
+        });
+
+        // Keyboard: Escape from inside dropdown
+        dropdown.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeDropdown(li, link, dropdown, 0);
+            link.focus();
+          }
+          // Tab out of last item closes dropdown
+          if (e.key === 'Tab') {
+            var focusable = Array.from(dropdown.querySelectorAll('a[href]'));
+            var last = focusable[focusable.length - 1];
+            if (document.activeElement === last && !e.shiftKey) {
+              closeDropdown(li, link, dropdown, 0);
+            }
           }
         });
       });
 
-      // Click outside closes all dropdowns
+      // Click outside closes all
       document.addEventListener('click', function(e) {
         if (!e.target.closest('.has-dropdown')) {
-          document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
-            d.classList.remove('open');
-            d.style.display = 'none';
+          items.forEach(function(li) {
+            var d = li.querySelector('.nav-dropdown');
+            var a = li.querySelector(':scope > a');
+            if (d) { d.classList.remove('open'); d.style.display = 'none'; }
+            if (a) a.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+      // Global Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          items.forEach(function(li) {
+            var d = li.querySelector('.nav-dropdown');
+            var a = li.querySelector(':scope > a');
+            if (d && d.classList.contains('open')) {
+              d.classList.remove('open'); d.style.display = 'none';
+              if (a) { a.setAttribute('aria-expanded', 'false'); a.focus(); }
+            }
           });
         }
       });
@@ -2483,4 +2630,6 @@
       }
     });
   })();
-  </scri
+  </script>
+</body>
+</html>
