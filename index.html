@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brian N. Huh — Behavioral Scientist · Aviation Safety & AI Trust · USC Marshall</title>
-  <meta name="description" content="Behavioral scientist studying aviation accidents, AI trust, and high-stakes decision-making. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
+  <title>Brian N. Huh — Research Scientist · Aviation Safety & AI Trust · USC Marshall</title>
+  <meta name="description" content="Research scientist studying aviation accidents, AI trust, and decision-making in aviation. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
 
   <!-- Open Graph / Social sharing -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://brianhuh.com/" />
   <meta property="og:title" content="Brian N. Huh — Behavioral Scientist · Aviation Safety & AI Trust · USC Marshall" />
-  <meta property="og:description" content="Behavioral scientist studying aviation accidents, AI trust, and high-stakes decision-making. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
+  <meta property="og:description" content="Research scientist studying aviation accidents, AI trust, and decision-making in aviation. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
   <meta property="og:image"       content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="twitter:title" content="Brian N. Huh — Behavioral Scientist · Aviation Safety & AI Trust · USC Marshall" />
-  <meta name="twitter:description" content="Behavioral scientist studying aviation accidents, AI trust, and high-stakes decision-making. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
+  <meta name="twitter:description" content="Research scientist studying aviation accidents, AI trust, and decision-making in aviation. Builder of the Marshall Behavioral Research Lab — multi-method behavioral science infrastructure at USC Marshall." />
   <meta name="twitter:image"      content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
 
   <!-- Favicon: crimson BH monogram -->
@@ -68,6 +68,12 @@
 
       --max:  1200px;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      /* ── Data visualization & accent ── */
+      --red-muted:    #e8a0a0;
+      --red-vivid:    #cc4444;
+      --data-blue:    #4a6fa5;
+      --data-green:   #5a7a5a;
+      --data-gold:    #c9a227;
     }
 
     /* ─────────────────────────────────────────────
@@ -998,7 +1004,7 @@
     .findings-kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); margin-bottom: 4rem; }
     .findings-kpi { background: #111110; padding: 2.25rem 2rem; }
     .findings-kpi-num { font-family: var(--serif); font-size: 2.75rem; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.4rem; }
-    .findings-kpi-num em { font-style: italic; color: #e8a0a0; }
+    .findings-kpi-num em { font-style: italic; color: var(--red-muted); }
     .findings-kpi-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.5rem; }
     .findings-kpi-note { font-size: 0.775rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
     .findings-model-head { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.60); margin-bottom: 1.25rem; }
@@ -1011,10 +1017,10 @@
     .path-bar-track { flex: 1; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; position: relative; }
     .path-bar-fill { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.2); position: absolute; top: 0; left: 0; }
     .path-bar-fill.sig { background: var(--red); }
-    .path-sig { font-family: var(--mono); font-size: 0.70rem; color: #e8a0a0; }
+    .path-sig { font-family: var(--mono); font-size: 0.70rem; color: var(--red-muted); }
     .path-ns  { font-family: var(--mono); font-size: 0.70rem; color: rgba(255,255,255,0.55); }
     .path-beta { font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
-    .path-beta.sig { color: #e8a0a0; font-weight: 500; }
+    .path-beta.sig { color: var(--red-muted); font-weight: 500; }
     .path-beta.ns  { color: rgba(255,255,255,0.65); }
     .findings-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.07); margin-bottom: 3rem; }
     .findings-panel { background: rgba(255,255,255,0.04); padding: 2rem; border: 1px solid rgba(255,255,255,0.07); }
@@ -1026,10 +1032,10 @@
     .val-hi  { color: #8fd4a0; }
     .val-med { color: #f5c97a; }
     .val-lo  { color: rgba(255,255,255,0.65); }
-    .val-red { color: #e8a0a0; }
+    .val-red { color: var(--red-muted); }
     .findings-method-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
     .fchip { font-family: var(--mono); font-size: 0.68rem; padding: 0.25rem 0.55rem; border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.70); border-radius: 2px; letter-spacing: 0.04em; }
-    .fchip.hi { border-color: rgba(153,0,0,0.4); color: #e8a0a0; background: rgba(153,0,0,0.1); }
+    .fchip.hi { border-color: rgba(153,0,0,0.4); color: var(--red-muted); background: rgba(153,0,0,0.1); }
     .reliability-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.07); margin-bottom: 3rem; }
     .rel-cell { background: rgba(255,255,255,0.03); padding: 1.5rem; }
     .rel-factor { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.60); margin-bottom: 0.65rem; }
@@ -1064,7 +1070,7 @@
     :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
     /* ── Findings (dark section) classes ── */
     .dark-h2 { color: var(--white); font-weight: 300; line-height: 1.18; margin-bottom: 1.5rem; }
-    .dark-h2 em { color: #e8a0a0; }
+    .dark-h2 em { color: var(--red-muted); }
     .dark-body { font-size: 0.9rem; color: rgba(255,255,255,0.80); line-height: 1.8; max-width: 38ch; }
     .dark-label { color: rgba(255,255,255,0.65); }
     .findings-stat { font-family: var(--serif); font-size: 2.75rem; font-weight: 300;
@@ -1103,17 +1109,17 @@
       <a href="index.html" class="nav-brand" aria-label="Brian N. Huh">
         Brian N. Huh
         <span class="nav-brand-sep"></span>
-        <span class="nav-brand-sub">Behavioral Scientist · USC Marshall</span>
+        <span class="nav-brand-sub">Research Scientist</span>
       </a>
       <ul class="nav-menu">
         <li class="has-dropdown">
           <a href="research.html" aria-haspopup="true" aria-expanded="false">Research</a>
           <div class="nav-dropdown" role="list" style="display:none;">
-            <a href="research.html#aviation" role="listitem">Aviation Human Factors</a>
-            <a href="research.html#findings" role="listitem">AI Trust &amp; Technology</a>
-            <a href="research.html#research-writing" role="listitem">Publications &amp; Writing</a>
+            <a href="research.html#research" role="listitem">Current Projects</a>
+            <a href="research.html#findings" role="listitem">Working Paper</a>
+            <a href="research.html#research-writing" role="listitem">Publications</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Current projects · Working paper · Publications</span>
             </div>
           </div>
         </li>
@@ -1157,10 +1163,10 @@
       <nav class="mobile-nav">
         <a href="research.html" class="mobile-nav-section">Research</a>
         <div class="mobile-nav-group">
-          <a href="research.html#aviation">Aviation Human Factors</a>
-          <a href="research.html#findings">AI Trust &amp; Technology</a>
-          <a href="research.html#research-writing">Publications &amp; Writing</a>
-          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Aviation human factors · AI trust · Publications</span>
+          <a href="research.html#research">Current Projects</a>
+          <a href="research.html#findings">Working Paper</a>
+          <a href="research.html#research-writing">Publications</a>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Current projects · Working paper · Publications</span>
         </div>
         <a href="lab.html" class="mobile-nav-section">Lab</a>
         <div class="mobile-nav-group">
@@ -1198,43 +1204,36 @@
         <div>
           <p class="hero-tag">
             <span class="hero-tag-dot"></span>
-            USC Marshall School of Business &ensp;·&ensp; Los Angeles, CA
+            Lab Manager, Marshall Behavioral Research Lab &ensp;·&ensp; USC Marshall School of Business
           </p>
-          <p style="font-family:var(--mono); font-size:0.62rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-ghost); margin-bottom:2rem; opacity:0.7;">
-            Previously &ensp;·&ensp; Harvard &ensp;·&ensp; Columbia Business School &ensp;·&ensp; Chicago Booth &ensp;·&ensp; Stanford
-          </p>
-
           <div class="hero-name">
             <h1 class="h1">Brian N.<br><span class="hero-em-wrap"><em>Huh</em></span></h1>
           </div>
 
           <p class="hero-domains">
-            Behavioral Scientist
+            Behavioral Sciences
+            <span class="hero-domains-sep">·</span>
+            AI Trust &amp; Safety
             <span class="hero-domains-sep">·</span>
             Aviation Human Factors
             <span class="hero-domains-sep">·</span>
-            AI Trust
-            <span class="hero-domains-sep">·</span>
-            Research Infrastructure & Methodology
+            Multi-Modal Research Infrastructure
           </p>
 
           <div class="hero-copy">
             <p>
-              I am a behavioral scientist who studies how people make decisions in 
-              high-stakes environments — particularly in aviation, where the consequences 
-              of those decisions are often irreversible. My research applies organizational and 
+              I am a behavioral scientist who studies decision-making in aviation — where the consequences 
+              of getting it wrong are often irreversible. My research applies organizational and 
               consumer behavior frameworks to aviation accidents, AI trust, and the human 
               systems that shape operational safety.
             </p>
             <p>
-              That research agenda is what drove me to build the Marshall Behavioral 
-              Research Lab into what it is. Rigorous multi-method behavioral science 
-              demands real infrastructure — participant ecosystems, measurement technology, 
-              experimental workflow, people who know how to run studies cleanly. I built 
-              what the work required. Eight years later, the lab supports 164 researchers 
-              across 11 departments, with eye-tracking, psychophysiology, online and field 
-              capabilities, and a 19,000-member participant pool. The infrastructure exists 
-              because the science demands it.
+              That research is what drove me to build the Marshall Behavioral 
+              Research Lab into what it is today. Behavioral science needs actual infrastructure — 
+              a participant pool, measurement equipment, people who know how to run a study 
+              without introducing error. I built what the work required. Eight years later, the lab 
+              supports 164 researchers across 11 departments, with eye-tracking, psychophysiology, 
+              online and field capabilities, and a 19,000-member participant pool.
             </p>
           </div>
 
@@ -1312,7 +1311,7 @@
         <span class="hero-bottom-tag">Aviation Accidents</span>
         <span class="hero-bottom-tag">AI Trust</span>
         <span class="hero-bottom-tag">Human Factors</span>
-        <span class="hero-bottom-tag">Behavioral Science</span>
+        <span class="hero-bottom-tag">Behavioral Sciences</span>
         <span class="hero-bottom-tag">Sensors · Radar · Lidar</span>
         <span class="hero-bottom-tag">Safety Operations</span>
       </div>
@@ -1345,8 +1344,8 @@
         <div style="background:var(--white); padding:2.5rem 2.25rem; display:flex; flex-direction:column; gap:1.5rem;">
           <div>
             <p style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Research</p>
-            <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:var(--ink); line-height:1.3; margin-bottom:0.85rem;">Aviation Accidents &amp; AI Trust</h2>
-            <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">Consumer and organizational behavior frameworks applied to aviation accidents, AI adoption, and safety-critical decision-making.</p>
+            <h2 class="h2">Aviation Accidents &amp; AI Trust</h2>
+            <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">Consumer and organizational behavior frameworks applied to aviation accidents, AI adoption, and decision-making under operational pressure.</p>
           </div>
           <div style="border-top:1px solid var(--border); padding-top:1.25rem; display:flex; flex-direction:column; gap:0.6rem;">
             <div style="display:flex; justify-content:space-between; align-items:baseline;">
@@ -1369,7 +1368,7 @@
         <div style="background:var(--bg); padding:2.5rem 2.25rem; display:flex; flex-direction:column; gap:1.5rem;">
           <div>
             <p style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Lab Management</p>
-            <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:var(--ink); line-height:1.3; margin-bottom:0.85rem;">Marshall Behavioral Research Lab</h2>
+            <h2 class="h2">Marshall Behavioral Research Lab</h2>
             <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">USC Marshall's primary behavioral science research infrastructure — serving 11 departments across in-person, online, and field study modes since 2017.</p>
           </div>
           <div style="border-top:1px solid var(--border); padding-top:1.25rem; display:flex; flex-direction:column; gap:0.6rem;">
@@ -1393,8 +1392,8 @@
         <div style="background:var(--white); padding:2.5rem 2.25rem; display:flex; flex-direction:column; gap:1.5rem;">
           <div>
             <p style="font-family:var(--mono); font-size:0.63rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Student RA Pool</p>
-            <h2 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:1.2rem; font-weight:400; color:var(--ink); line-height:1.3; margin-bottom:0.85rem;">Research Training With Outcomes</h2>
-            <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">139 students since 2017 — working directly inside the lab, on live studies and real data, under direct supervision. Not a program at a remove.</p>
+            <h2 class="h2">Research Training With Outcomes</h2>
+            <p style="font-size:0.875rem; color:var(--ink-body); line-height:1.8;">139 students since 2017 — working directly in the lab, on live studies, with real data, under direct supervision.</p>
           </div>
           <div style="border-top:1px solid var(--border); padding-top:1.25rem; display:flex; flex-direction:column; gap:0.6rem;">
             <div style="display:flex; justify-content:space-between; align-items:baseline;">
@@ -1431,11 +1430,9 @@
           <span class="label">About</span>
 
           <p>
-            My research sits at the intersection of organizational behavior and 
-            consumer behavior — applied not to markets or firms in the conventional sense, 
-            but to the human systems that govern aviation safety and the adoption of AI 
-            in high-stakes operational environments. The theoretical frameworks are 
-            behavioral; the questions are operational; the objective is applied.
+            I use organizational behavior and consumer behavior frameworks to study 
+            how people make decisions in aviation — specifically around accidents, incidents, 
+            and the adoption of AI in investigative and operational practice.
           </p>
           <p>
             My path moved through Harvard, Columbia Business School, Chicago Booth, 
@@ -1456,11 +1453,10 @@
           </p>
           <p>
             I work directly with every Research Assistant in the lab — 139 students since 2017, 
-            contributing 392 person-semesters across 21 semesters. Not a formal program at a remove: 
-            one-on-one, inside the work, as a staff researcher present in what students are doing. 
+            contributing 392 person-semesters across 21 semesters. One-on-one, inside the actual work. 
             Alumni go on to positions in tech, consulting, finance, and research — not because USC Marshall 
-            is on their degree, but because they worked in a real behavioral science lab and know how 
-            rigorous empirical research actually works.
+            is on their degree, but because they worked in a real behavioral science lab and understand 
+            how empirical research actually works.
           </p>
 
           <div style="margin-top: 2rem; display: flex; gap: 0.85rem; flex-wrap: wrap;">
@@ -1598,8 +1594,8 @@
         <p class="footer-col-lbl">Navigation</p>
         <ul class="footer-list">
           <li><a href="research.html" aria-haspopup="true" aria-expanded="false">Research</a></li>
-          <li><a href="research.html#aviation">Aviation Human Factors</a></li>
-          <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
+          <li><a href="research.html#research">Current Projects</a></li>
+          <li><a href="research.html#findings">Working Paper</a></li>
           <li><a href="lab.html" aria-haspopup="true" aria-expanded="false">Lab</a></li>
           <li><a href="lab.html#ra-pool">Student RA Pool</a></li>
           <li><a href="index.html#about" aria-haspopup="true" aria-expanded="false">About</a></li>
@@ -1611,7 +1607,7 @@
         <ul class="footer-list">
           <li><a href="/cdn-cgi/l/email-protection#cea6bba6ac8ea3afbcbda6afa2a2e0bbbdade0abaabb" class="red"><span class="__cf_email__" data-cfemail="87eff2efe5c7eae6f5f4efe6ebeba9f2f4e4a9e2e3f2">[email&#160;protected]</span></a></li>
           <li><a href="https://www.linkedin.com/in/brian-huh" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#" onclick="openCV();return false;">View CV</a></li>
+          <li><a href="cv.html">View CV</a></li>
           <li><a href="https://usc.edu" target="_blank" rel="noopener">USC Marshall</a></li>
         </ul>
       </div>
@@ -1909,8 +1905,8 @@
           <!-- Legend -->
           <div class="tl-legend">
             <div class="tl-leg-item"><div class="tl-leg-dot" style="background:#990000;"></div>Education</div>
-            <div class="tl-leg-item"><div class="tl-leg-dot" style="background:#4a6fa5;"></div>Research Experience</div>
-            <div class="tl-leg-item"><div class="tl-leg-dot" style="background:#5a7a5a;"></div>Professional</div>
+            <div class="tl-leg-item"><div class="tl-leg-dot" style="background:var(--data-blue);"></div>Research Experience</div>
+            <div class="tl-leg-item"><div class="tl-leg-dot" style="background:var(--data-green);"></div>Professional</div>
           </div>
 
           <div class="tl-wrap">
@@ -1945,12 +1941,12 @@
           {id:'usc-cert',cat:'edu',lbl:'Cert. Business Analytics',org:'USC Marshall',start:2021,end:2022,lane:0,color:'#990000',note:'Graduate Certificate in Business Analytics — applied quantitative methods to research operations.'},
           {id:'usc-ms',cat:'edu',lbl:'M.S. Applied Psychology',org:'USC Dornsife',start:2022,end:2024,lane:0,color:'#990000',note:'Graduate study in applied psychology while managing the lab full-time.'},
           {id:'cornell',cat:'edu',lbl:'Cert. Performance Leadership',org:'Cornell ILR',start:2024,end:2024.75,lane:0,color:'#990000',note:'Performance and leadership frameworks from Cornell\'s Industrial & Labor Relations School.'},
-          {id:'hma',cat:'res',lbl:'Research Associate, Marketing',org:'Harvard University',start:2011,end:2015,lane:1,color:'#4a6fa5',note:'Consumer behavior and marketing research — concurrent undergraduate role at Harvard.'},
-          {id:'hne',cat:'res',lbl:'Research Associate, Developmental Neuroscience',org:'Harvard University',start:2012,end:2015,lane:2,color:'#4a6fa5',note:'Behavioral and neurodevelopmental research methods. Introduced psychophysiological measurement.'},
-          {id:'booth',cat:'res',lbl:'Research Associate, Analytics, Orgs & Markets',org:'Chicago Booth',start:2013,end:2015,lane:3,color:'#4a6fa5',note:'Quantitative organizational research at Chicago Booth. Early exposure to large-scale behavioral data.'},
-          {id:'stanford',cat:'res',lbl:'Research Associate, Psychophysiology Lab',org:'Stanford University',start:2013.5,end:2015,lane:4,color:'#4a6fa5',note:'Physiological measurement and experimental methodology at Stanford\'s psychophysiology laboratory.'},
-          {id:'hsoc',cat:'res',lbl:'Research Assistant, Social Psychology',org:'Harvard University',start:2012.5,end:2014.5,lane:5,color:'#4a6fa5',note:'Social psychology experimental design and human subjects research at Harvard.'},
-          {id:'columbia',cat:'exp',lbl:'Research Coordinator',org:'Columbia Business School',start:2015,end:2017,lane:1,color:'#5a7a5a',note:'Coordinated behavioral research operations at Columbia Business School before founding the Marshall lab.'},
+          {id:'hma',cat:'res',lbl:'Research Associate, Marketing',org:'Harvard University',start:2011,end:2015,lane:1,color:'var(--data-blue)',note:'Consumer behavior and marketing research — concurrent undergraduate role at Harvard.'},
+          {id:'hne',cat:'res',lbl:'Research Associate, Developmental Neuroscience',org:'Harvard University',start:2012,end:2015,lane:2,color:'var(--data-blue)',note:'Behavioral and neurodevelopmental research methods. Introduced psychophysiological measurement.'},
+          {id:'booth',cat:'res',lbl:'Research Associate, Analytics, Orgs & Markets',org:'Chicago Booth',start:2013,end:2015,lane:3,color:'var(--data-blue)',note:'Quantitative organizational research at Chicago Booth. Early exposure to large-scale behavioral data.'},
+          {id:'stanford',cat:'res',lbl:'Research Associate, Psychophysiology Lab',org:'Stanford University',start:2013.5,end:2015,lane:4,color:'var(--data-blue)',note:'Physiological measurement and experimental methodology at Stanford\'s psychophysiology laboratory.'},
+          {id:'hsoc',cat:'res',lbl:'Research Assistant, Social Psychology',org:'Harvard University',start:2012.5,end:2014.5,lane:5,color:'var(--data-blue)',note:'Social psychology experimental design and human subjects research at Harvard.'},
+          {id:'columbia',cat:'exp',lbl:'Research Coordinator',org:'Columbia Business School',start:2015,end:2017,lane:1,color:'var(--data-green)',note:'Coordinated behavioral research operations at Columbia Business School before founding the Marshall lab.'},
           {id:'usc-lab',cat:'exp',lbl:'Lab Manager',org:'Marshall Behavioral Research Lab',start:2017,end:2026,lane:1,color:'#990000',current:true,note:'Founded and manages the Marshall Behavioral Research Lab. 110,862+ cumulative participants, 11 departments, 163 studies in FY2025.'},
         ];
 
@@ -2021,7 +2017,7 @@
             bar.style.width=Math.max(width,0.8)+'%';
             bar.style.height=ev.current?'24px':'19px';
             bar.style.background=ev.current?'linear-gradient(90deg,#990000,#780000)':ev.color;
-            if(ev.current)bar.style.borderLeft='3px solid #c9a227';
+            if(ev.current)bar.style.borderLeft='3px solid var(--data-gold)';
             bar.style.boxShadow=ev.current?'0 1px 6px rgba(153,0,0,0.25)':'none';
             bar.style.zIndex='1';
             bar.style.animationDelay=(li*0.04)+'s';

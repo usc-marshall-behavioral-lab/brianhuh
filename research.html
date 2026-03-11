@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research — Brian N. Huh · Behavioral Scientist · USC Marshall</title>
-  <meta name="description" content="Aviation human factors, AI trust, and behavioral science of safety-critical operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
+  <title>Research — Brian N. Huh · Research Scientist</title>
+  <meta name="description" content="Aviation human factors, AI trust, and behavioral science of aviation safety operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
 
   <!-- Open Graph / Social sharing -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://brianhuh.com/" />
-  <meta property="og:title" content="Research — Brian N. Huh · Behavioral Scientist · USC Marshall" />
-  <meta property="og:description" content="Aviation human factors, AI trust, and behavioral science of safety-critical operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
+  <meta property="og:title" content="Research — Brian N. Huh · Research Scientist" />
+  <meta property="og:description" content="Aviation human factors, AI trust, and behavioral science of aviation safety operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
   <meta property="og:image"       content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
   <meta name="twitter:card"       content="summary_large_image" />
-  <meta name="twitter:title" content="Research — Brian N. Huh · Behavioral Scientist · USC Marshall" />
-  <meta name="twitter:description" content="Aviation human factors, AI trust, and behavioral science of safety-critical operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
+  <meta name="twitter:title" content="Research — Brian N. Huh · Research Scientist" />
+  <meta name="twitter:description" content="Aviation human factors, AI trust, and behavioral science of aviation safety operations. ISASI survey findings, working papers, and published research by Brian N. Huh at USC Marshall." />
   <meta name="twitter:image"      content="https://students.marshall.usc.edu/sites/default/files/inline-images/Brian.jpeg" />
 
   <!-- Favicon: crimson BH monogram -->
@@ -68,6 +68,12 @@
 
       --max:  1200px;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      /* ── Data visualization & accent ── */
+      --red-muted:    #e8a0a0;
+      --red-vivid:    #cc4444;
+      --data-blue:    #4a6fa5;
+      --data-green:   #5a7a5a;
+      --data-gold:    #c9a227;
     }
 
     /* ─────────────────────────────────────────────
@@ -1000,7 +1006,7 @@
     .findings-kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); margin-bottom: 4rem; }
     .findings-kpi { background: #111110; padding: 2.25rem 2rem; }
     .findings-kpi-num { font-family: var(--serif); font-size: 2.75rem; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.4rem; }
-    .findings-kpi-num em { font-style: italic; color: #e8a0a0; }
+    .findings-kpi-num em { font-style: italic; color: var(--red-muted); }
     .findings-kpi-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.5rem; }
     .findings-kpi-note { font-size: 0.775rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
     .findings-model-head { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.60); margin-bottom: 1.25rem; }
@@ -1013,10 +1019,10 @@
     .path-bar-track { flex: 1; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; position: relative; }
     .path-bar-fill { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.2); position: absolute; top: 0; left: 0; width: 0 !important; transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
     .path-bar-fill.sig { background: var(--red); }
-    .path-sig { font-family: var(--mono); font-size: 0.70rem; color: #e8a0a0; }
+    .path-sig { font-family: var(--mono); font-size: 0.70rem; color: var(--red-muted); }
     .path-ns  { font-family: var(--mono); font-size: 0.70rem; color: rgba(255,255,255,0.55); }
     .path-beta { font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
-    .path-beta.sig { color: #e8a0a0; font-weight: 500; }
+    .path-beta.sig { color: var(--red-muted); font-weight: 500; }
     .path-beta.ns  { color: rgba(255,255,255,0.65); }
     .findings-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.07); margin-bottom: 3rem; }
     .findings-panel { background: rgba(255,255,255,0.04); padding: 2rem; border: 1px solid rgba(255,255,255,0.07); }
@@ -1028,10 +1034,10 @@
     .val-hi  { color: #8fd4a0; }
     .val-med { color: #f5c97a; }
     .val-lo  { color: rgba(255,255,255,0.65); }
-    .val-red { color: #e8a0a0; }
+    .val-red { color: var(--red-muted); }
     .findings-method-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
     .fchip { font-family: var(--mono); font-size: 0.68rem; padding: 0.25rem 0.55rem; border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.70); border-radius: 2px; letter-spacing: 0.04em; }
-    .fchip.hi { border-color: rgba(153,0,0,0.4); color: #e8a0a0; background: rgba(153,0,0,0.1); }
+    .fchip.hi { border-color: rgba(153,0,0,0.4); color: var(--red-muted); background: rgba(153,0,0,0.1); }
     .reliability-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.07); margin-bottom: 3rem; }
     .rel-cell { background: rgba(255,255,255,0.03); padding: 1.5rem; }
     .rel-factor { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.60); margin-bottom: 0.65rem; }
@@ -1066,7 +1072,7 @@
     :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
     /* ── Findings (dark section) classes ── */
     .dark-h2 { color: var(--white); font-weight: 300; line-height: 1.18; margin-bottom: 1.5rem; }
-    .dark-h2 em { color: #e8a0a0; }
+    .dark-h2 em { color: var(--red-muted); }
     .dark-body { font-size: 0.9rem; color: rgba(255,255,255,0.80); line-height: 1.8; max-width: 38ch; }
     .dark-label { color: rgba(255,255,255,0.65); }
     .findings-stat { font-family: var(--serif); font-size: 2.75rem; font-weight: 300;
@@ -1146,17 +1152,17 @@
       <a href="index.html" class="nav-brand" aria-label="Brian N. Huh">
         Brian N. Huh
         <span class="nav-brand-sep"></span>
-        <span class="nav-brand-sub">Behavioral Scientist · USC Marshall</span>
+        <span class="nav-brand-sub">Research Scientist</span>
       </a>
       <ul class="nav-menu">
         <li class="has-dropdown">
           <a href="research.html" aria-haspopup="true" aria-expanded="false">Research</a>
           <div class="nav-dropdown" role="list" style="display:none;">
-            <a href="research.html#aviation" role="listitem">Aviation Human Factors</a>
-            <a href="research.html#findings" role="listitem">AI Trust &amp; Technology</a>
-            <a href="research.html#research-writing" role="listitem">Publications &amp; Writing</a>
+            <a href="research.html#research" role="listitem">Current Projects</a>
+            <a href="research.html#findings" role="listitem">Working Paper</a>
+            <a href="research.html#research-writing" role="listitem">Publications</a>
             <div style="margin:0.4rem 1.25rem 0.5rem; padding-top:0.5rem; border-top:1px solid rgba(255,255,255,0.08);">
-              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Aviation human factors · AI trust · Publications</span>
+              <span style="font-family:var(--sans); font-size:0.63rem; font-style:italic; color:rgba(255,255,255,0.50); letter-spacing:0; text-transform:none;">Current projects · Working paper · Publications</span>
             </div>
           </div>
         </li>
@@ -1200,10 +1206,10 @@
       <nav class="mobile-nav">
         <a href="research.html" class="mobile-nav-section">Research</a>
         <div class="mobile-nav-group">
-          <a href="research.html#aviation">Aviation Human Factors</a>
-          <a href="research.html#findings">AI Trust &amp; Technology</a>
-          <a href="research.html#research-writing">Publications &amp; Writing</a>
-          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Aviation human factors · AI trust · Publications</span>
+          <a href="research.html#research">Current Projects</a>
+          <a href="research.html#findings">Working Paper</a>
+          <a href="research.html#research-writing">Publications</a>
+          <span style="display:block; font-size:0.63rem; font-style:italic; color:var(--ink-ghost); padding:0.25rem 0 0.5rem;">Current projects · Working paper · Publications</span>
         </div>
         <a href="lab.html" class="mobile-nav-section">Lab</a>
         <div class="mobile-nav-group">
@@ -1233,7 +1239,7 @@
       <a href="index.html" style="font-family:var(--mono); font-size:0.60rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-ghost); text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:1.5rem;">← Brian N. Huh</a>
       <span style="font-family:var(--mono); font-size:0.65rem; letter-spacing:0.13em; text-transform:uppercase; color:var(--red); display:block; margin-bottom:0.6rem;">Research</span>
       <h1 style="font-family:'IBM Plex Serif',Georgia,serif; font-size:clamp(2.25rem, 5vw, 3.25rem); font-weight:300; color:var(--ink); line-height:1.2;">Consumer and Organizational Behavior Applied to High-Stakes Operations</h1>
-      <p style="font-size:0.9rem; color:var(--ink-mid); max-width:58ch; line-height:1.7; margin-top:0.75rem;">Aviation accidents · AI trust · Behavioral science of safety-critical operations</p>
+      <p style="font-size:0.9rem; color:var(--ink-mid); max-width:58ch; line-height:1.7; margin-top:0.75rem;">Aviation accidents · AI trust · Behavioral science of aviation safety</p>
     </div>
   </div>
   <!-- Research page intro context -->
@@ -1254,17 +1260,17 @@
           <span class="label">Research</span>
           <h2 class="h2">Focus Areas &amp; Active Work</h2>
           <p class="body">
-            My research sits at the intersection of organizational behavior and consumer 
-            behavior — using both theoretical frameworks to study how people actually 
-            make decisions in complex, safety-critical environments. The question is 
-            always the same: why does behavior diverge from what the system expects, 
-            and what would it take to close that gap?
+            I use organizational behavior and consumer behavior frameworks to study 
+            how people make decisions in aviation — where the gap between expected 
+            and actual behavior tends to matter most. The question that runs through 
+            all of it: why does behavior diverge from what training, procedures, and 
+            system design predicted?
           </p>
 
           <div class="focus-list">
             <div class="focus-item">Aviation accidents &amp; incidents — consumer and organizational behavior analysis</div>
-            <div class="focus-item">Trust in AI, sensors, radar, and lidar in safety-critical settings</div>
-            <div class="focus-item">Operational efficiency through behavioral science and technology</div>
+            <div class="focus-item">Trust in AI, sensors, radar, and lidar in aviation operations</div>
+            <div class="focus-item">Performance and safety outcomes through behavioral science</div>
             <div class="focus-item">Experimental, field, and archival research methods</div>
           </div>
         </div>
@@ -1415,7 +1421,7 @@
           <span class="label">Aviation Human Factors</span>
           <h2 class="h2">Aviation Accidents, AI Trust, and the Systems That Govern High-Stakes Operations</h2>
           <p class="body" style="background:var(--bg-alt); border-left:2px solid var(--border); padding:0.85rem 1.1rem; font-size:0.8rem; color:var(--ink-mid);">
-            <strong style="color:var(--ink); font-weight:600;">Human factors</strong> is the study of how people, organizations, and technology interact — particularly in high-stakes environments where decisions under pressure determine outcomes. In aviation, it asks: why do accidents happen even when the aircraft is working and the crew is trained? The answer is almost always behavioral and organizational.
+            <strong style="color:var(--ink); font-weight:600;">Human factors</strong> is the study of how people, organizations, and technology interact — particularly in environments where decisions under pressure determine outcomes. In aviation, it asks: why do accidents happen even when the aircraft is working and the crew is trained? The answer is almost always behavioral and organizational.
           </p>
           <p class="body">
             I study aviation accidents and incidents as a behavioral scientist, not as a 
@@ -1433,10 +1439,10 @@
             questions in this research program.
           </p>
           <p class="body">
-            The objective is applied: derive principles from consumer and organizational 
-            behavior that translate into better-designed technologies, better-trained 
-            professionals, and measurable improvements in operational efficiency and 
-            safety outcomes.
+            The work is applied. The goal is to understand the behavioral mechanisms 
+            behind aviation accidents and AI adoption well enough to say something 
+            useful about how investigation tools should be designed and how 
+            professionals should be trained.
           </p>
         </div>
 
@@ -1455,7 +1461,7 @@
               <div class="card-cell-body">Member and contributor to the ISASI Human Factors Working Group. Contributing to the <em>Next Generation Human Factors Guide</em> — bridging consumer and organizational behavior frameworks with investigative and safety practice.</div>
             </div>
             <div id="aviation-viterbi" class="card-cell">
-              <div class="card-cell-title">Operational Efficiency Through Behavioral Science</div>
+              <div class="card-cell-title">Performance Outcomes Through Behavioral Science</div>
               <div class="card-cell-body">Cross-school collaboration with USC Viterbi translating behavioral research findings into operational design principles — connecting how people respond to AI-driven systems with how those systems should be built and deployed.</div>
             </div>
           </div>
@@ -1655,7 +1661,7 @@
             <div style="position:relative; height:22px; background:rgba(255,255,255,0.08); border-radius:2px; overflow:hidden;">
               <div class="beta-bar" data-w="72.7" style="position:absolute; left:0; top:0; height:100%; width:0; background:#990000; border-radius:2px; transition:width 1.2s cubic-bezier(.4,0,.2,1);"></div>
             </div>
-            <div style="font-family:var(--mono); font-size:0.70rem; color:#cc4444; font-weight:600;">+0.727***</div>
+            <div style="font-family:var(--mono); font-size:0.70rem; color:var(--red-vivid); font-weight:600;">+0.727***</div>
           </div>
 
           <div style="display:grid; grid-template-columns: 180px 1fr 60px; gap:0.75rem; align-items:center;">
@@ -1723,7 +1729,7 @@
           <div class="findings-row"><span class="findings-row-label">Junior (&lt;3 years)</span><span class="findings-row-val val-med">β = 0.452 · n=10</span></div>
           <div class="findings-row"><span class="findings-row-label">Senior (&gt;10 years)</span><span class="findings-row-val val-lo">β = 0.286 · n=117</span></div>
           <div style="margin-top:1rem; padding:0.75rem; background:rgba(153,0,0,0.12); border-left:2px solid rgba(153,0,0,0.4);">
-            <p style="font-size:0.72rem; color:#e8a0a0; line-height:1.5;">Senior investigators exhibit lower trust not as resistance, but as calibrated skepticism informed by direct experience with the limitations of prior technologies.</p>
+            <p style="font-size:0.72rem; color:var(--red-muted); line-height:1.5;">Senior investigators exhibit lower trust not as resistance, but as calibrated skepticism informed by direct experience with the limitations of prior technologies.</p>
           </div>
         </div>
         <div class="findings-panel">
@@ -1952,9 +1958,9 @@
         <div class="article">
           <p class="article-tag">AI Trust Research</p>
           <h3 class="article-title">Professional Engagement Patterns and AI Trust Among Safety Investigators</h3>
-          <p class="article-excerpt">My research shows that how aviation safety professionals engage with their field — not just their technical training — predicts how they develop trust toward AI tools. What that means for AI adoption in safety-critical work.</p>
+          <p class="article-excerpt">My research shows that how aviation safety professionals engage with their field — not just their technical training — predicts how they develop trust toward AI tools. What that means for AI adoption in aviation.</p>
           <div class="article-abstract" style="display:none; margin-bottom:1rem;">
-            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">The central finding from the ISASI survey — that professional engagement emerges as one of the strongest predictors of AI trust among aviation safety investigators — raises a deeper question: what does professional engagement actually consist of, and why does it predict trust? This essay unpacks the construct, explores what it means for AI adoption in safety-critical fields, and argues that the behavioral science of trust calibration offers a more useful framework than conventional adoption models.</p>
+            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">The central finding from the ISASI survey — that professional engagement emerges as one of the strongest predictors of AI trust among aviation safety investigators — raises a deeper question: what does professional engagement actually consist of, and why does it predict trust? This essay unpacks the construct, explores what it means for AI adoption in aviation and adjacent fields, and argues that the behavioral science of trust calibration offers a more useful framework than conventional adoption models.</p>
           </div>
           <div class="article-foot">
             <span class="article-meta">Research Note · In Development · 5 min read</span>
@@ -1993,7 +1999,7 @@
           <h3 class="article-title">Decisions Made Without Full Information</h3>
           <p class="article-excerpt">Most consequential decisions — in aviation, in organizations, in research — happen before all the facts are in. What behavioral science reveals about how people navigate uncertainty, and how they can do it better.</p>
           <div class="article-abstract" style="display:none; margin-bottom:1rem;">
-            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">Naturalistic decision-making research documents how experienced professionals develop judgment under time pressure — and where that judgment reliably fails. This essay draws on signal detection theory, the recognition-primed decision model, and the behavioral economics of ambiguity to examine what makes some pre-decision frameworks more robust than others, and what that means for how safety-critical professionals should be trained and supported.</p>
+            <p style="font-size:0.8rem; color:var(--ink-body); line-height:1.75; border-left:2px solid var(--border); padding-left:1rem;">Naturalistic decision-making research documents how experienced professionals develop judgment under time pressure — and where that judgment reliably fails. This essay draws on signal detection theory, the recognition-primed decision model, and the behavioral economics of ambiguity to examine what makes some pre-decision frameworks more robust than others, and what that means for how aviation professionals and investigators should be trained.</p>
           </div>
           <div class="article-foot">
             <span class="article-meta">Essay · In Development · 7 min read</span>
@@ -2051,8 +2057,8 @@
         <p class="footer-col-lbl">Navigation</p>
         <ul class="footer-list">
           <li><a href="research.html" aria-haspopup="true" aria-expanded="false">Research</a></li>
-          <li><a href="research.html#aviation">Aviation Human Factors</a></li>
-          <li><a href="research.html#findings">AI Trust &amp; Technology</a></li>
+          <li><a href="research.html#research">Current Projects</a></li>
+          <li><a href="research.html#findings">Working Paper</a></li>
           <li><a href="lab.html" aria-haspopup="true" aria-expanded="false">Lab</a></li>
           <li><a href="lab.html#ra-pool">Student RA Pool</a></li>
           <li><a href="index.html#about" aria-haspopup="true" aria-expanded="false">About</a></li>
